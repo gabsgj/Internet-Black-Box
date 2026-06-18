@@ -7,8 +7,12 @@ import {
 
 import { timeline } from "../../mock/timeline";
 import TimelineCard from "../../components/TimelineCard";
+import { useMobileStore } from "../../store/useMobileStore";
 
 export default function IncidentDetail() {
+    const { selectedIncident } =
+    useMobileStore();
+
   return (
     <ScrollView
       style={{
@@ -23,7 +27,7 @@ export default function IncidentDetail() {
           marginBottom: 8,
         }}
       >
-        Payment API Outage
+        {selectedIncident?.title}
       </Text>
 
       <Text
@@ -32,7 +36,7 @@ export default function IncidentDetail() {
           marginBottom: 20,
         }}
       >
-        Critical production outage affecting checkout requests.
+        {selectedIncident?.summary}
       </Text>
 
       <Text

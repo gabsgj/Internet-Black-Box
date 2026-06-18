@@ -8,13 +8,27 @@ import { useState } from "react";
 
 import IncidentCard from "../../components/IncidentCard";
 
-import { incidents } from "../../mock/incidents";
+import { useMobileStore } from "../../store/useMobileStore";
+
+import { incidents as mockIncidents } from "../../mock/incidents";
 
 import { router } from "expo-router";
+
+import { useEffect } from "react";
 
 export default function FeedScreen() {
   const [refreshing, setRefreshing] =
     useState(false);
+
+    const {
+        incidents,
+        setIncidents,
+        setSelectedIncident,
+        } = useMobileStore();
+
+        useEffect(() => {
+        setIncidents(mockIncidents);
+        }, []);
 
   const onRefresh = () => {
     setRefreshing(true);
@@ -37,10 +51,11 @@ export default function FeedScreen() {
         renderItem={({ item }) => (
           <IncidentCard
             incident={item}
-            onPress={() =>
-                router.push(`/incident/${item.id}`)
-}
-          />
+            onPress={() => {
+                setSelectedIncident(item);
+                router.push(`/incident/${item.id}`);
+            }}
+            />
         )}
         refreshControl={
           <RefreshControl
