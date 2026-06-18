@@ -10,6 +10,8 @@ import IncidentCard from "../../components/IncidentCard";
 
 import { incidents } from "../../mock/incidents";
 
+import { router } from "expo-router";
+
 export default function FeedScreen() {
   const [refreshing, setRefreshing] =
     useState(false);
@@ -36,8 +38,8 @@ export default function FeedScreen() {
           <IncidentCard
             incident={item}
             onPress={() =>
-              console.log(item.id)
-            }
+                router.push(`/incident/${item.id}`)
+}
           />
         )}
         refreshControl={
