@@ -1,0 +1,230 @@
+{
+  "incident": {
+    "id": "inc_pay_500_01",
+    "title": "Outage: Checkout API returning 500 error rates",
+    "type": "OUTAGE",
+    "triggeredAt": "2026-06-18T15:47:00Z",
+    "triggeredBy": "Sentry Webhook (Auto-Anomaly)",
+    "status": "OPEN",
+    "severity": "P1",
+    "aiSummary": "A backward compatibility failure in auth token validation was introduced by Sarah's pull request #42. Following deployment to production, existing active client sessions began failing validation, causing payment checkout API calls to fail with 500 internal errors.",
+    "rootCause": "Pull Request #42 broke backward validation compatibility of legacy JWT tokens on the api-gateway service."
+  },
+  "nodes": [
+    {
+      "id": "person_sarah",
+      "label": "Person",
+      "properties": {
+        "name": "Sarah Chen",
+        "email": "sarah.chen@internetblackbox.app",
+        "role": "Backend Engineer",
+        "teams": ["Core-Backend", "Security"]
+      }
+    },
+    {
+      "id": "person_raj",
+      "label": "Person",
+      "properties": {
+        "name": "Raj Patel",
+        "email": "raj.patel@internetblackbox.app",
+        "role": "QA Engineer",
+        "teams": ["On-Call", "QA"]
+      }
+    },
+    {
+      "id": "event_commit_01",
+      "label": "Event",
+      "properties": {
+        "type": "COMMIT",
+        "source": "github",
+        "timestamp": "2026-06-18T14:15:00Z",
+        "content": "Refactored JWT signature verification and expiry checks",
+        "severity": "INFO"
+      }
+    },
+    {
+      "id": "event_pr_merge_01",
+      "label": "Event",
+      "properties": {
+        "type": "PR_MERGE",
+        "source": "github",
+        "timestamp": "2026-06-18T14:31:00Z",
+        "content": "Merged Pull Request #42: Modernize auth token validation routes",
+        "severity": "INFO"
+      }
+    },
+    {
+      "id": "event_deploy_01",
+      "label": "Event",
+      "properties": {
+        "type": "DEPLOYMENT",
+        "source": "github-actions",
+        "timestamp": "2026-06-18T15:02:00Z",
+        "content": "Deployment pipeline #192 finished successfully for api-gateway:prod",
+        "severity": "INFO"
+      }
+    },
+    {
+      "id": "event_slack_01",
+      "label": "Event",
+      "properties": {
+        "type": "SLACK_MESSAGE",
+        "source": "slack",
+        "timestamp": "2026-06-18T15:12:00Z",
+        "content": "Hey is anyone seeing increased latency or auth errors on checkout routes?",
+        "severity": "WARNING"
+      }
+    },
+    {
+      "id": "event_sentry_01",
+      "label": "Event",
+      "properties": {
+        "type": "ALERT",
+        "source": "sentry",
+        "timestamp": "2026-06-18T15:47:00Z",
+        "content": "HTTP 500 spike detected on /api/pay. Error rate is 89% (500 events/min)",
+        "severity": "CRITICAL"
+      }
+    },
+    {
+      "id": "system_api_gateway",
+      "label": "System",
+      "properties": {
+        "name": "api-gateway",
+        "type": "SERVICE",
+        "environment": "production"
+      }
+    },
+    {
+      "id": "file_security_config",
+      "label": "File",
+      "properties": {
+        "path": "src/main/java/com/company/gateway/security/JwtTokenProvider.java",
+        "repository": "api-gateway",
+        "language": "java"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "person_sarah",
+      "target": "event_commit_01",
+      "type": "AUTHORED",
+      "properties": { "at": "2026-06-18T14:15:00Z" }
+    },
+    {
+      "source": "person_sarah",
+      "target": "event_pr_merge_01",
+      "type": "AUTHORED",
+      "properties": { "at": "2026-06-18T14:31:00Z" }
+    },
+    {
+      "source": "event_commit_01",
+      "target": "file_security_config",
+      "type": "MODIFIED",
+      "properties": {}
+    },
+    {
+      "source": "event_pr_merge_01",
+      "target": "event_deploy_01",
+      "type": "TRIGGERED",
+      "properties": { "confidence": 0.95, "lagSeconds": 1860 }
+    },
+    {
+      "source": "event_deploy_01",
+      "target": "system_api_gateway",
+      "type": "DEPLOYED_TO",
+      "properties": { "environment": "production" }
+    },
+    {
+      "source": "person_raj",
+      "target": "event_slack_01",
+      "type": "AUTHORED",
+      "properties": { "at": "2026-06-18T15:12:00Z" }
+    },
+    {
+      "source": "event_deploy_01",
+      "target": "event_slack_01",
+      "type": "PRECEDED",
+      "properties": { "secondsDelta": 600 }
+    },
+    {
+      "source": "event_slack_01",
+      "target": "event_sentry_01",
+      "type": "PRECEDED",
+      "properties": { "secondsDelta": 2100 }
+    },
+    {
+      "source": "event_deploy_01",
+      "target": "event_sentry_01",
+      "type": "TRIGGERED",
+      "properties": { "confidence": 0.90, "lagSeconds": 2700 }
+    },
+    {
+      "source": "system_api_gateway",
+      "target": "inc_pay_500_01",
+      "type": "EXPERIENCED",
+      "properties": {}
+    },
+    {
+      "source": "inc_pay_500_01",
+      "target": "event_sentry_01",
+      "type": "CAUSED_BY",
+      "properties": { "rank": 1, "confidence": 0.98 }
+    },
+    {
+      "source": "inc_pay_500_01",
+      "target": "event_deploy_01",
+      "type": "CAUSED_BY",
+      "properties": { "rank": 2, "confidence": 0.92 }
+    },
+    {
+      "source": "inc_pay_500_01",
+      "target": "event_pr_merge_01",
+      "type": "CAUSED_BY",
+      "properties": { "rank": 3, "confidence": 0.88 }
+    }
+  ],
+  "timeline": [
+    {
+      "timestamp": "2026-06-18T14:15:00Z",
+      "actor": "Sarah Chen",
+      "source": "github",
+      "type": "COMMIT",
+      "content": "Refactored JWT signature verification and expiry checks in JwtTokenProvider.java",
+      "severity": "INFO"
+    },
+    {
+      "timestamp": "2026-06-18T14:31:00Z",
+      "actor": "Sarah Chen",
+      "source": "github",
+      "type": "PR_MERGE",
+      "content": "Merged Pull Request #42: Modernize auth token validation routes into main branch",
+      "severity": "INFO"
+    },
+    {
+      "timestamp": "2026-06-18T15:02:00Z",
+      "actor": "GitHub Actions",
+      "source": "github-actions",
+      "type": "DEPLOYMENT",
+      "content": "Deployment pipeline #192 finished successfully for api-gateway to production",
+      "severity": "INFO"
+    },
+    {
+      "timestamp": "2026-06-18T15:12:00Z",
+      "actor": "Raj Patel",
+      "source": "slack",
+      "type": "SLACK_MESSAGE",
+      "content": "Hey is anyone seeing increased latency or auth errors on checkout routes?",
+      "severity": "WARNING"
+    },
+    {
+      "timestamp": "2026-06-18T15:47:00Z",
+      "actor": "Sentry",
+      "source": "sentry",
+      "type": "ALERT",
+      "content": "HTTP 500 spike detected on /api/pay. Error rate is 89% (500 events/min)",
+      "severity": "CRITICAL"
+    }
+  ]
+}
