@@ -3,26 +3,29 @@ package com.hackhazards.internetblackbox.service;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hackhazards.internetblackbox.dto.EventDto;
 import com.hackhazards.internetblackbox.dto.IncidentDto;
-import com.hackhazards.internetblackbox.dto.anthropic.AnthropicRequest;
-import com.hackhazards.internetblackbox.dto.anthropic.AnthropicResponse;
 import com.hackhazards.internetblackbox.dto.anthropic.ReconstructionReport;
+import com.hackhazards.internetblackbox.dto.nvidia.NvidiaChatRequest;
+import com.hackhazards.internetblackbox.dto.nvidia.NvidiaChatResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Slf4j
 @Service
-public class AnthropicService {
+public class NvidiaLlmService {
 
     private final WebClient webClient;
     private final ObjectMapper objectMapper;
 
-    public AnthropicService(@Qualifier("anthropicWebClient") WebClient webClient, ObjectMapper objectMapper) {
+    @Value("${nvidia.model:meta/llama-3.1-70b-instruct}")
+    private String nvidiaModel;
+
+    public NvidiaLlmService(@Qualifier("nvidiaWebClient") WebClient webClient, ObjectMapper objectMapper) {
         this.webClient = webClient;
         this.objectMapper = objectMapper;
     }
@@ -38,69 +41,76 @@ public class AnthropicService {
         String systemPrompt = buildSystemPrompt();
         String userPrompt = buildUserPrompt(incident, events);
 
-        AnthropicRequest.Message message = AnthropicRequest.Message.builder()
+        NvidiaChatRequest.Message systemMsg = NvidiaChatRequest.Message.builder()
+                .role("system")
+                .content(systemPrompt)
+                .build();
+
+        NvidiaChatRequest.Message userMsg = NvidiaChatRequest.Message.builder()
                 .role("user")
                 .content(userPrompt)
                 .build();
 
-        AnthropicRequest request = AnthropicRequest.builder()
-                .model("claude-3-5-sonnet-20241022")
-                .maxTokens(4000)
-                .system(systemPrompt)
-                .messages(List.of(message))
+        NvidiaChatRequest request = NvidiaChatRequest.builder()
+                .model(nvidiaModel)
+                .messages(List.of(systemMsg, userMsg))
                 .temperature(0.2)
+                .maxTokens(4000)
                 .build();
 
-        log.info("Sending incident reconstruction request to Anthropic Claude for incident: {}", incident.getId());
+        log.info("Sending incident reconstruction request to Nvidia NIM AI ({}) for incident: {}", nvidiaModel, incident.getId());
 
         return webClient.post()
-                .uri("/v1/messages")
+                .uri("/chat/completions")
                 .bodyValue(request)
                 .retrieve()
-                .bodyToMono(AnthropicResponse.class)
+                .bodyToMono(NvidiaChatResponse.class)
                 .flatMap(response -> {
-                    if (response.getContent() == null || response.getContent().isEmpty()) {
-                        return Mono.error(new IllegalStateException("Empty response content from Claude"));
+                    if (response.getChoices() == null || response.getChoices().isEmpty()) {
+                        return Mono.error(new IllegalStateException("Empty response choices from Nvidia NIM LLM"));
                     }
-                    String textResponse = response.getContent().get(0).getText();
+                    String textResponse = response.getChoices().get(0).getMessage().getContent();
                     return parseReport(textResponse);
                 })
-                .doOnError(error -> log.error("Failed to reconstruct incident via Anthropic Claude: {}", error.getMessage(), error));
+                .doOnError(error -> log.error("Failed to reconstruct incident via Nvidia NIM LLM: {}", error.getMessage(), error));
     }
 
     /**
-     * Sends a general-purpose prompt to Claude and returns the raw text response.
+     * Sends a general-purpose prompt to the LLM and returns the raw text response.
      */
-    public Mono<String> askClaude(String systemPrompt, String userPrompt) {
-        AnthropicRequest.Message message = AnthropicRequest.Message.builder()
+    public Mono<String> askLlm(String systemPrompt, String userPrompt) {
+        NvidiaChatRequest.Message systemMsg = NvidiaChatRequest.Message.builder()
+                .role("system")
+                .content(systemPrompt)
+                .build();
+
+        NvidiaChatRequest.Message userMsg = NvidiaChatRequest.Message.builder()
                 .role("user")
                 .content(userPrompt)
                 .build();
 
-        AnthropicRequest request = AnthropicRequest.builder()
-                .model("claude-3-5-sonnet-20241022")
-                .maxTokens(1000)
-                .system(systemPrompt)
-                .messages(List.of(message))
+        NvidiaChatRequest request = NvidiaChatRequest.builder()
+                .model(nvidiaModel)
+                .messages(List.of(systemMsg, userMsg))
                 .temperature(0.5)
+                .maxTokens(1000)
                 .build();
 
-        log.info("Sending general query to Anthropic Claude");
+        log.info("Sending general query to Nvidia NIM AI ({})", nvidiaModel);
 
         return webClient.post()
-                .uri("/v1/messages")
+                .uri("/chat/completions")
                 .bodyValue(request)
                 .retrieve()
-                .bodyToMono(AnthropicResponse.class)
+                .bodyToMono(NvidiaChatResponse.class)
                 .map(response -> {
-                    if (response.getContent() == null || response.getContent().isEmpty()) {
-                        throw new IllegalStateException("Empty response content from Claude");
+                    if (response.getChoices() == null || response.getChoices().isEmpty()) {
+                        throw new IllegalStateException("Empty response choices from Nvidia NIM LLM");
                     }
-                    return response.getContent().get(0).getText();
+                    return response.getChoices().get(0).getMessage().getContent();
                 })
-                .doOnError(error -> log.error("Failed to query Anthropic Claude: {}", error.getMessage(), error));
+                .doOnError(error -> log.error("Failed to query Nvidia NIM LLM: {}", error.getMessage(), error));
     }
-
 
     private String buildSystemPrompt() {
         return "You are an expert incident investigator for software teams. You analyze sequences of digital events " +
@@ -183,7 +193,7 @@ public class AnthropicService {
         return Mono.defer(() -> {
             try {
                 String cleanJson = rawContent.trim();
-                // If Claude wrapped the output in markdown code blocks, strip them
+                // If the LLM wrapped the output in markdown code blocks, strip them
                 if (cleanJson.startsWith("```")) {
                     int startIdx = cleanJson.indexOf("{");
                     int endIdx = cleanJson.lastIndexOf("}");

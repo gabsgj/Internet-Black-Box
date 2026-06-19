@@ -1,4 +1,4 @@
-package com.hackhazards.internetblackbox.dto.anthropic;
+package com.hackhazards.internetblackbox.dto.nvidia;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,16 +11,10 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class AnthropicRequest {
+public class NvidiaChatRequest {
 
     @JsonProperty("model")
     private String model;
-
-    @JsonProperty("max_tokens")
-    private Integer maxTokens;
-
-    @JsonProperty("system")
-    private String system;
 
     @JsonProperty("messages")
     private List<Message> messages;
@@ -28,13 +22,16 @@ public class AnthropicRequest {
     @JsonProperty("temperature")
     private Double temperature;
 
+    @JsonProperty("max_tokens")
+    private Integer maxTokens;
+
     @Data
     @Builder
     @NoArgsConstructor
     @AllArgsConstructor
     public static class Message {
         @JsonProperty("role")
-        private String role; // "user" or "assistant"
+        private String role; // "system", "user", or "assistant"
 
         @JsonProperty("content")
         private String content;

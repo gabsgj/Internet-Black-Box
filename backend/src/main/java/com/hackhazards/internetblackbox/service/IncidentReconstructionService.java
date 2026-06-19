@@ -26,7 +26,7 @@ public class IncidentReconstructionService {
 
     private final IncidentRepository incidentRepository;
     private final EventRepository eventRepository;
-    private final AnthropicService anthropicService;
+    private final NvidiaLlmService nvidiaLlmService;
 
     /**
      * Triggers the incident reconstruction workflow asynchronously.
@@ -85,8 +85,8 @@ public class IncidentReconstructionService {
                             .build())
                     .collect(Collectors.toList());
 
-            // 6. Call Claude to reconstruct
-            ReconstructionReport report = anthropicService.reconstructIncident(incidentDto, eventDtos).block();
+            // 6. Call Nvidia NIM AI to reconstruct
+            ReconstructionReport report = nvidiaLlmService.reconstructIncident(incidentDto, eventDtos).block();
 
             if (report != null) {
                 // 7. Map results back to database Incident Node

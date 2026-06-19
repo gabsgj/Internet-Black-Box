@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
 public class QueryService {
 
     private final SarvamService sarvamService;
-    private final AnthropicService anthropicService;
+    private final NvidiaLlmService nvidiaLlmService;
     private final IncidentRepository incidentRepository;
     private final EventRepository eventRepository;
 
@@ -39,7 +39,7 @@ public class QueryService {
 
         String userPrompt = systemContext + "\n\nUser Question: " + query;
 
-        return anthropicService.askClaude(systemPrompt, userPrompt)
+        return nvidiaLlmService.askLlm(systemPrompt, userPrompt)
                 .map(answer -> TextQueryResponse.builder().answer(answer).build());
     }
 

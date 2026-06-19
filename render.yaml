@@ -15,8 +15,10 @@ services:
         sync: false
       - key: SPRING_NEO4J_PASSWORD
         sync: false
-      - key: ANTHROPIC_API_KEY
+      - key: NVIDIA_API_KEY
         sync: false
+      - key: NVIDIA_MODEL
+        value: meta/llama-3.1-70b-instruct
       - key: SARVAM_API_KEY
         sync: false
       - key: GITHUB_PERSONAL_ACCESS_TOKEN

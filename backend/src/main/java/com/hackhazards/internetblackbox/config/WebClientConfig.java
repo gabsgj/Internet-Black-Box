@@ -10,18 +10,17 @@ import org.springframework.web.reactive.function.client.WebClient;
 @Configuration
 public class WebClientConfig {
 
-    @Value("${anthropic.api.key:}")
-    private String anthropicApiKey;
+    @Value("${nvidia.api.key:}")
+    private String nvidiaApiKey;
 
     @Value("${sarvam.api.key:}")
     private String sarvamApiKey;
 
     @Bean
-    public WebClient anthropicWebClient(WebClient.Builder builder) {
+    public WebClient nvidiaWebClient(WebClient.Builder builder) {
         return builder
-                .baseUrl("https://api.anthropic.com")
-                .defaultHeader("x-api-key", anthropicApiKey)
-                .defaultHeader("anthropic-version", "2023-06-01")
+                .baseUrl("https://integrate.api.nvidia.com/v1")
+                .defaultHeader(HttpHeaders.AUTHORIZATION, "Bearer " + nvidiaApiKey)
                 .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
                 .build();
     }
