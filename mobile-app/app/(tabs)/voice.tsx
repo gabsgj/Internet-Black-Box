@@ -5,13 +5,49 @@ import {
   TouchableOpacity,
 } from "react-native";
 
+import { Audio } from "expo-av";
+
 export default function VoiceScreen() {
   const [recording, setRecording] =
+    useState<Audio.Recording | null>(null);
+
+  const [isRecording, setIsRecording] =
     useState(false);
 
-  const toggleRecording = () => {
-    setRecording(!recording);
-  };
+  async function startRecording() {
+    try {
+      await Audio.requestPermissionsAsync();
+
+      await Audio.setAudioModeAsync({
+        allowsRecordingIOS: true,
+        playsInSilentModeIOS: true,
+      });
+
+      const { recording } =
+        await Audio.Recording.createAsync(
+          Audio.RecordingOptionsPresets.HIGH_QUALITY
+        );
+
+      setRecording(recording);
+      setIsRecording(true);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  async function stopRecording() {
+    if (!recording) return;
+
+    await recording.stopAndUnloadAsync();
+
+    const uri = recording.getURI();
+
+    console.log("Audio URI:", uri);
+    alert("Recording saved successfully");
+
+    setRecording(null);
+    setIsRecording(false);
+  }
 
   return (
     <View
@@ -19,52 +55,50 @@ export default function VoiceScreen() {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        padding: 20,
       }}
     >
       <Text
         style={{
           fontSize: 24,
-          fontWeight: "700",
           marginBottom: 40,
+          fontWeight: "700",
         }}
       >
         Voice Query
       </Text>
 
       <TouchableOpacity
-        onPress={toggleRecording}
+        onPress={
+          isRecording
+            ? stopRecording
+            : startRecording
+        }
         style={{
-          width: 140,
-          height: 140,
-          borderRadius: 70,
-          justifyContent: "center",
-          alignItems: "center",
-          backgroundColor: recording
+          width: 150,
+          height: 150,
+          borderRadius: 75,
+          backgroundColor: isRecording
             ? "#dc2626"
             : "#2563eb",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
         <Text
           style={{
             color: "white",
-            fontSize: 18,
             fontWeight: "700",
+            fontSize: 18,
           }}
         >
-          {recording ? "STOP" : "MIC"}
+          {isRecording ? "STOP" : "MIC"}
         </Text>
       </TouchableOpacity>
 
-      <Text
-        style={{
-          marginTop: 30,
-          fontSize: 16,
-        }}
-      >
-        {recording
+      <Text style={{ marginTop: 30 }}>
+        {isRecording
           ? "Recording..."
-          : "Tap microphone to ask a question"}
+          : "Tap microphone to start"}
       </Text>
     </View>
   );
