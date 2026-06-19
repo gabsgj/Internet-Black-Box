@@ -10,6 +10,9 @@ import {
   removeToken,
 } from "../../services/auth";
 
+import { registerForPushNotifications }
+from "../../services/notifications";
+
 export default function ProfileScreen() {
   async function handleSave() {
     await saveToken(
@@ -41,6 +44,13 @@ export default function ProfileScreen() {
         gap: 20,
       }}
     >
+
+      <TouchableOpacity
+        onPress={registerForPushNotifications}
+      >
+        <Text>Enable Notifications</Text>
+      </TouchableOpacity>
+
       <Text
         style={{
           fontSize: 22,
