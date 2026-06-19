@@ -24,10 +24,17 @@ export async function registerForPushNotifications() {
     return;
   }
 
+  try {
   const token =
     await Notifications.getExpoPushTokenAsync();
 
-  console.log("Expo Push Token:", token.data);
-
+  console.log(token.data);
+  
   return token.data;
+  } catch (error) {
+    console.log(
+      "Push token unavailable in Expo Go"
+    );
+  }
+
 }
