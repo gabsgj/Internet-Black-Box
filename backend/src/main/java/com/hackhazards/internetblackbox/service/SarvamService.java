@@ -27,10 +27,10 @@ public class SarvamService {
     @Value("${sarvam.model.stt:saarika:v2}")
     private String sttModel;
 
-    @Value("${sarvam.model.tts:bulbul:v1}")
+    @Value("${sarvam.model.tts:bulbul:v3}")
     private String ttsModel;
 
-    @Value("${sarvam.speaker.tts:meera}")
+    @Value("${sarvam.speaker.tts:ritu}")
     private String defaultSpeaker;
 
     public SarvamService(@Qualifier("sarvamWebClient") WebClient webClient) {
