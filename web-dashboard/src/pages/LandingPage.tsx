@@ -46,7 +46,6 @@ export const LandingPage: React.FC = () => {
           <button onClick={() => scrollToSection('solution')} className="hover:text-emerald-400 transition-colors">Solution</button>
           <button onClick={() => scrollToSection('works')} className="hover:text-emerald-400 transition-colors">How it works</button>
           <button onClick={() => scrollToSection('features')} className="hover:text-emerald-400 transition-colors">Features</button>
-          <button onClick={() => scrollToSection('tech')} className="hover:text-emerald-400 transition-colors">Stack</button>
         </div>
 
         <Link
@@ -303,53 +302,6 @@ export const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Tech Stack Section */}
-      <section id="tech" className="py-20 bg-slate-950/40 border-t border-slate-950 px-6">
-        <div className="max-w-5xl mx-auto space-y-12">
-          <div className="text-center space-y-2">
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tight">The Ecosystem</h2>
-            <p className="text-xs text-slate-400 max-w-md mx-auto">Standardised stack supporting microsecond ingestion latency and AI lookups.</p>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
-            <div className="p-4 bg-slate-950 border border-slate-900 rounded-xl space-y-2">
-              <div className="text-emerald-500 text-xs font-bold font-mono">JAVA</div>
-              <h4 className="text-xs font-semibold text-slate-200">Spring Boot</h4>
-              <p className="text-[9px] text-slate-500">Backend Core API</p>
-            </div>
-
-            <div className="p-4 bg-slate-950 border border-slate-900 rounded-xl space-y-2">
-              <div className="text-emerald-500 text-xs font-bold font-mono">NEO4J</div>
-              <h4 className="text-xs font-semibold text-slate-200">AuraDB</h4>
-              <p className="text-[9px] text-slate-500">Causal Graph DB</p>
-            </div>
-
-            <div className="p-4 bg-slate-950 border border-slate-900 rounded-xl space-y-2">
-              <div className="text-emerald-500 text-xs font-bold font-mono">AI</div>
-              <h4 className="text-xs font-semibold text-slate-200">Gemini</h4>
-              <p className="text-[9px] text-slate-500">Reconstruction Engine</p>
-            </div>
-
-            <div className="p-4 bg-slate-950 border border-slate-900 rounded-xl space-y-2">
-              <div className="text-emerald-500 text-xs font-bold font-mono">REACT</div>
-              <h4 className="text-xs font-semibold text-slate-200">Vite + TS</h4>
-              <p className="text-[9px] text-slate-500">Dashboard UI</p>
-            </div>
-
-            <div className="p-4 bg-slate-950 border border-slate-900 rounded-xl space-y-2">
-              <div className="text-emerald-500 text-xs font-bold font-mono">MOBILE</div>
-              <h4 className="text-xs font-semibold text-slate-200">Expo Native</h4>
-              <p className="text-[9px] text-slate-500">On-Call Client</p>
-            </div>
-
-            <div className="p-4 bg-slate-950 border border-slate-900 rounded-xl space-y-2">
-              <div className="text-emerald-500 text-xs font-bold font-mono">VOICE</div>
-              <h4 className="text-xs font-semibold text-slate-200">Sarvam AI</h4>
-              <p className="text-[9px] text-slate-500">Multilingual STT/TTS</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
 
     </div>
