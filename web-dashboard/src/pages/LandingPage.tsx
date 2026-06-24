@@ -351,29 +351,7 @@ export const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Footer Section */}
-      <footer className="border-t border-slate-950 bg-slate-950 py-12 px-6 text-center text-xs text-slate-600">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center space-x-2.5">
-            <span className="w-5 h-5 bg-emerald-600 rounded flex items-center justify-center font-bold text-slate-950 text-[10px] border border-emerald-400">
-              ■
-            </span>
-            <span className="font-semibold text-slate-400 uppercase tracking-wider text-[11px]">
-              Internet Black Box — HackHazards '26
-            </span>
-          </div>
 
-          <div className="flex items-center space-x-1.5 text-slate-500 text-[11px]">
-            <span>Developed by</span>
-            <span className="font-semibold text-slate-400 hover:text-emerald-400 transition-colors">Team Member 2</span>
-            <span>(Dashboard Engineer)</span>
-          </div>
-
-          <div className="text-[10px] font-mono text-slate-600">
-            © 2026 Namespace Community. All rights reserved.
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };
