@@ -10,7 +10,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.time.ZoneId;
+import java.time.ZoneOffset;
+
 import java.util.*;
 
 @Slf4j
@@ -120,21 +123,21 @@ public class WebhookService {
                         }
 
                         // Create Event
-                        LocalDateTime eventTime = timestampStr != null ? 
-                                LocalDateTime.parse(timestampStr.substring(0, 19)) : LocalDateTime.now();
+OffsetDateTime eventTime = timestampStr != null
+        ? OffsetDateTime.parse(timestampStr)
+        : OffsetDateTime.now();
 
-                        Event commitEvent = Event.builder()
-                                .id("github:commit:" + commitSha)
-                                .type(EventType.COMMIT)
-                                .timestamp(eventTime)
-                                .source("github")
-                                .content("Commit: " + message)
-                                .severity(Severity.INFO)
-                                .metadata(objectMapper.writeValueAsString(commitMap))
-                                .affectedSystems(List.of(repoSystem))
-                                .modifiedFiles(modifiedFiles)
-                                .build();
-
+Event commitEvent = Event.builder()
+        .id("github:commit:" + commitSha)
+        .type(EventType.COMMIT)
+        .timestamp(eventTime)
+        .source("github")
+        .content("Commit: " + message)
+        .severity(Severity.INFO)
+        .metadata(objectMapper.writeValueAsString(commitMap))
+        .affectedSystems(List.of(repoSystem))
+        .modifiedFiles(modifiedFiles)
+        .build();
                         eventRepository.save(commitEvent);
 
                         // Link Person -> Event
@@ -173,15 +176,15 @@ public class WebhookService {
                                 });
 
                         Event prMergeEvent = Event.builder()
-                                .id("github:pr:" + prId)
-                                .type(EventType.PR_MERGE)
-                                .timestamp(LocalDateTime.now())
-                                .source("github")
-                                .content(String.format("Merged PR #%d: %s", number, title))
-                                .severity(Severity.INFO)
-                                .metadata(objectMapper.writeValueAsString(prMap))
-                                .affectedSystems(List.of(repoSystem))
-                                .build();
+        .id("github:pr:" + prId)
+        .type(EventType.PR_MERGE)
+        .timestamp(OffsetDateTime.now())
+        .source("github")
+        .content(String.format("Merged PR #%d: %s", number, title))
+        .severity(Severity.INFO)
+        .metadata(objectMapper.writeValueAsString(prMap))
+        .affectedSystems(List.of(repoSystem))
+        .build();
 
                         eventRepository.save(prMergeEvent);
 
@@ -237,20 +240,20 @@ public class WebhookService {
                         });
 
                 double unixTime = Double.parseDouble(tsStr);
-                LocalDateTime eventTime = LocalDateTime.ofInstant(
-                        Instant.ofEpochMilli((long) (unixTime * 1000)),
-                        ZoneId.systemDefault()
-                );
 
-                Event slackEvent = Event.builder()
-                        .id(eventId)
-                        .type(EventType.SLACK_MESSAGE)
-                        .timestamp(eventTime)
-                        .source("slack")
-                        .content(text)
-                        .severity(Severity.INFO)
-                        .metadata(objectMapper.writeValueAsString(event))
-                        .build();
+OffsetDateTime eventTime = Instant
+        .ofEpochMilli((long) (unixTime * 1000))
+        .atOffset(ZoneOffset.UTC);
+
+Event slackEvent = Event.builder()
+        .id(eventId)
+        .type(EventType.SLACK_MESSAGE)
+        .timestamp(eventTime)
+        .source("slack")
+        .content(text)
+        .severity(Severity.INFO)
+        .metadata(objectMapper.writeValueAsString(event))
+        .build();
 
                 eventRepository.save(slackEvent);
 
@@ -321,7 +324,7 @@ public class WebhookService {
             Event sentryEvent = Event.builder()
                     .id(eventId)
                     .type(EventType.ALERT)
-                    .timestamp(LocalDateTime.now())
+                    .timestamp(java.time.OffsetDateTime.now())
                     .source("sentry")
                     .content("Sentry Alert: " + message)
                     .severity(severity)

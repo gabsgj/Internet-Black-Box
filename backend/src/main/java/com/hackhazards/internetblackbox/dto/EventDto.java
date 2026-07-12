@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 
 @Data
 @Builder
@@ -14,7 +14,7 @@ public class EventDto {
     private String id;
     private String type; // e.g., COMMIT, SLACK_MESSAGE, SENTRY_ALERT
     private String source; // e.g., github, slack, sentry
-    private LocalDateTime timestamp;
+    private OffsetDateTime timestamp;
     private String content;
     private String severity; // INFO, WARNING, CRITICAL
     private String actorName;

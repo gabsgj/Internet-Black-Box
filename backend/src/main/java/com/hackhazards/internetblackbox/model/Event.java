@@ -8,7 +8,7 @@ import org.springframework.data.neo4j.core.schema.Id;
 import org.springframework.data.neo4j.core.schema.Node;
 import org.springframework.data.neo4j.core.schema.Relationship;
 
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +23,7 @@ public class Event {
     private String id; // Unique event identifier (e.g. "github:commit:abc123")
 
     private EventType type;
-    private LocalDateTime timestamp;
+    private OffsetDateTime timestamp;
     private String source; // github | slack | sentry | etc.
     private String content;
     private Severity severity;
