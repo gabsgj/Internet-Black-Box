@@ -35,10 +35,7 @@ public class IncidentService {
     // Return timeline events
     public List<EventDto> getIncidentTimeline(String id) {
 
-        Incident incident = incidentRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Incident not found"));
-
-        return incident.getCausedByEvents()
+        return incidentRepository.findTimelineEvents(id)
                 .stream()
                 .map(this::mapEventToDto)
                 .collect(Collectors.toList());
