@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Internet Black Box — Pitch Deck</title>
+  
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-base: #060913;
+      --bg-surface: #0b1120;
+      --border-color: rgba(16, 185, 129, 0.15);
+      --accent: #10b981;
+      --accent-glow: rgba(16, 185, 129, 0.3);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dark: #64748b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      font-family: 'Outfit', sans-serif;
+      overflow: hidden;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    /* Starry background effect */
+    .bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        radial-gradient(circle at 20% 30%, rgba(16, 185, 129, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(99, 102, 241, 0.04) 0%, transparent 45%),
+        linear-gradient(rgba(16, 185, 129, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(16, 185, 129, 0.02) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* Presentation Wrapper */
+    .deck-container {
+      position: relative;
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 10;
+      padding: 2.5rem;
+    }
+
+    /* Top Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      opacity: 0.8;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .brand-logo {
+      width: 24px;
+      height: 24px;
+      border: 1.5px stroke var(--accent);
+      border-radius: 6px;
+    }
+
+    .brand-name {
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .brand-badge {
+      font-size: 0.65rem;
+      font-weight: 600;
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      color: #ef4444;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Active Slide Container */
+    .slides-wrapper {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin: 1.5rem 0;
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      max-width: 1100px;
+      height: 100%;
+      max-height: 600px;
+      opacity: 0;
+      transform: translateY(20px) scale(0.98);
+      pointer-events: none;
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .slide.active {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      pointer-events: auto;
+    }
+
+    /* Slide Content Typo */
+    .slide-label {
+      color: var(--accent);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .slide-label::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background-color: var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--accent);
+    }
+
+    .slide-title {
+      font-size: 2.8rem;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    .slide-title span {
+      background: linear-gradient(135deg, var(--accent) 0%, #10b981 50%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .slide-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 800px;
+      line-height: 1.6;
+    }
+
+    /* Grid Layouts for Slides */
+    .grid-2 {
+      display: grid;
+      grid-template-cols: 1.1fr 0.9fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-cols: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    /* Glass Cards */
+    .slide-card {
+      background: rgba(11, 17, 32, 0.4);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 1.75rem;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(8px);
+    }
+
+    .slide-card:hover {
+      border-color: rgba(16, 185, 129, 0.3);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 40px rgba(16, 185, 129, 0.05);
+    }
+
+    .slide-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      opacity: 0.3;
+    }
+
+    .card-num {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--text-main);
+    }
+
+    .card-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Visual Representation blocks */
+    .visual-block {
+      border-radius: 16px;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      line-height: 1.6;
+      box-shadow: inset 0 2px 8px rgba(0,0,0,0.8);
+    }
+
+    /* Bullet List */
+    .slide-list {
+      list-style: none;
+      space-y: 0.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .slide-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .slide-list li::before {
+      content: "✔";
+      color: var(--accent);
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    /* Highlight metrics */
+    .metric-group {
+      display: flex;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .metric-box {
+      border-left: 2px solid var(--accent);
+      padding-left: 1rem;
+    }
+
+    .metric-val {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--accent);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .metric-label {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* Bottom Footer & Progress controls */
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.03);
+      padding-top: 1.5rem;
+      z-index: 20;
+    }
+
+    .footer-meta {
+      font-size: 0.65rem;
+      color: var(--text-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .controls-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .progress-bar-container {
+      width: 150px;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 9999px;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: var(--accent);
+      width: 16.66%;
+      transition: width 0.3s ease;
+      box-shadow: 0 0 6px var(--accent);
+    }
+
+    .slide-nav-btn {
+      background: none;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-main);
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+
+    .slide-nav-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(16, 185, 129, 0.05);
+    }
+
+    .slide-nav-btn:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+      border-color: rgba(255, 255, 255, 0.05);
+      color: var(--text-dark);
+    }
+
+    .slide-counter {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Specific Slide Styling */
+    .timeline-node {
+      border-left: 2px dashed rgba(16, 185, 129, 0.3);
+      margin-left: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+      padding-bottom: 1.5rem;
+    }
+    .timeline-node::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 4px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 6px var(--accent);
+    }
+    .timeline-node:last-child {
+      padding-bottom: 0;
+    }
+
+    /* Grayscale logo block */
+    .sponsor-strip {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      opacity: 0.6;
+      margin-top: 1rem;
+    }
+
+    .sponsor-logo-mini {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-family: 'JetBrains Mono', monospace;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-grid"></div>
+
+  <div class="deck-container">
+    
+    <!-- Top Header -->
+    <header>
+      <div class="brand">
+        <!-- SVG Isometric Icon -->
+        <svg class="brand-logo" viewBox="0 0 32 32" fill="none">
+          <polygon points="16,4 28,10 16,16 4,10" fill="#0b1120" stroke="#10b981" stroke-width="1.5"/>
+          <polygon points="4,10 16,16 16,28 4,22" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
+          <polygon points="28,10 16,16 16,28 28,22" fill="#080e1a" stroke="#10b981" stroke-width="1.5"/>
+        </svg>
+        <span class="brand-name">Internet Black Box</span>
+      </div>
+      <div class="brand-badge">HackHazards '26</div>
+    </header>
+
+    <!-- Slides Container -->
+    <div class="slides-wrapper">
+
+      <!-- Slide 1: Cover -->
+      <div class="slide active" id="slide-1">
+        <div class="slide-label">Team Arete Presentation</div>
+        <h1 class="slide-title">The Causal <span>Aircraft Black Box</span><br/>for Software Teams</h1>
+        <p class="slide-subtitle">
+          Passively mapping commits, communication channels, and telemetry alerts into an immutable causal property graph for sub-second outage forensics.
+        </p>
+        <div class="metric-group">
+          <div class="metric-box">
+            <div class="metric-val">100%</div>
+            <div class="metric-label">Passive Capture</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-val">&lt; 50ms</div>
+            <div class="metric-label">Causal Traversal</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-val">AI</div>
+            <div class="metric-label">Reconstructed Post-Mortem</div>
+          </div>
+        </div>
+        <div class="sponsor-strip">
+          <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Sponsor Integrations:</span>
+          <span class="sponsor-logo-mini">Neo4j AuraDB</span>
+          <span class="sponsor-logo-mini">Render Workflows</span>
+          <span class="sponsor-logo-mini">Expo Mobile</span>
+          <span class="sponsor-logo-mini">Sarvam AI</span>
+        </div>
+      </div>
+
+      <!-- Slide 2: The Problem -->
+      <div class="slide" id="slide-2">
+        <div class="slide-label">Outage Archaeology & Out-of-Context Triage</div>
+        <h1 class="slide-title">Outages Strike at 3 AM.<br/><span>Forensics Take 3 Days.</span></h1>
+        
+        <div class="grid-2">
+          <div class="space-y-4">
+            <p class="slide-subtitle" style="font-size: 1rem;">
+              Critical breakdowns are slow to diagnose because software evidence exists in isolated, temporal silos. Relational tables treat events as separate occurrences, leaving engineers to stitch paths together.
+            </p>
+            <ul class="slide-list">
+              <li><strong>Git blame</strong> only records raw changes, missing human intent & conversations.</li>
+              <li><strong>Slack discussions</strong> outline decisions but don't trace downstream system impacts.</li>
+              <li><strong>Sentry Exception metrics</strong> trigger alerts but fail to link back to the originating PR.</li>
+            </ul>
+          </div>
+          <div class="slide-card">
+            <span class="card-num">Triage Cost Metrics</span>
+            <div style="display: flex; flex-direction: column; gap: 1.2rem; margin-top: 0.5rem;">
+              <div class="metric-box">
+                <div class="metric-val" style="color: #ef4444;">4.2 Hrs</div>
+                <div class="metric-label">Average Mean Time to Resolution (MTTR)</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-val" style="color: #ef4444;">$300K/hr</div>
+                <div class="metric-label">Cost of Outages for Digital Infrastructure</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: The Solution (Neo4j) -->
+      <div class="slide" id="slide-3">
+        <div class="slide-label">Neo4j Causal Graph Database</div>
+        <h1 class="slide-title">Querying <span>Lineage, Not Tables</span></h1>
+        
+        <div class="grid-2">
+          <div class="space-y-4">
+            <p class="slide-subtitle" style="font-size: 1.05rem;">
+              By modeling developers, code diffs, deployments, chats, and alerts as connected nodes, Internet Black Box converts diagnostic queries into simple, constant-time graph traversals.
+            </p>
+            <ul class="slide-list">
+              <li><strong>Index-Free Adjacency:</strong> Traces lineage without expensive SQL JOINs.</li>
+              <li><strong>Causal Traversal:</strong> Connects nodes via <code>:AUTHORED</code>, <code>:DEPLOYED_TO</code>, <code>:AFFECTED</code>, and <code>:CAUSED_BY</code> edges.</li>
+              <li><strong>Root Cause Extraction:</strong> Computes the shortest path from an incident to the originating commit.</li>
+            </ul>
+          </div>
+          <div class="visual-block">
+            <span style="color: #64748b; font-weight: bold;">// Neo4j Causal Path Tracing</span><br/>
+            <span style="color: #10b981;">MATCH</span> (i:Incident {id: $id})<br/>
+            <span style="color: #10b981;">MATCH</span> path = shortestPath((c:Event {type:'COMMIT'})-[:TRIGGERED|PRECEDED*]-&gt;(i))<br/>
+            <span style="color: #10b981;">RETURN</span> path<br/>
+            <span style="color: #64748b;">[Result: Sarah's middleware commit &rarr; deployment #42 &rarr; alert spike]</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4: Render Ingestion Workflows -->
+      <div class="slide" id="slide-4">
+        <div class="slide-label">Render Workflows Integration</div>
+        <h1 class="slide-title">Reliable, <span>Multi-Stage Ingestion</span></h1>
+        
+        <div class="grid-3">
+          <div class="slide-card">
+            <span class="card-num">01. `ingest-github`</span>
+            <div class="card-title">Scheduled Cron Ingestion</div>
+            <p class="card-desc">Scheduled every 5 minutes. Pulls new commits, PR approvals, and deployment triggers into AuraDB. Normalizes diff files asynchronously.</p>
+          </div>
+          <div class="slide-card">
+            <span class="card-num">02. `ingest-slack`</span>
+            <div class="card-title">Real-Time Event Stream</div>
+            <p class="card-desc">Event-driven webhook listener. Captures channels and filters messages. Extracts metadata to generate direct reference edges.</p>
+          </div>
+          <div class="slide-card">
+            <span class="card-num">03. `reconstruct-incident`</span>
+            <div class="card-title">9-Stage AI Worker</div>
+            <p class="card-desc">On-demand background worker. Queries the 4-hour temporal subgraph, compiles variables, and calls NVIDIA NIM for final timeline reconstruction.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 5: Voice & Mobile (Sarvam AI & Expo) -->
+      <div class="slide" id="slide-5">
+        <div class="slide-label">Expo Mobile & Sarvam AI Voice Tracks</div>
+        <h1 class="slide-title">Hands-Free <span>On-Call Intelligence</span></h1>
+        
+        <div class="grid-2">
+          <div class="space-y-4">
+            <p class="slide-subtitle" style="font-size: 1rem;">
+              Outages don't wait for your laptop. Expo and Sarvam AI bring incident intelligence straight to developers' pockets.
+            </p>
+            <ul class="slide-list">
+              <li><strong>Push Notifications:</strong> Real-time alerts containing initial AI-generated timelines directly on mobile devices.</li>
+              <li><strong>Sarvam AI TTS:</strong> Synthesizes natural language briefs in multiple regional languages (English, Hindi) for audio playbacks.</li>
+              <li><strong>Sarvam AI STT:</strong> Allows engineers to execute voice searches ("What broke yesterday at 3 PM?") and receive immediate TTS reports.</li>
+            </ul>
+          </div>
+          <div class="visual-block" style="background: rgba(11, 17, 32, 0.8);">
+            <div class="timeline-node">
+              <strong style="color: var(--text-main);">Voice Triggered:</strong> "Create P1 Incident"
+            </div>
+            <div class="timeline-node">
+              <strong style="color: var(--text-main);">AuraDB Update:</strong> Incident nodes established
+            </div>
+            <div class="timeline-node">
+              <strong style="color: var(--text-main);">AI Audio Out:</strong> Sarvam TTS reads post-mortem brief
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 6: Tech Stack & Architecture -->
+      <div class="slide" id="slide-6">
+        <div class="slide-label">Technical Summary</div>
+        <h1 class="slide-title">Under the Hood: <span>Ecosystem Spec</span></h1>
+        
+        <div class="grid-3">
+          <div class="slide-card">
+            <span class="card-num">Backend Core</span>
+            <div class="card-title">Spring Boot</div>
+            <ul class="slide-list" style="font-size: 0.75rem; margin-top: 0.5rem;">
+              <li>Java 17 & WebFlux (non-blocking pipelines)</li>
+              <li>Spring Data Neo4j (direct database driver mapping)</li>
+              <li>WebSocket servers for dashboard streaming</li>
+            </ul>
+          </div>
+          <div class="slide-card">
+            <span class="card-num">Forensics</span>
+            <div class="card-title">NVIDIA NIM & Sarvam</div>
+            <ul class="slide-list" style="font-size: 0.75rem; margin-top: 0.5rem;">
+              <li>LLaMA-3.1-70B model via NVIDIA NIM APIs</li>
+              <li>Temporal subgraph compilation</li>
+              <li>Sarvam AI voice query interpretation pipelines</li>
+            </ul>
+          </div>
+          <div class="slide-card">
+            <span class="card-num">Clients</span>
+            <div class="card-title">Dashboard & Mobile</div>
+            <ul class="slide-list" style="font-size: 0.75rem; margin-top: 0.5rem;">
+              <li>React 19 + Tailwind v4 + Sigma.js</li>
+              <li>Expo router navigation native apps</li>
+              <li>Zustand client-side state synchronization</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Footer -->
+    <footer>
+      <div class="footer-meta">Team Arete | HackHazards '26</div>
+      
+      <div class="controls-wrapper">
+        <div class="progress-bar-container">
+          <div class="progress-bar-fill" id="progress-fill"></div>
+        </div>
+        
+        <div class="controls-wrapper" style="gap: 0.5rem;">
+          <button class="slide-nav-btn" id="prev-btn" disabled>&larr;</button>
+          <span class="slide-counter"><span id="curr-idx">1</span>/6</span>
+          <button class="slide-nav-btn" id="next-btn">&rarr;</button>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Interactive Slide Navigation Script -->
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const currIdxSpan = document.getElementById('curr-idx');
+    const progressFill = document.getElementById('progress-fill');
+    
+    let activeIdx = 0;
+    const totalSlides = slides.length;
+
+    function updateSlide(newIdx) {
+      if (newIdx < 0 || newIdx >= totalSlides) return;
+      
+      slides[activeIdx].classList.remove('active');
+      slides[newIdx].classList.add('active');
+      
+      activeIdx = newIdx;
+      
+      // Update controls
+      currIdxSpan.innerText = activeIdx + 1;
+      progressFill.style.width = `${((activeIdx + 1) / totalSlides) * 100}%`;
+      
+      prevBtn.disabled = activeIdx === 0;
+      nextBtn.disabled = activeIdx === totalSlides - 1;
+    }
+
+    prevBtn.addEventListener('click', () => updateSlide(activeIdx - 1));
+    nextBtn.addEventListener('click', () => updateSlide(activeIdx + 1));
+
+    // Keyboard navigation
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        updateSlide(activeIdx - 1);
+      } else if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+        updateSlide(activeIdx + 1);
+      }
+    });
+  </script>
+</body>
+</html>

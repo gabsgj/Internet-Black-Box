@@ -97,8 +97,8 @@ Internet Black Box eliminates this by building a **unified causal property graph
 ## 📽️ Demo & Deliverables
 
 - **Demo Video Link (Mandatory):** [Paste link here]  
-- **Deployment Link (Recommended):** [Paste link here]  
-- **Pitch Deck / PPT (Optional):** [Paste link here]  
+- **Deployment Link (Recommended):** [http://localhost:5173](http://localhost:5173)  
+- **Pitch Deck / PPT (Highly Recommended):** [Interactive HTML Slide Deck](http://localhost:5173/pitch-deck.html) (Download PowerPoint: [presentation.pptx](./presentation.pptx))  
 
 ---
 
