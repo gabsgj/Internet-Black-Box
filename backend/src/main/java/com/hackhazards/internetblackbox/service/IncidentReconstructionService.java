@@ -10,6 +10,8 @@ import com.hackhazards.internetblackbox.repository.EventRepository;
 import com.hackhazards.internetblackbox.repository.IncidentRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -28,26 +30,82 @@ public class IncidentReconstructionService {
     private final EventRepository eventRepository;
     private final NvidiaLlmService nvidiaLlmService;
 
-    /**
-     * Triggers the incident reconstruction workflow asynchronously.
-     *
-     * @param incidentId the ID of the incident to reconstruct
-     */
-    @Async
-    @Transactional("transactionManager")
-    public void triggerReconstruction(String incidentId) {
-        log.info("Starting async incident reconstruction for incident ID: {}", incidentId);
+    @Autowired
+    @Lazy
+    private IncidentReconstructionService self;
 
-        // 1. Fetch Incident
+    @Transactional("transactionManager")
+    public Incident startReconstruction(String incidentId) {
+        Incident incident = incidentRepository.findById(incidentId).orElse(null);
+        if (incident != null) {
+            incident.setStatus(IncidentStatus.RECONSTRUCTING);
+            return incidentRepository.save(incident);
+        }
+        return null;
+    }
+
+    @Transactional("transactionManager")
+    public void saveReconstructionReport(String incidentId, ReconstructionReport report) {
         Incident incident = incidentRepository.findById(incidentId).orElse(null);
         if (incident == null) {
             log.error("Incident not found for ID: {}", incidentId);
             return;
         }
 
-        // 2. Update status to RECONSTRUCTING
-        incident.setStatus(IncidentStatus.RECONSTRUCTING);
+        incident.setRootCause(report.getRootCause().getDescription());
+        
+        // Formulate a markdown summary of the report
+        String summaryMarkdown = buildSummaryMarkdown(report);
+        incident.setAiSummary(summaryMarkdown);
+
+        // Add causal relationships: CAUSED_BY edges to Event nodes
+        List<Event> causalEvents = new ArrayList<>();
+        if (report.getRootCause().getEvidence() != null) {
+            for (String evidenceId : report.getRootCause().getEvidence()) {
+                eventRepository.findById(evidenceId).ifPresent(causalEvents::add);
+            }
+        }
+        
+        // Add timeline events to causal links
+        for (ReconstructionReport.TimelineEntry entry : report.getTimeline()) {
+            if (entry.getEventId() != null) {
+                eventRepository.findById(entry.getEventId()).ifPresent(e -> {
+                    if (!causalEvents.contains(e)) {
+                        causalEvents.add(e);
+                    }
+                });
+            }
+        }
+
+        incident.setCausedByEvents(causalEvents);
+        incident.setStatus(IncidentStatus.RESOLVED);
         incidentRepository.save(incident);
+    }
+
+    @Transactional("transactionManager")
+    public void revertStatusToOpen(String incidentId) {
+        Incident incident = incidentRepository.findById(incidentId).orElse(null);
+        if (incident != null) {
+            incident.setStatus(IncidentStatus.OPEN);
+            incidentRepository.save(incident);
+        }
+    }
+
+    /**
+     * Triggers the incident reconstruction workflow asynchronously.
+     *
+     * @param incidentId the ID of the incident to reconstruct
+     */
+    @Async
+    public void triggerReconstruction(String incidentId) {
+        log.info("Starting async incident reconstruction for incident ID: {}", incidentId);
+
+        // 1. Fetch Incident and set status to RECONSTRUCTING in a short transaction
+        Incident incident = self.startReconstruction(incidentId);
+        if (incident == null) {
+            log.error("Incident not found for ID: {}", incidentId);
+            return;
+        }
 
         try {
             // 3. Define Time Window: 4 hours before to 30 minutes after triggeredAt
@@ -89,46 +147,17 @@ public class IncidentReconstructionService {
             ReconstructionReport report = nvidiaLlmService.reconstructIncident(incidentDto, eventDtos).block();
 
             if (report != null) {
-                // 7. Map results back to database Incident Node
-                incident.setRootCause(report.getRootCause().getDescription());
-                
-                // Formulate a markdown summary of the report
-                String summaryMarkdown = buildSummaryMarkdown(report);
-                incident.setAiSummary(summaryMarkdown);
+                // 7. Map results back to database Incident Node and save in a separate transaction
+                self.saveReconstructionReport(incidentId, report);
 
-                // Add causal relationships: CAUSED_BY edges to Event nodes
-                List<Event> causalEvents = new ArrayList<>();
-                if (report.getRootCause().getEvidence() != null) {
-                    for (String evidenceId : report.getRootCause().getEvidence()) {
-                        eventRepository.findById(evidenceId).ifPresent(causalEvents::add);
-                    }
-                }
-                
-                // Add timeline events to causal links
-                for (ReconstructionReport.TimelineEntry entry : report.getTimeline()) {
-                    if (entry.getEventId() != null) {
-                        eventRepository.findById(entry.getEventId()).ifPresent(e -> {
-                            if (!causalEvents.contains(e)) {
-                                causalEvents.add(e);
-                            }
-                        });
-                    }
-                }
-
-                incident.setCausedByEvents(causalEvents);
-                incident.setStatus(IncidentStatus.RESOLVED);
-                incidentRepository.save(incident);
-
-                log.info("Incident reconstruction completed successfully for ID: {}. Root cause: {}", 
-                        incidentId, incident.getRootCause());
+                log.info("Incident reconstruction completed successfully for ID: {}", incidentId);
             } else {
                 throw new IllegalStateException("Reconstruction report from Anthropic service was null");
             }
 
         } catch (Exception e) {
             log.error("Failed to reconstruct incident ID: {}. Error: {}", incidentId, e.getMessage(), e);
-            incident.setStatus(IncidentStatus.OPEN); // Revert status so it can be re-run
-            incidentRepository.save(incident);
+            self.revertStatusToOpen(incidentId);
         }
     }
 

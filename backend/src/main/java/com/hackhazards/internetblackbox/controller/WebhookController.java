@@ -24,7 +24,7 @@ public class WebhookController {
         log.info("Received GitHub Webhook request, event: {}", githubEventHeader);
         
         // Asynchronously process the webhook to return a fast 200 OK response
-        new Thread(() -> webhookService.processGitHubWebhook(payload, githubEventHeader)).start();
+        webhookService.processGitHubWebhook(payload, githubEventHeader);
         
         return ResponseEntity.ok().build();
     }
@@ -42,7 +42,7 @@ public class WebhookController {
         }
 
         // Asynchronously process the message
-        new Thread(() -> webhookService.processSlackWebhook(payload)).start();
+        webhookService.processSlackWebhook(payload);
 
         return ResponseEntity.ok().build();
     }
@@ -52,7 +52,7 @@ public class WebhookController {
         log.info("Received Sentry Webhook request");
         
         // Asynchronously process the webhook
-        new Thread(() -> webhookService.processSentryWebhook(payload)).start();
+        webhookService.processSentryWebhook(payload);
 
         return ResponseEntity.ok().build();
     }

@@ -69,6 +69,7 @@ public class IncidentService {
                     .triggeredBy(dto.getTriggeredBy() != null ? dto.getTriggeredBy() : "Manual")
                     .status(IncidentStatus.OPEN)
                     .severity(IncidentSeverity.valueOf(dto.getSeverity()))
+                    .description(dto.getDescription())
                     .build();
             return mapToDto(incidentRepository.save(incident));
         } catch (Exception e) {
@@ -115,7 +116,7 @@ public class IncidentService {
                 .triggeredBy(incident.getTriggeredBy())
                 .status(incident.getStatus().name())
                 .severity(incident.getSeverity().name())
-                .description(incident.getAiSummary())
+                .description(incident.getAiSummary() != null ? incident.getAiSummary() : incident.getDescription())
                 .build();
     }
 

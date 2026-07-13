@@ -31,6 +31,7 @@ public class Incident {
     
     private String aiSummary;
     private String rootCause;
+    private String description;
 
     @Relationship(type = "CAUSED_BY", direction = Relationship.Direction.OUTGOING)
     @Builder.Default

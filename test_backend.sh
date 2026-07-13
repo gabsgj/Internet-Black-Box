@@ -7,6 +7,7 @@ echo "=== Running Backend Verification Script ==="
 
 # 1. Start the backend if not already running on port 8080
 PORT=8080
+trap 'FINAL_PID=$(lsof -t -i:$PORT || true); if [ -n "$FINAL_PID" ]; then kill -15 "$FINAL_PID" 2>/dev/null || true; fi' EXIT INT TERM
 PID=$(lsof -t -i:$PORT || true)
 
 if [ -z "$PID" ]; then

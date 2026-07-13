@@ -5,6 +5,7 @@ import com.hackhazards.internetblackbox.model.*;
 import com.hackhazards.internetblackbox.repository.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Lazy;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -47,6 +48,7 @@ public class WebhookService {
     /**
      * Parses and processes GitHub webhook events (e.g. push/commits and pull_request).
      */
+    @Async
     @Transactional("transactionManager")
     public void processGitHubWebhook(Map<String, Object> payload, String githubEventHeader) {
         log.info("Processing GitHub webhook event type: {}", githubEventHeader);
@@ -206,6 +208,7 @@ Event commitEvent = Event.builder()
     /**
      * Parses and processes Slack webhook events.
      */
+    @Async
     @Transactional("transactionManager")
     public void processSlackWebhook(Map<String, Object> payload) {
         log.info("Processing Slack webhook event");
@@ -273,6 +276,7 @@ Event slackEvent = Event.builder()
     /**
      * Parses and processes Sentry webhook events (Alerts).
      */
+    @Async
     @Transactional("transactionManager")
     public void processSentryWebhook(Map<String, Object> payload) {
         log.info("Processing Sentry alert webhook");

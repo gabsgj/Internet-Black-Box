@@ -52,19 +52,22 @@ Implement the full Internet Black Box application, coordinating Backend, Fronten
 | Explorer_M1 | teamwork_preview_explorer | Explore backend and mobile | completed | 30a3c0df-fcff-46ff-b5f8-e11078b9971a |
 | Worker_M1_M2 | teamwork_preview_worker | Set up Neo4j and create test_backend.sh | completed | e3fbedcd-c61e-4714-a627-b92e8c166f6c |
 | Worker_M3_M4 | teamwork_preview_worker | Connect mobile app to API, mock toggle, build check | completed | 44d42c5c-dea9-4ff1-b72a-43aa85b15b43 |
-| Reviewer_M4 | teamwork_preview_reviewer | Review code changes and test scripts | in-progress | b568deea-469b-48aa-a52d-5175c31695bf |
-| Auditor_M4 | teamwork_preview_auditor | Forensic integrity check | in-progress | 4cdaea34-7c16-401a-ab3a-2f201787d883 |
+| Reviewer_M4 | teamwork_preview_reviewer | Review code changes and test scripts | completed | b568deea-469b-48aa-a52d-5175c31695bf |
+| Auditor_M4 | teamwork_preview_auditor | Forensic integrity check | completed | 4cdaea34-7c16-401a-ab3a-2f201787d883 |
+| Worker_Remediation | teamwork_preview_worker | Quality remediation changes | completed | 8b0bc6c6-f888-48b9-82f5-dea00f86b90f |
+| Reviewer_Verification | teamwork_preview_reviewer | Review quality remediations | in-progress | 35634f46-e61f-484d-b26e-56dd8829b49a |
+| Auditor_Verification | teamwork_preview_auditor | Forensic integrity verification | in-progress | 8b254e30-5dfa-46d2-b8a0-c9eacc9b6bb9 |
 
 ## Succession Status
 - Succession required: no
-- Spawn count: 5 / 16
-- Pending subagents: b568deea-469b-48aa-a52d-5175c31695bf, 4cdaea34-7c16-401a-ab3a-2f201787d883
+- Spawn count: 8 / 16
+- Pending subagents: 35634f46-e61f-484d-b26e-56dd8829b49a, 8b254e30-5dfa-46d2-b8a0-c9eacc9b6bb9
 - Predecessor: none
 - Successor: not yet spawned
 
 ## Active Timers
 - Heartbeat cron: task-71
-- Safety timer: task-194 (Reviewer), task-196 (Auditor)
+- Safety timer: task-249 (Reviewer Verification), task-251 (Auditor Verification)
 
 ## Artifact Index
 - /Users/gabriel/Projects/Internet Black Box/.agents/orchestrator/ORIGINAL_REQUEST.md — Original User Request

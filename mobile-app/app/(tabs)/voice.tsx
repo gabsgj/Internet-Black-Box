@@ -3,6 +3,7 @@ import {
   View,
   Text,
   TouchableOpacity,
+  Alert,
 } from "react-native";
 import { Audio } from "expo-av";
 
@@ -30,11 +31,26 @@ export default function VoiceScreen() {
       : undefined;
   }, [sound]);
 
+  // Clean up recording on unmount
+  useEffect(() => {
+    return () => {
+      if (recording) {
+        recording.stopAndUnloadAsync().catch((err) => {
+          console.log("Error unloading recording on unmount:", err);
+        });
+      }
+    };
+  }, [recording]);
+
   async function startRecording() {
     try {
       setTranscription("");
       setAnswer("");
-      await Audio.requestPermissionsAsync();
+      const { status } = await Audio.requestPermissionsAsync();
+      if (status !== "granted") {
+        Alert.alert("Permission Denied", "Microphone permission is required to record audio.");
+        return;
+      }
 
       await Audio.setAudioModeAsync({
         allowsRecordingIOS: true,

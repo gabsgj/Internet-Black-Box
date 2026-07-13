@@ -24,5 +24,5 @@ Internet Black Box is an always-on digital evidence collector and AI-powered inc
 ### Voice Queries
 - Endpoint: `POST /api/query/voice`
 - Content-Type: `application/json`
-- Request: `{ "audio": "base64String", "language": "en" }`
-- Response: `{ "text": "transcription", "answer": "reconstructed incident summary", "audio": "base64StringTts" }`
+- Request: `{ "audioBase64": "base64String", "languageCode": "en-IN" }`
+- Response: `{ "transcript": "transcription", "answer": "reconstructed incident summary", "audioBase64": "base64StringTts" }`
