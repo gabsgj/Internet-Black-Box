@@ -2,21 +2,50 @@
 > web-dashboard@0.0.0 dev
 > vite --host
 
-12:59:59 PM [vite] (client) Re-optimizing dependencies because vite config has changed
+2:48:29 PM [vite] (client) Re-optimizing dependencies because vite config has changed
 
-  VITE v8.1.0  ready in 90 ms
+  VITE v8.1.0  ready in 112 ms
 
   ➜  Local:   http://localhost:5173/
   ➜  Network: http://192.168.1.18:5173/
-12:59:59 PM [vite] (client) [Unhandled error] SyntaxError: Unexpected token '('
+  ➜  Network: http://192.168.139.3:5173/
+  ➜  Network: http://192.168.215.0:5173/
+2:49:39 PM [vite] (client) hmr update /src/index.css
+2:53:49 PM [vite] (client) hmr update /src/pages/LandingPage.tsx, /src/index.css
+2:54:11 PM [vite] (client) hmr update /src/components/Sidebar.tsx, /src/index.css
+2:54:11 PM [vite] Internal server error: Transform failed with 1 error:
 
-1:00:14 PM [vite] (client) [Unhandled error] SyntaxError: Unexpected token '('
+[31m[PARSE_ERROR] [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/components/Sidebar.tsx:178:1 [38;5;246m][0m
+     [38;5;246m│[0m
+ [38;5;246m178 │[0m [38;5;249m}[0m[38;5;249m;[0m
+ [38;5;240m    │[0m │ 
+ [38;5;240m    │[0m ╰─ 
+[38;5;246m─────╯[0m
 
-1:00:14 PM [vite] (client) [Unhandled error] SyntaxError: Unexpected token '('
+  Plugin: vite:oxc
+  File: /Users/gabriel/Projects/Internet Black Box/web-dashboard/src/components/Sidebar.tsx
+      at transformWithOxc (file:///Users/gabriel/Projects/Internet%20Black%20Box/web-dashboard/node_modules/vite/dist/node/chunks/node.js:3657:19)
+      at TransformPluginContext.transform (file:///Users/gabriel/Projects/Internet%20Black%20Box/web-dashboard/node_modules/vite/dist/node/chunks/node.js:3728:26)
+      at EnvironmentPluginContainer.transform (file:///Users/gabriel/Projects/Internet%20Black%20Box/web-dashboard/node_modules/vite/dist/node/chunks/node.js:29699:51)
+      at async loadAndTransform (file:///Users/gabriel/Projects/Internet%20Black%20Box/web-dashboard/node_modules/vite/dist/node/chunks/node.js:19725:26)
+      at async viteTransformMiddleware (file:///Users/gabriel/Projects/Internet%20Black%20Box/web-dashboard/node_modules/vite/dist/node/chunks/node.js:24149:20)
+2:54:11 PM [vite] Internal server error: Transform failed with 1 error:
 
-1:00:14 PM [vite] (client) [Unhandled error] SyntaxError: Unexpected token '('
+[31m[PARSE_ERROR] [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/components/Sidebar.tsx:178:1 [38;5;246m][0m
+     [38;5;246m│[0m
+ [38;5;246m178 │[0m [38;5;249m}[0m[38;5;249m;[0m
+ [38;5;240m    │[0m │ 
+ [38;5;240m    │[0m ╰─ 
+[38;5;246m─────╯[0m
 
-1:00:15 PM [vite] (client) [Unhandled error] SyntaxError: Unexpected token '('
-
-1:00:15 PM [vite] (client) [Unhandled error] SyntaxError: Unexpected token '('
-
+  Plugin: vite:oxc
+  File: /Users/gabriel/Projects/Internet Black Box/web-dashboard/src/components/Sidebar.tsx
+      at transformWithOxc (file:///Users/gabriel/Projects/Internet%20Black%20Box/web-dashboard/node_modules/vite/dist/node/chunks/node.js:3657:19)
+      at TransformPluginContext.transform (file:///Users/gabriel/Projects/Internet%20Black%20Box/web-dashboard/node_modules/vite/dist/node/chunks/node.js:3728:26)
+      at EnvironmentPluginContainer.transform (file:///Users/gabriel/Projects/Internet%20Black%20Box/web-dashboard/node_modules/vite/dist/node/chunks/node.js:29699:51)
+      at async loadAndTransform (file:///Users/gabriel/Projects/Internet%20Black%20Box/web-dashboard/node_modules/vite/dist/node/chunks/node.js:19725:26)
+      at async viteTransformMiddleware (file:///Users/gabriel/Projects/Internet%20Black%20Box/web-dashboard/node_modules/vite/dist/node/chunks/node.js:24149:20)
+2:54:23 PM [vite] (client) hmr update /src/components/Sidebar.tsx, /src/index.css
+2:54:36 PM [vite] (client) hmr update /src/App.tsx, /src/index.css

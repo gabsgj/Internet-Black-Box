@@ -176,7 +176,7 @@ export const LandingPage: React.FC = () => {
   };
 
   return (
-    <div className="bg-[#020617] text-slate-100 min-h-screen font-sans overflow-x-hidden selection:bg-emerald-500/30 selection:text-emerald-400">
+    <div className="  text-slate-100 min-h-screen font-sans overflow-x-hidden selection:bg-emerald-500/30 selection:text-emerald-400">
       
       {/* Background Gradients & Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
@@ -184,7 +184,7 @@ export const LandingPage: React.FC = () => {
       <div className="absolute top-[800px] right-10 w-[600px] h-[600px] bg-indigo-500/5 rounded-full blur-[160px] pointer-events-none" />
 
       {/* Header/Navbar */}
-      <header className="border-b border-slate-900 bg-slate-950/60 backdrop-blur-md sticky top-0 z-50 px-6 py-4 flex items-center justify-between">
+      <header className="border-b border-none neu-flat/60 backdrop-blur-md sticky top-0 z-50 px-6 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-3">
           <img src="/logo.jpg" className="w-9 h-9 rounded-lg border border-emerald-500/30 object-cover shadow-lg shadow-emerald-500/10 animate-[pulse-glow_3s_infinite_ease-in-out]" alt="Internet Black Box Logo" />
           <div>
@@ -243,7 +243,7 @@ export const LandingPage: React.FC = () => {
           </Link>
           <a
             href="#interactive-playground"
-            className="w-full sm:w-auto px-6 py-3.5 bg-slate-950 hover:bg-slate-900 border border-slate-900 rounded-xl text-xs font-bold text-slate-300 hover:text-white transition-all block text-center"
+            className="w-full sm:w-auto px-6 py-3.5 neu-flat hover:bg-slate-900 border border-none rounded-xl text-xs font-bold text-slate-300 hover:text-white transition-all block text-center"
           >
             Try Interactive Walkthrough
           </a>
@@ -251,9 +251,9 @@ export const LandingPage: React.FC = () => {
 
         {/* Floating dashboard preview badge */}
         <div className="pt-10 flex justify-center">
-          <div className="relative p-1.5 bg-slate-950 border border-slate-900 rounded-2xl max-w-4xl shadow-2xl">
+          <div className="relative p-1.5 neu-flat border border-none rounded-2xl max-w-4xl shadow-2xl">
             <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl opacity-10 blur-xl" />
-            <div className="bg-[#030712] rounded-xl overflow-hidden border border-slate-900 p-4 flex items-center space-x-4">
+            <div className="neu-flat rounded-xl overflow-hidden border border-none p-4 flex items-center space-x-4">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping" />
               <p className="text-xs text-slate-400 font-mono">
                 Listening: <span className="text-emerald-400">git-repo:payment-service</span>, <span className="text-cyan-400">slack:#on-call-devs</span>, <span className="text-rose-400">sentry:alert-hook</span>
@@ -264,7 +264,7 @@ export const LandingPage: React.FC = () => {
       </section>
 
       {/* Forensic Problem Explainer */}
-      <section id="problem" className="py-24 bg-slate-950/40 border-t border-slate-950 px-6">
+      <section id="problem" className="py-24 neu-flat/40 border-t border-slate-950 px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-6">
             <div className="p-2.5 bg-red-950/40 border border-red-900/50 rounded-xl text-red-500 w-fit">
@@ -277,11 +277,11 @@ export const LandingPage: React.FC = () => {
               When a critical outage spikes at 3 AM, engineers are forced to manually parse logs, scan Git diffs, read old Slack threads, and verify ticket states. These systems are isolated, making tracing the direct causal relationship extremely slow and subjective.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
-              <div className="p-4 bg-slate-950 border border-slate-900 rounded-xl space-y-2">
+              <div className="p-4 neu-flat border border-none rounded-xl space-y-2">
                 <span className="text-xs font-bold text-rose-500 uppercase tracking-widest block">System Blindspots</span>
                 <p className="text-[11px] text-slate-400">Logs explain what broke (JsonWebTokenError), but not which PR author merged it or the discussion preceding it.</p>
               </div>
-              <div className="p-4 bg-slate-950 border border-slate-900 rounded-xl space-y-2">
+              <div className="p-4 neu-flat border border-none rounded-xl space-y-2">
                 <span className="text-xs font-bold text-rose-500 uppercase tracking-widest block">The Cost of Latency</span>
                 <p className="text-[11px] text-slate-400">SaaS companies waste up to 4 hours per incident simply aligning timelines and creating post-mortems.</p>
               </div>
@@ -290,26 +290,26 @@ export const LandingPage: React.FC = () => {
 
           <div className="relative p-0.5 bg-slate-900/40 border border-slate-800 rounded-2xl overflow-hidden bg-slate-900/10">
             <div className="p-6 space-y-4 font-mono text-xs">
-              <div className="flex justify-between items-center text-slate-500 border-b border-slate-900 pb-3">
+              <div className="flex justify-between items-center text-slate-500 border-b border-none pb-3">
                 <span className="text-[10px] uppercase tracking-widest">Diagnostic Logs (Fragmented Silos)</span>
                 <span className="w-2 h-2 rounded-full bg-rose-500 animate-pulse" />
               </div>
               <div className="space-y-2.5">
-                <div className="p-3 bg-slate-950 border border-slate-900 rounded-lg flex items-center justify-between text-slate-400">
+                <div className="p-3 neu-flat border border-none rounded-lg flex items-center justify-between text-slate-400">
                   <span className="flex items-center space-x-2">
                     <GitBranch size={14} className="text-purple-400" />
                     <span>GitHub: PR #92 claims validator refactored</span>
                   </span>
                   <span className="text-[9px] bg-purple-950/20 border border-purple-900/30 text-purple-400 px-2 py-0.5 rounded">Unlinked</span>
                 </div>
-                <div className="p-3 bg-slate-950 border border-slate-900 rounded-lg flex items-center justify-between text-slate-400">
+                <div className="p-3 neu-flat border border-none rounded-lg flex items-center justify-between text-slate-400">
                   <span className="flex items-center space-x-2">
                     <MessageSquare size={14} className="text-cyan-400" />
                     <span>Slack: "Timeout errors on checkout container"</span>
                   </span>
                   <span className="text-[9px] bg-cyan-950/20 border border-cyan-900/30 text-cyan-400 px-2 py-0.5 rounded">Isolated</span>
                 </div>
-                <div className="p-3 bg-slate-950 border border-slate-900 rounded-lg flex items-center justify-between text-slate-400">
+                <div className="p-3 neu-flat border border-none rounded-lg flex items-center justify-between text-slate-400">
                   <span className="flex items-center space-x-2">
                     <AlertCircle size={14} className="text-rose-400" />
                     <span>Sentry: JsonWebTokenError (signature mismatch)</span>
@@ -343,7 +343,7 @@ export const LandingPage: React.FC = () => {
           </div>
 
           {/* Interactive Playground Navigation Tabs */}
-          <div className="flex flex-wrap justify-center gap-2 border-b border-slate-900 pb-2">
+          <div className="flex flex-wrap justify-center gap-2 border-b border-none pb-2">
             {[
               { id: 'walkthrough', label: '1. Outage Simulator', icon: Play },
               { id: 'graph', label: '2. SQL vs Neo4j Graph', icon: Database },
@@ -372,7 +372,7 @@ export const LandingPage: React.FC = () => {
           {activeTab === 'walkthrough' && (
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch animate-in fade-in duration-300">
               {/* Timeline Simulator Controls & Feed */}
-              <div className="lg:col-span-7 bg-slate-950/40 border border-slate-900 rounded-2xl p-6 flex flex-col justify-between space-y-6">
+              <div className="lg:col-span-7 neu-flat/40 border border-none rounded-2xl p-6 flex flex-col justify-between space-y-6">
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
                     <h3 className="text-sm font-bold uppercase tracking-wider text-slate-400">Ingestion Inflow Pipeline</h3>
@@ -397,7 +397,7 @@ export const LandingPage: React.FC = () => {
                     {simulationSteps.map((step, idx) => {
                       if (idx > simStep) return null;
                       return (
-                        <div key={idx} className="flex items-start space-x-3.5 p-3.5 bg-slate-950 border border-slate-900 rounded-xl animate-in slide-in-from-bottom-2 duration-300">
+                        <div key={idx} className="flex items-start space-x-3.5 p-3.5 neu-flat border border-none rounded-xl animate-in slide-in-from-bottom-2 duration-300">
                           <span className={`text-[9px] font-mono font-bold px-2 py-0.5 rounded shrink-0 ${
                             step.severity === 'critical' ? 'bg-red-950 border border-red-900 text-red-400' :
                             step.severity === 'warning' ? 'bg-amber-950 border border-amber-900 text-amber-400' :
@@ -430,9 +430,9 @@ export const LandingPage: React.FC = () => {
               </div>
 
               {/* Forensic Report Output */}
-              <div className="lg:col-span-5 bg-slate-950/40 border border-slate-900 rounded-2xl p-6 flex flex-col justify-between">
+              <div className="lg:col-span-5 neu-flat/40 border border-none rounded-2xl p-6 flex flex-col justify-between">
                 <div className="space-y-6">
-                  <div className="flex items-center justify-between border-b border-slate-900 pb-3">
+                  <div className="flex items-center justify-between border-b border-none pb-3">
                     <span className="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center space-x-2">
                       <Sparkles size={14} className="text-orange-500" />
                       <span>Reconstructor Output</span>
@@ -469,7 +469,7 @@ export const LandingPage: React.FC = () => {
                         <span className="text-[9px] font-bold text-slate-500 uppercase tracking-wider block">People Involved in Causal Chain</span>
                         <div className="space-y-1.5">
                           {mockReport.people.map((p, idx) => (
-                            <div key={idx} className="flex justify-between items-center text-xs p-2 bg-slate-950 border border-slate-900/60 rounded font-mono">
+                            <div key={idx} className="flex justify-between items-center text-xs p-2 neu-flat border border-none/60 rounded font-mono">
                               <span className="font-semibold text-slate-300">{p.name}</span>
                               <span className="text-[10px] text-slate-500">{p.role}</span>
                             </div>
@@ -510,7 +510,7 @@ export const LandingPage: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="flex bg-slate-950 border border-slate-900 rounded-xl p-1 w-fit">
+                <div className="flex neu-flat border border-none rounded-xl p-1 w-fit">
                   <button
                     onClick={() => setGraphMode('sql')}
                     className={`px-4 py-2 rounded-lg text-xs font-semibold flex items-center space-x-1.5 transition-colors ${
@@ -531,8 +531,8 @@ export const LandingPage: React.FC = () => {
                   </button>
                 </div>
 
-                <div className="p-4 bg-slate-950 border border-slate-900 rounded-xl font-mono text-[10px] space-y-2">
-                  <div className="flex justify-between items-center text-slate-500 pb-1.5 border-b border-slate-900">
+                <div className="p-4 neu-flat border border-none rounded-xl font-mono text-[10px] space-y-2">
+                  <div className="flex justify-between items-center text-slate-500 pb-1.5 border-b border-none">
                     <span>Query Performance</span>
                     <span>Complexity</span>
                   </div>
@@ -548,14 +548,14 @@ export const LandingPage: React.FC = () => {
               </div>
 
               {/* Graphic Comparison */}
-              <div className="bg-slate-950/40 border border-slate-900 rounded-2xl p-6 min-h-[350px] flex flex-col justify-between">
+              <div className="neu-flat/40 border border-none rounded-2xl p-6 min-h-[350px] flex flex-col justify-between">
                 {graphMode === 'sql' ? (
                   <div className="space-y-4 animate-in fade-in duration-300">
                     <span className="text-[10px] font-bold text-rose-500 uppercase tracking-widest block">Flat DB Tables (Foreign Key Joins Required)</span>
                     <div className="space-y-2.5 font-mono text-[10px]">
-                      <div className="bg-slate-950 border border-slate-900 rounded p-2.5 space-y-1">
-                        <span className="text-rose-400 font-bold">Table: events</span>
-                        <div className="grid grid-cols-3 text-slate-500 border-b border-slate-900 pb-1">
+                      <div className="neu-flat border border-none rounded p-2.5 space-y-1 overflow-x-auto">
+                        <span className="text-rose-400 font-bold block">Table: events</span>
+                        <div className="grid grid-cols-3 text-slate-500 border-b border-none pb-1 min-w-[280px]">
                           <span>id</span>
                           <span>type</span>
                           <span>system_id (FK)</span>
@@ -567,9 +567,9 @@ export const LandingPage: React.FC = () => {
                         </div>
                       </div>
 
-                      <div className="bg-slate-950 border border-slate-900 rounded p-2.5 space-y-1">
-                        <span className="text-rose-400 font-bold">Table: authors</span>
-                        <div className="grid grid-cols-3 text-slate-500 border-b border-slate-900 pb-1">
+                      <div className="neu-flat border border-none rounded p-2.5 space-y-1 overflow-x-auto">
+                        <span className="text-rose-400 font-bold block">Table: authors</span>
+                        <div className="grid grid-cols-3 text-slate-500 border-b border-none pb-1 min-w-[280px]">
                           <span>id</span>
                           <span>name</span>
                           <span>event_id (FK)</span>
@@ -581,9 +581,9 @@ export const LandingPage: React.FC = () => {
                         </div>
                       </div>
 
-                      <div className="bg-slate-950 border border-slate-900 rounded p-2.5 space-y-1">
-                        <span className="text-rose-400 font-bold">Table: anomalies</span>
-                        <div className="grid grid-cols-3 text-slate-500 border-b border-slate-900 pb-1">
+                      <div className="neu-flat border border-none rounded p-2.5 space-y-1 overflow-x-auto">
+                        <span className="text-rose-400 font-bold block">Table: anomalies</span>
+                        <div className="grid grid-cols-3 text-slate-500 border-b border-none pb-1 min-w-[280px]">
                           <span>id</span>
                           <span>alert_title</span>
                           <span>event_id (FK)</span>
@@ -601,18 +601,9 @@ export const LandingPage: React.FC = () => {
                     <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-widest block">Direct Pointer Connections (AuraDB)</span>
                     
                     {/* Graphical Node representation */}
-                    <div className="relative h-44 flex items-center justify-between px-6">
-                      {/* Connecting SVG Path Line */}
-                      <svg className="absolute inset-0 w-full h-full pointer-events-none">
-                        <path d="M 50,88 Q 150,20 250,88 T 350,88" fill="none" stroke="#10b981" strokeWidth="2" strokeDasharray="5" className="animate-[dash_10s_linear_infinite]" />
-                        <style>{`
-                          @keyframes dash {
-                            to {
-                              stroke-dashoffset: -100;
-                            }
-                          }
-                        `}</style>
-                      </svg>
+                    <div className="relative py-8 flex items-start justify-between px-0 sm:px-6 w-full max-w-sm mx-auto sm:max-w-none">
+                      {/* Responsive Connecting Dashed Line */}
+                      <div className="absolute top-[56px] left-[15%] right-[15%] border-t-2 border-dashed border-emerald-500/50 pointer-events-none z-0" />
 
                       <div className="relative z-10 flex flex-col items-center space-y-1.5">
                         <div className="w-12 h-12 bg-cyan-950 border border-cyan-500/50 rounded-full flex items-center justify-center text-cyan-400 shadow-lg shadow-cyan-500/10">
@@ -636,7 +627,7 @@ export const LandingPage: React.FC = () => {
                       </div>
                     </div>
 
-                    <div className="p-3 bg-slate-950 border border-slate-900 rounded-lg">
+                    <div className="p-3 neu-flat border border-none rounded-lg">
                       <span className="text-[9px] text-slate-500 uppercase tracking-widest block mb-1">Causal Cypher Query</span>
                       <code className="text-[10px] text-emerald-400 font-mono">
                         MATCH path = shortestPath((c:Event)-[:TRIGGERED*]-&gt;(i:Incident)) RETURN path
@@ -652,7 +643,7 @@ export const LandingPage: React.FC = () => {
           {activeTab === 'voice' && (
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch animate-in fade-in duration-300">
               {/* Language selection and controls */}
-              <div className="lg:col-span-5 bg-slate-950/40 border border-slate-900 rounded-2xl p-6 flex flex-col justify-between space-y-6">
+              <div className="lg:col-span-5 neu-flat/40 border border-none rounded-2xl p-6 flex flex-col justify-between space-y-6">
                 <div className="space-y-4">
                   <h3 className="text-sm font-bold uppercase tracking-wider text-slate-400">Sarvam Multilingual Voice Stream</h3>
                   <p className="text-xs text-slate-400 leading-relaxed">
@@ -675,7 +666,7 @@ export const LandingPage: React.FC = () => {
                         className={`px-3 py-1.5 rounded-lg text-xs font-semibold border transition-all ${
                           voiceLang === lang.id
                             ? 'bg-emerald-950 border-emerald-500 text-emerald-400'
-                            : 'bg-slate-950 border-slate-900 text-slate-500 hover:text-slate-300'
+                            : 'neu-flat border-none text-slate-500 hover:text-slate-300'
                         }`}
                       >
                         {lang.label}
@@ -700,9 +691,9 @@ export const LandingPage: React.FC = () => {
               </div>
 
               {/* Visualized STT -> Response Chain */}
-              <div className="lg:col-span-7 bg-slate-950/40 border border-slate-900 rounded-2xl p-6 flex flex-col justify-between">
+              <div className="lg:col-span-7 neu-flat/40 border border-none rounded-2xl p-6 flex flex-col justify-between">
                 <div className="space-y-5">
-                  <span className="text-xs font-bold text-slate-400 uppercase tracking-widest block border-b border-slate-900 pb-2">
+                  <span className="text-xs font-bold text-slate-400 uppercase tracking-widest block border-b border-none pb-2">
                     Speech-to-Text Pipeline
                   </span>
 
@@ -710,7 +701,7 @@ export const LandingPage: React.FC = () => {
                     {/* Mic Inbound */}
                     <div className="space-y-1">
                       <span className="text-[9px] text-slate-500 uppercase font-bold">1. Spoken Query Input</span>
-                      <div className="p-3 bg-slate-950 border border-slate-900 rounded-xl flex items-center justify-between">
+                      <div className="p-3 neu-flat border border-none rounded-xl flex items-center justify-between">
                         <p className="text-xs text-slate-300 italic">"{voiceMocks[voiceLang].query}"</p>
                         <Mic size={14} className="text-slate-600 animate-pulse" />
                       </div>
@@ -719,7 +710,7 @@ export const LandingPage: React.FC = () => {
                     {/* Transcription */}
                     <div className="space-y-1">
                       <span className="text-[9px] text-slate-500 uppercase font-bold">2. Sarvam Speech Transcription</span>
-                      <div className="p-3 bg-slate-950 border border-slate-900 rounded-xl font-mono text-[10px] text-slate-400">
+                      <div className="p-3 neu-flat border border-none rounded-xl font-mono text-[10px] text-slate-400">
                         {voiceMocks[voiceLang].transcription}
                       </div>
                     </div>
@@ -730,7 +721,7 @@ export const LandingPage: React.FC = () => {
                       <div className={`p-3 border rounded-xl transition-all duration-300 ${
                         voicePlaying 
                           ? 'bg-emerald-950/20 border-emerald-500/50' 
-                          : 'bg-slate-950 border-slate-900'
+                          : 'neu-flat border-none'
                       }`}>
                         <p className="text-xs text-slate-300 leading-relaxed font-semibold">
                           {voiceMocks[voiceLang].response}
@@ -748,9 +739,9 @@ export const LandingPage: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center animate-in fade-in duration-300">
               {/* Smartphone Simulator */}
               <div className="lg:col-span-5 flex justify-center">
-                <div className="w-[280px] h-[550px] bg-slate-950 border-[8px] border-slate-900 rounded-[36px] shadow-2xl relative overflow-hidden flex flex-col justify-between">
+                <div className="w-[280px] h-[550px] neu-flat border-[8px] border-none rounded-[36px] shadow-2xl relative overflow-hidden flex flex-col justify-between">
                   {/* Status Bar */}
-                  <div className="h-6 bg-slate-950 px-5 flex justify-between items-center text-[9px] font-mono text-slate-400 shrink-0">
+                  <div className="h-6 neu-flat px-5 flex justify-between items-center text-[9px] font-mono text-slate-400 shrink-0">
                     <span>9:41</span>
                     <div className="flex space-x-1.5">
                       <span>5G</span>
@@ -759,7 +750,7 @@ export const LandingPage: React.FC = () => {
                   </div>
 
                   {/* Simulator Screen Container */}
-                  <div className="flex-grow bg-[#030712] p-4 overflow-y-auto">
+                  <div className="flex-grow neu-flat p-4 overflow-y-auto">
                     {mobileScreen === 'feed' && (
                       <div className="space-y-4 animate-in fade-in duration-200">
                         <div className="flex justify-between items-center">
@@ -797,7 +788,7 @@ export const LandingPage: React.FC = () => {
                             { title: 'Deploy Prod', desc: 'workflow #412', source: 'github' },
                             { title: '500 Spike', desc: 'Checkout returns 500', source: 'sentry' }
                           ].map((e, idx) => (
-                            <div key={idx} className="p-2.5 bg-slate-950 border border-slate-900 rounded-lg flex items-center space-x-2.5">
+                            <div key={idx} className="p-2.5 neu-flat border border-none rounded-lg flex items-center space-x-2.5">
                               <div className="w-5 h-5 rounded bg-slate-900 flex items-center justify-center text-[9px] font-bold text-emerald-400 font-mono">
                                 {idx + 1}
                               </div>
@@ -830,7 +821,7 @@ export const LandingPage: React.FC = () => {
                   </div>
 
                   {/* Tab bar Navigation */}
-                  <div className="h-12 bg-slate-950 border-t border-slate-900 flex justify-around items-center text-[8px] font-semibold text-slate-500 shrink-0">
+                  <div className="h-12 neu-flat border-t border-none flex justify-around items-center text-[8px] font-semibold text-slate-500 shrink-0">
                     <button 
                       onClick={() => setMobileScreen('feed')}
                       className={mobileScreen === 'feed' ? 'text-emerald-500' : ''}
@@ -875,7 +866,7 @@ export const LandingPage: React.FC = () => {
       </section>
 
       {/* Technical Workflow Architecture */}
-      <section id="how-it-works" className="py-24 bg-slate-950/40 border-t border-slate-950 px-6">
+      <section id="how-it-works" className="py-24 neu-flat/40 border-t border-slate-950 px-6">
         <div className="max-w-6xl mx-auto space-y-16">
           <div className="text-center space-y-3">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">System Workflow Architecture</h2>
@@ -883,7 +874,7 @@ export const LandingPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-            <div className="glass border border-slate-900 rounded-2xl p-6 space-y-4 hover:border-slate-800 transition-colors">
+            <div className="glass border border-none rounded-2xl p-6 space-y-4 hover:border-slate-800 transition-colors">
               <div className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center font-bold text-sm text-emerald-400 font-mono">
                 01
               </div>
@@ -893,7 +884,7 @@ export const LandingPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="glass border border-slate-900 rounded-2xl p-6 space-y-4 hover:border-slate-800 transition-colors">
+            <div className="glass border border-none rounded-2xl p-6 space-y-4 hover:border-slate-800 transition-colors">
               <div className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center font-bold text-sm text-emerald-400 font-mono">
                 02
               </div>
@@ -903,7 +894,7 @@ export const LandingPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="glass border border-slate-900 rounded-2xl p-6 space-y-4 hover:border-slate-800 transition-colors">
+            <div className="glass border border-none rounded-2xl p-6 space-y-4 hover:border-slate-800 transition-colors">
               <div className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center font-bold text-sm text-emerald-400 font-mono">
                 03
               </div>
@@ -934,7 +925,7 @@ export const LandingPage: React.FC = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Visual Node Graph Simulator */}
-            <div className="lg:col-span-7 p-6 bg-slate-950/40 border border-slate-900 rounded-2xl flex flex-col justify-center min-h-[350px]">
+            <div className="lg:col-span-7 p-6 neu-flat/40 border border-none rounded-2xl flex flex-col justify-center min-h-[350px]">
               <div className="flex flex-col items-center space-y-8 relative">
                 {/* Visual Connection Lines */}
                 <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-cyan-500 via-emerald-500 to-rose-500 -translate-y-1/2 opacity-20 pointer-events-none" />
@@ -989,7 +980,7 @@ export const LandingPage: React.FC = () => {
             </div>
 
             {/* Cypher Code Presentation */}
-            <div className="lg:col-span-5 p-6 bg-slate-950/40 border border-slate-900 rounded-2xl flex flex-col justify-between space-y-6">
+            <div className="lg:col-span-5 p-6 neu-flat/40 border border-none rounded-2xl flex flex-col justify-between space-y-6">
               <div className="space-y-3">
                 <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block">Querying Causality (Neo4j Cypher)</span>
                 <p className="text-xs text-slate-400 leading-relaxed">
@@ -997,7 +988,7 @@ export const LandingPage: React.FC = () => {
                 </p>
               </div>
 
-              <div className="bg-slate-950 border border-slate-900 rounded-xl p-4 font-mono text-[10px] text-slate-300 space-y-3">
+              <div className="neu-flat border border-none rounded-xl p-4 font-mono text-[10px] text-slate-300 space-y-3">
                 <div>
                   <span className="text-slate-500 font-bold block">// Find shortest path between anomaly and developer commits</span>
                   <span className="text-emerald-400">MATCH</span> path = shortestPath((dev:Person)-[:AUTHORED|:TRIGGERED*1..5]-&gt;(alert:SentryAlert))
@@ -1015,7 +1006,7 @@ export const LandingPage: React.FC = () => {
       </section>
 
       {/* Section 6: Ingestion ecosystem & adapters */}
-      <section id="integrations" className="py-24 bg-slate-950/20 border-t border-slate-950 px-6">
+      <section id="integrations" className="py-24 neu-flat/20 border-t border-slate-950 px-6">
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="text-center space-y-3">
             <div className="inline-flex items-center space-x-2 px-3 py-1 bg-cyan-950/50 border border-cyan-900 rounded-full text-[10px] font-bold tracking-wider text-cyan-400 uppercase">
@@ -1039,7 +1030,7 @@ export const LandingPage: React.FC = () => {
               { title: 'Google Meet War Room', desc: 'Transcribes calls in real-time, extracts keywords, and tags active engineers in the causal timeline.', latency: '240ms Ingestion', status: 'STANDBY', statusColor: 'text-slate-500 bg-slate-900/30 border-slate-800' },
               { title: 'PagerDuty Adapter', desc: 'Syncs current on-call schedules, incident response ownership shifts, and pager triggers.', latency: '45ms Ingestion', status: 'STANDBY', statusColor: 'text-slate-500 bg-slate-900/30 border-slate-800' }
             ].map((item, idx) => (
-              <div key={idx} className="glass hover:bg-slate-900/35 border border-slate-900 rounded-xl p-5 flex flex-col justify-between min-h-[180px] hover:border-slate-800 transition-all">
+              <div key={idx} className="glass hover:bg-slate-900/35 border border-none rounded-xl p-5 flex flex-col justify-between min-h-[180px] hover:border-slate-800 transition-all">
                 <div className="space-y-2">
                   <div className="flex justify-between items-center">
                     <h3 className="text-xs font-bold text-slate-200 uppercase tracking-wider">{item.title}</h3>
@@ -1049,7 +1040,7 @@ export const LandingPage: React.FC = () => {
                   </div>
                   <p className="text-[11px] text-slate-400 leading-relaxed">{item.desc}</p>
                 </div>
-                <div className="flex items-center space-x-1.5 text-[9px] font-mono text-slate-500 mt-3 pt-3 border-t border-slate-900">
+                <div className="flex items-center space-x-1.5 text-[9px] font-mono text-slate-500 mt-3 pt-3 border-t border-none">
                   <Activity size={10} className="text-cyan-500" />
                   <span>Avg parsing: {item.latency}</span>
                 </div>
@@ -1076,8 +1067,8 @@ export const LandingPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="glass border border-slate-900 rounded-xl p-6 space-y-4">
-              <div className="flex items-center space-x-3.5 border-b border-slate-900 pb-3">
+            <div className="glass border border-none rounded-xl p-6 space-y-4">
+              <div className="flex items-center space-x-3.5 border-b border-none pb-3">
                 <span className="p-2 bg-emerald-950/30 border border-emerald-900 rounded text-emerald-400 font-mono text-xs font-bold">JVM</span>
                 <div>
                   <h3 className="text-xs font-bold uppercase tracking-wider text-slate-200">Spring Boot 3.3.0</h3>
@@ -1089,8 +1080,8 @@ export const LandingPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="glass border border-slate-900 rounded-xl p-6 space-y-4">
-              <div className="flex items-center space-x-3.5 border-b border-slate-900 pb-3">
+            <div className="glass border border-none rounded-xl p-6 space-y-4">
+              <div className="flex items-center space-x-3.5 border-b border-none pb-3">
                 <span className="p-2 bg-purple-950/30 border border-purple-900 rounded text-purple-400 font-mono text-xs font-bold">GDB</span>
                 <div>
                   <h3 className="text-xs font-bold uppercase tracking-wider text-slate-200">Neo4j AuraDB</h3>
@@ -1102,8 +1093,8 @@ export const LandingPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="glass border border-slate-900 rounded-xl p-6 space-y-4">
-              <div className="flex items-center space-x-3.5 border-b border-slate-900 pb-3">
+            <div className="glass border border-none rounded-xl p-6 space-y-4">
+              <div className="flex items-center space-x-3.5 border-b border-none pb-3">
                 <span className="p-2 bg-cyan-950/30 border border-cyan-900 rounded text-cyan-400 font-mono text-xs font-bold">SPA</span>
                 <div>
                   <h3 className="text-xs font-bold uppercase tracking-wider text-slate-200">React 19 & Tailwind CSS v4</h3>
@@ -1115,8 +1106,8 @@ export const LandingPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="glass border border-slate-900 rounded-xl p-6 space-y-4">
-              <div className="flex items-center space-x-3.5 border-b border-slate-900 pb-3">
+            <div className="glass border border-none rounded-xl p-6 space-y-4">
+              <div className="flex items-center space-x-3.5 border-b border-none pb-3">
                 <span className="p-2 bg-orange-950/30 border border-orange-900 rounded text-orange-400 font-mono text-xs font-bold">LLM</span>
                 <div>
                   <h3 className="text-xs font-bold uppercase tracking-wider text-slate-200">AI Context Traversal</h3>
@@ -1132,7 +1123,7 @@ export const LandingPage: React.FC = () => {
       </section>
 
       {/* Section 8: Security & air-gapped compliance */}
-      <section id="security" className="py-24 bg-slate-950/20 border-t border-slate-950 px-6">
+      <section id="security" className="py-24 neu-flat/20 border-t border-slate-950 px-6">
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="text-center space-y-3">
             <div className="inline-flex items-center space-x-2 px-3 py-1 bg-red-950/50 border border-red-900 rounded-full text-[10px] font-bold tracking-wider text-red-400 uppercase">
@@ -1148,24 +1139,76 @@ export const LandingPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="glass border border-slate-900 rounded-xl p-5 space-y-2">
+            <div className="glass border border-none rounded-xl p-5 space-y-2">
               <h4 className="text-xs font-bold text-slate-200 uppercase tracking-wide">PII Scrubbing Pipeline</h4>
               <p className="text-[11px] text-slate-400 leading-relaxed">
                 Automatically identifies and redacts secrets, database passwords, environment variables, and client identifiers before event data is parsed into the causal graph.
               </p>
             </div>
-            <div className="glass border border-slate-900 rounded-xl p-5 space-y-2">
+            <div className="glass border border-none rounded-xl p-5 space-y-2">
               <h4 className="text-xs font-bold text-slate-200 uppercase tracking-wide">WORM Log Integrity</h4>
               <p className="text-[11px] text-slate-400 leading-relaxed">
                 Utilizes Write-Once-Read-Many storage primitives on the Neo4j graph, ensuring all audit trials, timelines, and causal edges are permanently immutable and tamper-resistant.
               </p>
             </div>
-            <div className="glass border border-slate-900 rounded-xl p-5 space-y-2">
+            <div className="glass border border-none rounded-xl p-5 space-y-2">
               <h4 className="text-xs font-bold text-slate-200 uppercase tracking-wide">Air-Gapped / PGP Encryption</h4>
               <p className="text-[11px] text-slate-400 leading-relaxed">
                 Supports local deployment inside isolated corporate subnets. Optional local PGP keys allow telemetry payloads to be stored fully encrypted at rest.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* NEW SECTION: Team Arete */}
+      <section id="team" className="py-24 neu-flat/40 border-t border-slate-950 px-6 relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-500/5 rounded-full blur-[120px] pointer-events-none" />
+        <div className="max-w-6xl mx-auto space-y-12 relative z-10">
+          <div className="text-center space-y-3">
+            <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight">Built by Team Arete</h2>
+            <p className="text-sm text-slate-400 max-w-2xl mx-auto">
+              A team of passionate builders obsessed with graphing out chaos for HackHazards '26.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                name: 'Nayana Shaji Mekkunnel',
+                link: 'https://www.linkedin.com/in/nayana-shaji-394124320',
+              },
+              {
+                name: 'Gabriel James',
+                link: 'https://www.linkedin.com/in/gabrieljamesamara',
+              },
+              {
+                name: 'Jany Sabarinath',
+                link: 'https://www.linkedin.com/in/jany-sabarinath-1b4b9b21a',
+              },
+              {
+                name: 'Vrindha P',
+                link: 'https://www.linkedin.com/in/vrindha-p',
+              }
+            ].map((member, idx) => (
+              <div key={idx} className="group relative p-[1px] rounded-2xl bg-gradient-to-b from-slate-800 to-slate-950 overflow-hidden hover:from-emerald-500/50 hover:to-slate-900 transition-all duration-500">
+                <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="neu-flat rounded-[15px] p-6 h-full flex flex-col items-center text-center space-y-4 relative z-10">
+                  <div className={`w-20 h-20 rounded-full bg-slate-900 border-2 border-slate-800 flex items-center justify-center shadow-lg group-hover:border-emerald-500/50 transition-colors`}>
+                    <span className="text-2xl font-bold text-slate-300 uppercase group-hover:text-emerald-400 transition-colors">
+                      {member.name.charAt(0)}
+                    </span>
+                  </div>
+                  <div className="space-y-1 mb-2">
+                    <h3 className="text-base font-bold text-slate-200">{member.name}</h3>
+                  </div>
+                  <a href={member.link} target="_blank" rel="noreferrer" className="inline-flex items-center space-x-2 text-xs font-bold text-slate-300 hover:text-white bg-slate-900 hover:bg-slate-800 px-4 py-2 rounded-lg transition-colors w-full justify-center border border-slate-800 hover:border-slate-700 relative z-20 mt-auto">
+                    <span>View LinkedIn</span>
+                    <ArrowRight size={14} />
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

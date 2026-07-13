@@ -37,45 +37,47 @@ export const Sidebar: React.FC = () => {
   };
 
   return (
-    <aside className="w-64 bg-slate-950 border-r border-slate-900 flex flex-col justify-between h-screen sticky top-0">
-      <div>
-        {/* Brand Header */}
-        <div className="p-6 border-b border-slate-900 flex items-center space-x-3">
-          <img src="/logo.jpg" className="w-8 h-8 rounded-lg border border-emerald-500/30 object-cover shadow-lg shadow-emerald-500/10" alt="Logo" />
-          <div>
-            <h1 className="text-sm font-semibold tracking-wider text-slate-100 uppercase">
-              Black Box
-            </h1>
-            <span className="text-[10px] text-emerald-500 font-bold tracking-widest block uppercase">
-              INCIDENT RECONSTRUCTOR
-            </span>
+    <>
+      {/* Desktop Sidebar */}
+      <aside className="hidden md:flex w-64 neu-flat border-r border-none flex-col justify-between h-screen sticky top-0 shrink-0">
+        <div>
+          {/* Brand Header */}
+          <div className="p-6 border-b border-none flex items-center space-x-3">
+            <img src="/logo.jpg" className="w-8 h-8 rounded-lg border border-emerald-500/30 object-cover shadow-lg shadow-emerald-500/10" alt="Logo" />
+            <div>
+              <h1 className="text-sm font-semibold tracking-wider text-slate-100 uppercase">
+                Black Box
+              </h1>
+              <span className="text-[10px] text-emerald-500 font-bold tracking-widest block uppercase">
+                INCIDENT RECONSTRUCTOR
+              </span>
+            </div>
           </div>
+
+          {/* Navigation */}
+          <nav className="p-4 space-y-1">
+            {navItems.map((item) => {
+              const isActive = location.pathname === item.path || 
+                (item.path === '/incidents' && location.pathname.startsWith('/incidents'));
+              const Icon = item.icon;
+
+              return (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className={`flex items-center space-x-3 px-4 py-2.5 rounded-lg text-sm font-medium transition-all ${
+                    isActive
+                      ? 'neu-pressed text-emerald-400 border-l-2 border-emerald-500'
+                      : 'text-slate-400 hover:text-slate-200 hover:brightness-125'
+                  }`}
+                >
+                  <Icon size={18} className={isActive ? 'text-emerald-400' : 'text-slate-400'} />
+                  <span>{item.name}</span>
+                </Link>
+              );
+            })}
+          </nav>
         </div>
-
-        {/* Navigation */}
-        <nav className="p-4 space-y-1">
-          {navItems.map((item) => {
-            const isActive = location.pathname === item.path || 
-              (item.path === '/incidents' && location.pathname.startsWith('/incidents'));
-            const Icon = item.icon;
-
-            return (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`flex items-center space-x-3 px-4 py-2.5 rounded-lg text-sm font-medium transition-all ${
-                  isActive
-                    ? 'bg-slate-900 text-emerald-400 border-l-2 border-emerald-500'
-                    : 'text-slate-400 hover:bg-slate-900/50 hover:text-slate-200'
-                }`}
-              >
-                <Icon size={18} className={isActive ? 'text-emerald-400' : 'text-slate-400'} />
-                <span>{item.name}</span>
-              </Link>
-            );
-          })}
-        </nav>
-      </div>
 
       {/* System Status, Mode Toggles, and Active Operator Profile */}
       <div className="p-4 border-t border-slate-900 space-y-4">
@@ -172,5 +174,28 @@ export const Sidebar: React.FC = () => {
         )}
       </div>
     </aside>
+
+    {/* Mobile Bottom Navigation */}
+    <nav className="md:hidden fixed bottom-0 left-0 right-0 neu-flat border-t border-none z-50 flex justify-around items-center h-16 px-6 pb-safe">
+      {navItems.map((item) => {
+        const isActive = location.pathname === item.path || 
+          (item.path === '/incidents' && location.pathname.startsWith('/incidents'));
+        const Icon = item.icon;
+
+        return (
+          <Link
+            key={item.path}
+            to={item.path}
+            className={`flex flex-col items-center justify-center space-y-1 w-full h-full ${
+              isActive ? 'text-emerald-400' : 'text-slate-500'
+            }`}
+          >
+            <Icon size={20} className={isActive ? 'text-emerald-400' : 'text-slate-500'} />
+            <span className="text-[10px] font-semibold">{item.name}</span>
+          </Link>
+        );
+      })}
+    </nav>
+    </>
   );
 };

@@ -5,7 +5,8 @@ import {
   Activity, 
   Server,
   Terminal,
-  ChevronRight
+  ChevronRight,
+  Database
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { 
@@ -86,12 +87,12 @@ export const Dashboard: React.FC = () => {
         
         <div className="flex items-center space-x-4">
           {/* Mode Switcher */}
-          <div className="flex items-center bg-slate-950/60 border border-slate-900 rounded-xl p-1 text-xs">
+          <div className="flex items-center neu-flat/60 border border-none rounded-xl p-1 text-xs">
             <button
               onClick={() => setRealTimeMode(false)}
               className={`px-3 py-1.5 rounded-lg font-bold transition-all ${
                 !realTimeMode 
-                  ? 'bg-slate-900 text-amber-500 border border-amber-900/30' 
+                  ? 'neu-flat text-amber-500 border border-amber-900/30' 
                   : 'text-slate-500 hover:text-slate-300'
               }`}
             >
@@ -101,7 +102,7 @@ export const Dashboard: React.FC = () => {
               onClick={() => setRealTimeMode(true)}
               className={`px-3 py-1.5 rounded-lg font-bold transition-all ${
                 realTimeMode 
-                  ? 'bg-slate-900 text-emerald-400 border border-emerald-900/30' 
+                  ? 'neu-flat text-emerald-400 border border-emerald-900/30' 
                   : 'text-slate-500 hover:text-slate-300'
               }`}
             >
@@ -109,7 +110,7 @@ export const Dashboard: React.FC = () => {
             </button>
           </div>
 
-          <div className="flex items-center space-x-2 bg-slate-950/40 border border-slate-900 rounded-lg px-3 py-1.5 text-xs text-slate-400">
+          <div className="flex items-center space-x-2 neu-flat/40 border border-none rounded-lg px-3 py-1.5 text-xs text-slate-400">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
             <span>Ingestors Active</span>
           </div>
@@ -186,7 +187,7 @@ export const Dashboard: React.FC = () => {
           {/* Recharts Panels */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Incident History Area Chart */}
-            <div className="glass border border-slate-900 rounded-xl p-5 flex flex-col h-[280px]">
+            <div className="glass border border-none rounded-xl p-5 flex flex-col h-[280px]">
               <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">
                 Outage History Trend
               </h3>
@@ -214,7 +215,7 @@ export const Dashboard: React.FC = () => {
             </div>
 
             {/* Event Distribution Bar Chart */}
-            <div className="glass border border-slate-900 rounded-xl p-5 flex flex-col h-[280px]">
+            <div className="glass border border-none rounded-xl p-5 flex flex-col h-[280px]">
               <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">
                 Event Distribution by Source
               </h3>
@@ -237,12 +238,12 @@ export const Dashboard: React.FC = () => {
           </div>
 
           {/* Integration Status / Connected Tools */}
-          <div className="glass border border-slate-900 rounded-xl p-5">
+          <div className="glass border border-none rounded-xl p-5">
             <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">
               Passive Ingestion Adapters
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div className="p-4 bg-slate-950 border border-slate-900 rounded-lg flex items-center justify-between">
+              <div className="p-4 neu-flat border border-none rounded-lg flex items-center justify-between">
                 <div className="flex items-center space-x-3">
                   <div className="p-2 bg-purple-950/40 border border-purple-900/50 rounded-lg text-purple-400">
                     <Terminal size={16} />
@@ -255,7 +256,7 @@ export const Dashboard: React.FC = () => {
                 <span className={`w-2 h-2 rounded-full ${metrics.systemStatuses.github === 'online' ? 'bg-emerald-500' : 'bg-amber-500'} animate-pulse`} />
               </div>
 
-              <div className="p-4 bg-slate-950 border border-slate-900 rounded-lg flex items-center justify-between">
+              <div className="p-4 neu-flat border border-none rounded-lg flex items-center justify-between">
                 <div className="flex items-center space-x-3">
                   <div className="p-2 bg-cyan-950/40 border border-cyan-900/50 rounded-lg text-cyan-400">
                     <Server size={16} />
@@ -268,7 +269,7 @@ export const Dashboard: React.FC = () => {
                 <span className={`w-2 h-2 rounded-full ${metrics.systemStatuses.slack === 'online' ? 'bg-emerald-500' : 'bg-amber-500'} animate-pulse`} />
               </div>
 
-              <div className="p-4 bg-slate-950 border border-slate-900 rounded-lg flex items-center justify-between">
+              <div className="p-4 neu-flat border border-none rounded-lg flex items-center justify-between">
                 <div className="flex items-center space-x-3">
                   <div className="p-2 bg-rose-950/40 border border-rose-900/50 rounded-lg text-rose-400">
                     <AlertCircle size={16} />
@@ -282,6 +283,73 @@ export const Dashboard: React.FC = () => {
               </div>
             </div>
           </div>
+
+          {/* NEW SECTION: Neo4j Graph Database Health */}
+          <div className="glass border border-none rounded-xl p-5 glow-border transition-all">
+            <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4 flex items-center gap-2">
+              <Database size={14} className="text-emerald-500" />
+              Neo4j Graph Database Health
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+               <div className="neu-flat/80 rounded-lg p-3 border border-slate-800/60 shadow-inner">
+                 <span className="text-[10px] text-slate-500 uppercase tracking-wider font-semibold">Total Nodes</span>
+                 <p className="text-xl font-bold font-mono text-emerald-400 mt-1">1.2M</p>
+               </div>
+               <div className="neu-flat/80 rounded-lg p-3 border border-slate-800/60 shadow-inner">
+                 <span className="text-[10px] text-slate-500 uppercase tracking-wider font-semibold">Total Edges</span>
+                 <p className="text-xl font-bold font-mono text-cyan-400 mt-1">4.5M</p>
+               </div>
+               <div className="neu-flat/80 rounded-lg p-3 border border-slate-800/60 shadow-inner">
+                 <span className="text-[10px] text-slate-500 uppercase tracking-wider font-semibold">Avg Query Time</span>
+                 <p className="text-xl font-bold font-mono text-amber-400 mt-1">14ms</p>
+               </div>
+               <div className="neu-flat/80 rounded-lg p-3 border border-slate-800/60 shadow-inner">
+                 <span className="text-[10px] text-slate-500 uppercase tracking-wider font-semibold">Cluster Status</span>
+                 <p className="text-lg font-bold font-mono text-emerald-500 mt-1.5 flex items-center gap-2"><span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"/> ONLINE</p>
+               </div>
+            </div>
+          </div>
+
+          {/* NEW SECTION: Recent Anomaly AI Detections */}
+          <div className="glass border border-none rounded-xl p-5 glow-border transition-all">
+            <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4 flex items-center gap-2">
+              <AlertCircle size={14} className="text-amber-500" />
+              AI Anomaly Detection Stream
+            </h3>
+            <div className="space-y-3">
+              <div className="p-3.5 bg-amber-950/10 border border-amber-900/30 rounded-lg flex justify-between items-center hover:bg-amber-950/20 transition-colors">
+                <div className="flex items-start gap-3">
+                  <div className="p-2 bg-amber-900/40 rounded-lg text-amber-400 mt-0.5 shadow-inner"><Clock size={14}/></div>
+                  <div>
+                    <h4 className="text-xs font-bold text-slate-200 tracking-wide">Unusual login failure pattern detected</h4>
+                    <p className="text-[10px] text-slate-500 mt-1">Service: <span className="text-slate-400 font-mono">auth-gateway</span> • 120% spike in failure rate over 5m window</p>
+                  </div>
+                </div>
+                <button className="text-[10px] font-bold px-4 py-2 neu-flat border border-slate-700 text-slate-300 rounded-lg hover:bg-slate-800 hover:text-white transition-all shadow-sm">Investigate</button>
+              </div>
+              <div className="p-3.5 bg-indigo-950/10 border border-indigo-900/30 rounded-lg flex justify-between items-center hover:bg-indigo-950/20 transition-colors">
+                <div className="flex items-start gap-3">
+                  <div className="p-2 bg-indigo-900/40 rounded-lg text-indigo-400 mt-0.5 shadow-inner"><Server size={14}/></div>
+                  <div>
+                    <h4 className="text-xs font-bold text-slate-200 tracking-wide">Memory leak pattern matching</h4>
+                    <p className="text-[10px] text-slate-500 mt-1">Service: <span className="text-slate-400 font-mono">payment-api</span> • Heap usage increasing linearly across 3 container pods</p>
+                  </div>
+                </div>
+                <button className="text-[10px] font-bold px-4 py-2 neu-flat border border-slate-700 text-slate-300 rounded-lg hover:bg-slate-800 hover:text-white transition-all shadow-sm">Investigate</button>
+              </div>
+              <div className="p-3.5 bg-rose-950/10 border border-rose-900/30 rounded-lg flex justify-between items-center hover:bg-rose-950/20 transition-colors">
+                <div className="flex items-start gap-3">
+                  <div className="p-2 bg-rose-900/40 rounded-lg text-rose-400 mt-0.5 shadow-inner"><Activity size={14}/></div>
+                  <div>
+                    <h4 className="text-xs font-bold text-slate-200 tracking-wide">Elevated Redis latency</h4>
+                    <p className="text-[10px] text-slate-500 mt-1">Resource: <span className="text-slate-400 font-mono">redis-cache-cluster</span> • Query latency degraded by P99 &gt; 250ms</p>
+                  </div>
+                </div>
+                <button className="text-[10px] font-bold px-4 py-2 neu-flat border border-slate-700 text-slate-300 rounded-lg hover:bg-slate-800 hover:text-white transition-all shadow-sm">Investigate</button>
+              </div>
+            </div>
+          </div>
+
         </div>
 
         {/* Right Column - Live Running Event log Feed (1/3 width) */}

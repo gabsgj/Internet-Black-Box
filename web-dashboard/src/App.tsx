@@ -17,9 +17,9 @@ const ProtectedRoute = () => {
 // Layout wrapping dashboard routes to include the collapsible sidebar navigation
 const DashboardLayout = () => {
   return (
-    <div className="flex bg-[#030712] min-h-screen text-slate-100 font-sans w-full">
+    <div className="flex min-h-screen text-slate-100 font-sans w-full">
       <Sidebar />
-      <main className="flex-grow flex flex-col h-screen overflow-hidden">
+      <main className="flex-grow flex flex-col h-screen overflow-hidden pb-16 md:pb-0">
         <Outlet />
       </main>
     </div>

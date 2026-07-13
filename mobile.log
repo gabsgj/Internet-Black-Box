@@ -6,5 +6,5 @@ Starting project at /Users/gabriel/Projects/Internet Black Box/mobile-app
 Starting Metro Bundler
 Waiting on http://localhost:8081
 Logs for your project will appear below.
-Web Bundled 182ms node_modules/expo-router/entry.js (643 modules)
+Web Bundled 229ms node_modules/expo-router/entry.js (915 modules)
  LOG  [web] Logs will appear in the browser console

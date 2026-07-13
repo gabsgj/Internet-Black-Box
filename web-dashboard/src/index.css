@@ -17,39 +17,64 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #1e293b;
   border-radius: 4px;
+  box-shadow: inset 1px 1px 2px #020617;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #334155;
 }
 
-/* Custom Styles */
+/* Dark Neumorphism Utilities (Original Color Palette) */
+.neu-flat {
+  background: #020617;
+  box-shadow: 6px 6px 12px #01030b, -6px -6px 12px #030923;
+  border: none !important;
+}
+
+.neu-pressed {
+  background: #020617;
+  box-shadow: inset 6px 6px 12px #01030b, inset -6px -6px 12px #030923;
+  border: none !important;
+}
+
+.neu-convex {
+  background: linear-gradient(145deg, #020719, #020515);
+  box-shadow: 6px 6px 12px #01030b, -6px -6px 12px #030923;
+  border: none !important;
+}
+
+.neu-concave {
+  background: linear-gradient(145deg, #020515, #020719);
+  box-shadow: 6px 6px 12px #01030b, -6px -6px 12px #030923;
+  border: none !important;
+}
+
+.neu-button {
+  background: #020617;
+  box-shadow: 4px 4px 8px #01030b, -4px -4px 8px #030923;
+  transition: all 0.2s ease;
+  border: none !important;
+}
+
+.neu-button:hover {
+  box-shadow: 2px 2px 4px #01030b, -2px -2px 4px #030923;
+}
+
+.neu-button:active {
+  box-shadow: inset 4px 4px 8px #01030b, inset -4px -4px 8px #030923;
+}
+
 .glass {
-  background: rgba(15, 23, 42, 0.65);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: #020617 !important;
+  box-shadow: 6px 6px 12px #01030b, -6px -6px 12px #030923 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
 }
 
-.glass-hover:hover {
-  background: rgba(30, 41, 59, 0.45);
-  border-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease;
-}
-
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 15px rgba(249, 115, 22, 0.2);
-    border-color: rgba(249, 115, 22, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 25px rgba(249, 115, 22, 0.45);
-    border-color: rgba(249, 115, 22, 0.7);
-  }
-}
-
-.glow-active {
-  animation: pulse-glow 2s infinite ease-in-out;
+.glow-active, .glow-border, .glass-hover {
+  animation: none !important;
+  box-shadow: 6px 6px 12px #01030b, -6px -6px 12px #030923 !important;
+  border: none !important;
 }
 
 /* Custom hide scrollbar */
@@ -57,6 +82,6 @@ body {
   display: none;
 }
 .no-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
