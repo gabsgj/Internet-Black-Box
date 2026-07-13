@@ -634,8 +634,8 @@ This ensures the causal graph is a forensic evidence store, not a secret exfiltr
 ## 📽️ Demo & Deliverables
 
 - **Demo Video Link (Mandatory):** [YouTube Demo Video](https://youtu.be/5RN4Sodz3bo)
-- **Deployment Link (Recommended):** [https://api-server-xxxx.onrender.com](https://api-server-xxxx.onrender.com)
-- **Pitch Deck / PPT (Highly Recommended):** [presentation.pptx](./presentation.pptx) · [Demo Script](./VIDEO_SCRIPT.md)
+- **Deployment Link (Recommended):** [https://web-dashboard-y5zl.onrender.com](https://web-dashboard-y5zl.onrender.com)
+- **Pitch Deck / PPT (Highly Recommended):** [presentation.pptx](./presentation.pptx)
 
 ---
 
