@@ -23,15 +23,11 @@ services:
   # ── 1. Spring Boot API (Web Service — Free Tier) ───────────────────────────
   - type: web
     name: api-server
-    runtime: java
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
     region: oregon
     plan: free
-
-    # Build the fat JAR from the backend/ subdirectory
-    buildCommand: cd backend && mvn clean package -DskipTests -q
-
-    # Run the built JAR — Render sets $PORT automatically
-    startCommand: java -Dserver.port=$PORT -jar backend/target/internet-black-box-0.0.1-SNAPSHOT.jar
 
     # Auto-deploy on every push to main
     autoDeploy: true
