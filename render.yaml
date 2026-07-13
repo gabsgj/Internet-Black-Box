@@ -2,20 +2,21 @@
 # Internet Black Box — Render Blueprint (render.yaml)
 # https://render.com/docs/blueprint-spec
 #
-# FREE TIER SETUP
-#   - api-server    → Web Service, native Java runtime (free, sleeps after 15 min)
-#   - web-dashboard → Static Site (always free, never sleeps)
+# Services deployed:
+#   1. api-server              → Spring Boot 3 REST API  (Web Service, Docker)
+#   2. web-dashboard           → React + Vite SPA         (Static Site)
+#   3. reconstruct-incident    → 9-stage Render Workflow  (deployed via dashboard)
 #
-# Webhook ingestion (GitHub / Slack / Sentry) is handled directly by the API
-# server. Configure these URLs in each platform after first deploy:
+# The Render Workflow (workflow/workflow.py) is deployed separately:
+#   Render Dashboard → New → Workflow → connect repo → set path: workflow/workflow.py
+#
+# The Spring Boot API triggers the workflow via HTTP when an incident is created.
+# Configure these webhook URLs after first deploy:
 #
 #   GitHub  → https://<api-server>.onrender.com/api/webhooks/github
 #   Slack   → https://<api-server>.onrender.com/api/webhooks/slack
 #   Sentry  → https://<api-server>.onrender.com/api/webhooks/sentry
 #
-# NOTE: Free web services sleep after 15 min of inactivity.
-#       First request after sleep takes ~30 sec to wake up.
-#       Upgrade to Starter ($7/mo) for always-on behavior.
 # ─────────────────────────────────────────────────────────────────────────────
 
 services:
