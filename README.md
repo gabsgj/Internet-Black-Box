@@ -639,6 +639,20 @@ This ensures the causal graph is a forensic evidence store, not a secret exfiltr
 
 ---
 
+## 📸 Screenshots
+
+<img width="3396" height="2038" alt="Image" src="https://github.com/user-attachments/assets/0c4c0a8f-06bf-40fd-9823-296605f9c271" />
+
+<img width="3396" height="2038" alt="Image" src="https://github.com/user-attachments/assets/b2647bc1-5091-45ca-b236-c6cebebdc121" />
+
+<img width="3396" height="2038" alt="Image" src="https://github.com/user-attachments/assets/d7118fae-cf24-4a04-b3cd-64b6dfdd03d0" />
+
+<img width="3396" height="2038" alt="Image" src="https://github.com/user-attachments/assets/2a329714-5e1e-4604-9e5c-7ad9513b8244" />
+
+<img width="3396" height="2038" alt="Image" src="https://github.com/user-attachments/assets/c4437df6-ec59-4478-96d2-2ff84b9f0058" />
+
+---
+
 ## ✅ Tasks & Bonus Checklist
 
 - [x] All team members completed the mandatory social task
