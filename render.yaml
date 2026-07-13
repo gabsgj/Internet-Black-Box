@@ -1,43 +1,54 @@
 services:
-  # Backend Ingest & AI API (Spring Boot)
+  # 1. Spring Boot API Gateway (Web Service)
   - type: web
-    name: internet-black-box-backend
-    env: java
-    rootDir: backend
-    buildCommand: mvn clean package -DskipTests
-    startCommand: java -jar target/internet-black-box-0.0.1-SNAPSHOT.jar
+    name: api-server
+    env: docker
+    region: oregon
+    plan: starter
+    healthCheckPath: /actuator/health
     envVars:
-      - key: PORT
-        value: 8080
-      - key: SPRING_NEO4J_URI
+      - key: NEO4J_URI
         sync: false
-      - key: SPRING_NEO4J_USERNAME
+      - key: NEO4J_USERNAME
         sync: false
-      - key: SPRING_NEO4J_PASSWORD
+      - key: NEO4J_PASSWORD
         sync: false
-      - key: NVIDIA_API_KEY
+      - key: USE_MOCK_DATA
+        value: "true"
+
+  # 2. React Web Dashboard (Static Site)
+  - type: web
+    name: web-dashboard
+    env: static
+    buildCommand: cd web-dashboard && npm install && npm run build
+    staticPublishPath: web-dashboard/dist
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: api-server
+          property: host
+
+  # 3. GitHub Ingestion Workflow (Cron Job)
+  - type: cron
+    name: ingest-github
+    env: docker
+    schedule: "*/5 * * * *"
+    command: "./scripts/ingest-github.sh"
+    envVars:
+      - key: GITHUB_TOKEN
         sync: false
-      - key: NVIDIA_MODEL
-        value: meta/llama-3.1-70b-instruct
-      - key: SARVAM_API_KEY
-        sync: false
-      - key: GITHUB_PERSONAL_ACCESS_TOKEN
-        sync: false
-      - key: SLACK_BOT_TOKEN
-        sync: false
-      - key: SLACK_SIGNING_SECRET
-        sync: false
-      - key: SENTRY_DSN
+      - key: NEO4J_URI
         sync: false
 
-  # Frontend Web Dashboard (React + Vite static deployment)
-  - type: web
-    name: internet-black-box-frontend
-    env: static
-    rootDir: web-dashboard
-    buildCommand: npm install && npm run build
-    publishPath: dist
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
+  # 4. Incident Reconstruction Workflow (Background Worker)
+  - type: worker
+    name: reconstruct-incident
+    env: docker
+    buildCommand: "mvn clean install -DskipTests"
+    startCommand: "java -jar target/worker.jar"
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: SARVAM_API_KEY
+        sync: false
