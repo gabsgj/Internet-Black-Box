@@ -43,7 +43,7 @@ export const Sidebar: React.FC = () => {
         <div>
           {/* Brand Header */}
           <div className="p-6 border-b border-none flex items-center space-x-3">
-            <img src="/logo.jpg" className="w-8 h-8 rounded-lg border border-emerald-500/30 object-cover shadow-lg shadow-emerald-500/10" alt="Logo" />
+            <img src="/logo.svg" className="w-8 h-8 rounded-lg border border-emerald-500/30 object-cover shadow-lg shadow-emerald-500/10" alt="Logo" />
             <div>
               <h1 className="text-sm font-semibold tracking-wider text-slate-100 uppercase">
                 Black Box

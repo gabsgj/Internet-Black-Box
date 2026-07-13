@@ -186,7 +186,7 @@ export const LandingPage: React.FC = () => {
       {/* Header/Navbar */}
       <header className="border-b border-none neu-flat/60 backdrop-blur-md sticky top-0 z-50 px-6 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-3">
-          <img src="/logo.jpg" className="w-9 h-9 rounded-lg border border-emerald-500/30 object-cover shadow-lg shadow-emerald-500/10 animate-[pulse-glow_3s_infinite_ease-in-out]" alt="Internet Black Box Logo" />
+          <img src="/logo.svg" className="w-9 h-9 rounded-lg border border-emerald-500/30 object-cover shadow-lg shadow-emerald-500/10 animate-[pulse-glow_3s_infinite_ease-in-out]" alt="Internet Black Box Logo" />
           <div>
             <h1 className="text-sm font-semibold tracking-wider text-slate-100 uppercase">
               Internet Black Box
@@ -1262,7 +1262,7 @@ export const LandingPage: React.FC = () => {
       <footer className="border-t border-slate-900 py-12 px-6 bg-slate-950/60 backdrop-blur-md">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center space-x-3">
-            <img src="/logo.jpg" className="w-8 h-8 rounded-lg border border-emerald-500/30 object-cover shadow-lg shadow-emerald-500/10" alt="Logo" />
+            <img src="/logo.svg" className="w-8 h-8 rounded-lg border border-emerald-500/30 object-cover shadow-lg shadow-emerald-500/10" alt="Logo" />
             <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Internet Black Box (2026)</span>
           </div>
           <span className="text-[10px] text-slate-600 font-mono uppercase tracking-widest">Built for HackHazards '26</span>
