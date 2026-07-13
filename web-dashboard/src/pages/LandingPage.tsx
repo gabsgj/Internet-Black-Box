@@ -268,72 +268,62 @@ export const LandingPage: React.FC = () => {
       </section>
 
       {/* Flattering Sponsor & Partner Tracks Section */}
-      <section className="py-12 border-t border-b border-slate-900/60 bg-slate-950/20 px-6">
-        <div className="max-w-6xl mx-auto space-y-8">
-          <p className="text-center text-[10px] text-slate-500 font-extrabold uppercase tracking-widest">
+      <section className="py-16 border-t border-b border-slate-900/60 bg-slate-950/20 px-6">
+        <div className="max-w-6xl mx-auto space-y-10">
+          <p className="text-center text-xs text-slate-500 font-extrabold uppercase tracking-widest">
             Proudly Integrating with & Supporting HackHazards '26 Sponsor Tracks
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-75 hover:opacity-100 transition-opacity duration-300">
+          <div className="flex flex-wrap justify-center items-center gap-10 md:gap-20 opacity-80 hover:opacity-100 transition-opacity duration-300">
             {/* Neo4j */}
-            <div className="flex items-center space-x-2.5 grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer group">
-              <div className="p-1.5 bg-emerald-950/30 rounded border border-emerald-900/50 group-hover:border-emerald-500/50 transition-colors">
-                <svg className="w-5 h-5 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <circle cx="12" cy="12" r="3" />
-                  <circle cx="6" cy="6" r="2" />
-                  <circle cx="18" cy="6" r="2" />
-                  <circle cx="6" cy="18" r="2" />
-                  <circle cx="18" cy="18" r="2" />
-                  <line x1="8" y1="8" x2="10" y2="10" />
-                  <line x1="16" y1="8" x2="14" y2="10" />
-                  <line x1="8" y1="16" x2="10" y2="14" />
-                  <line x1="16" y1="16" x2="14" y2="14" />
+            <div className="flex items-center space-x-3.5 grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer group">
+              <div className="p-2.5 bg-emerald-950/30 rounded-xl border border-emerald-900/50 group-hover:border-emerald-500/50 transition-colors">
+                <svg className="w-8 h-8 fill-current text-emerald-400" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.629 13.227c-.593 0-1.139.2-1.58.533l-2.892-1.976a2.61 2.61 0 0 0 .101-.711 2.633 2.633 0 0 0-2.629-2.629A2.632 2.632 0 0 0 0 11.073a2.632 2.632 0 0 0 2.629 2.629c.593 0 1.139-.2 1.579-.533L7.1 15.145c-.063.226-.1.465-.1.711 0 .247.037.484.1.711l-2.892 1.976a2.608 2.608 0 0 0-1.579-.533A2.632 2.632 0 0 0 0 20.639a2.632 2.632 0 0 0 2.629 2.629 2.632 2.632 0 0 0 2.629-2.629c0-.247-.037-.485-.101-.711l2.892-1.976c.441.333.987.533 1.58.533a2.633 2.633 0 0 0 2.629-2.629c0-1.45-1.18-2.629-2.629-2.629ZM16.112.732c-4.72 0-7.888 2.748-7.888 8.082v3.802a3.525 3.525 0 0 1 3.071.008v-3.81c0-3.459 1.907-5.237 4.817-5.237s4.817 1.778 4.817 5.237v8.309H24V8.814C24 3.448 20.832.732 16.112.732Z"/>
                 </svg>
               </div>
-              <span className="font-extrabold font-sans text-slate-300 tracking-tight text-xs uppercase group-hover:text-slate-100 transition-colors">neo4j <span className="text-emerald-400">AuraDB</span></span>
+              <span className="font-extrabold font-sans text-slate-200 tracking-tight text-sm uppercase group-hover:text-slate-100 transition-colors">neo4j <span className="text-emerald-400">AuraDB</span></span>
             </div>
 
             {/* Render */}
-            <div className="flex items-center space-x-2.5 grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer group">
-              <div className="p-1.5 bg-indigo-950/30 rounded border border-indigo-900/50 group-hover:border-indigo-500/50 transition-colors">
-                <svg className="w-5 h-5 text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                  <path d="M2 17l10 5 10-5" />
-                  <path d="M2 12l10 5 10-5" />
+            <div className="flex items-center space-x-3.5 grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer group">
+              <div className="p-2.5 bg-indigo-950/30 rounded-xl border border-indigo-900/50 group-hover:border-indigo-500/50 transition-colors">
+                <svg className="w-8 h-8 fill-current text-indigo-400" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.263.007c-3.121-.147-5.744 2.109-6.192 5.082-.018.138-.045.272-.067.405-.696 3.703-3.936 6.507-7.827 6.507-1.388 0-2.691-.356-3.825-.979a.2024.2024 0 0 0-.302.178V24H12v-8.999c0-1.656 1.338-3 2.987-3h2.988c3.382 0 6.103-2.817 5.97-6.244-.12-3.084-2.61-5.603-5.682-5.75"/>
                 </svg>
               </div>
-              <span className="font-extrabold font-sans text-slate-300 tracking-tight text-xs uppercase group-hover:text-slate-100 transition-colors">RENDER <span className="text-indigo-400">Workflows</span></span>
+              <span className="font-extrabold font-sans text-slate-200 tracking-tight text-sm uppercase group-hover:text-slate-100 transition-colors">RENDER <span className="text-indigo-400">Workflows</span></span>
             </div>
 
             {/* Expo */}
-            <div className="flex items-center space-x-2.5 grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer group">
-              <div className="p-1.5 bg-slate-900/40 rounded border border-slate-800/80 group-hover:border-slate-400 transition-colors">
-                <svg className="w-5 h-5 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 2L2 22h20L12 2z" />
-                  <path d="M12 18v-8" />
-                  <path d="M8 14h8" />
+            <div className="flex items-center space-x-3.5 grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer group">
+              <div className="p-2.5 bg-slate-900/40 rounded-xl border border-slate-800/80 group-hover:border-slate-400 transition-colors">
+                <svg className="w-8 h-8 fill-current text-slate-300" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 20.084c.043.53.23 1.063.718 1.778.58.849 1.576 1.315 2.303.567.49-.505 5.794-9.776 8.35-13.29a.761.761 0 011.248 0c2.556 3.514 7.86 12.785 8.35 13.29.727.748 1.723.282 2.303-.567.57-.835.728-1.42.728-2.046 0-.426-8.26-15.798-9.092-17.078-.8-1.23-1.044-1.498-2.397-1.542h-1.032c-1.353.044-1.597.311-2.398 1.542C8.267 3.991.33 18.758 0 19.77Z"/>
                 </svg>
               </div>
-              <span className="font-extrabold font-sans text-slate-300 tracking-tight text-xs uppercase group-hover:text-slate-100 transition-colors">EXPO <span className="text-slate-400">Track</span></span>
+              <span className="font-extrabold font-sans text-slate-200 tracking-tight text-sm uppercase group-hover:text-slate-100 transition-colors">EXPO <span className="text-slate-400">Track</span></span>
             </div>
 
             {/* Sarvam AI */}
-            <div className="flex items-center space-x-2.5 grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer group">
-              <div className="p-1.5 bg-cyan-950/30 rounded border border-cyan-900/50 group-hover:border-cyan-500/50 transition-colors">
-                <svg className="w-5 h-5 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-                  <line x1="4" y1="9" x2="4" y2="15" />
-                  <line x1="8" y1="6" x2="8" y2="18" />
-                  <line x1="12" y1="3" x2="12" y2="21" />
-                  <line x1="16" y1="6" x2="16" y2="18" />
-                  <line x1="20" y1="9" x2="20" y2="15" />
+            <div className="flex items-center space-x-3.5 grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer group">
+              <div className="p-2.5 bg-cyan-950/30 rounded-xl border border-cyan-900/50 group-hover:border-cyan-500/50 transition-colors">
+                <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none">
+                  <defs>
+                    <linearGradient id="sarvam-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#3b82f6" />
+                      <stop offset="100%" stopColor="#f97316" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M4 22V10a8 8 0 0 1 16 0v12" stroke="url(#sarvam-grad)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M9 22V14a3 3 0 0 1 6 0v8" stroke="url(#sarvam-grad)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
-              <span className="font-extrabold font-sans text-slate-300 tracking-tight text-xs uppercase group-hover:text-slate-100 transition-colors">sarvam<span className="text-cyan-400">.ai</span></span>
+              <span className="font-extrabold font-sans text-slate-200 tracking-tight text-sm uppercase group-hover:text-slate-100 transition-colors">sarvam<span className="text-cyan-400">.ai</span></span>
             </div>
 
-
             {/* HackHazards */}
-            <div className="flex items-center space-x-2.5 grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer group">
-              <span className="px-2.5 py-1 bg-red-950/40 border border-red-900 rounded text-red-500 font-extrabold font-mono text-[9px] tracking-wider uppercase group-hover:border-red-500/50 transition-colors">HackHazards '26</span>
+            <div className="flex items-center space-x-3.5 grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer group">
+              <span className="px-4 py-2 bg-red-950/40 border border-red-900 rounded-xl text-red-500 font-extrabold font-mono text-xs tracking-wider uppercase group-hover:border-red-500/50 transition-colors">HackHazards '26</span>
             </div>
           </div>
         </div>
