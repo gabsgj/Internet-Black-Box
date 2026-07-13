@@ -228,6 +228,10 @@ export const LandingPage: React.FC = () => {
           The Causal <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-400 to-green-500 drop-shadow-sm">Aircraft Black Box</span> for Dev Teams
         </h1>
 
+        <div className="text-emerald-400/90 font-mono text-xs md:text-sm uppercase tracking-widest max-w-3xl mx-auto py-1 animate-pulse">
+          Causal Incident Reconstruction — Hands-Free, Instant, and Autonomous
+        </div>
+
         <p className="text-sm md:text-lg text-slate-400 max-w-3xl mx-auto leading-relaxed">
           Passively maps commits, Slack context, and Sentry alerts into a Neo4j causal graph. 
           When an outage strikes, our AI traces the evidence pathways to isolate the root cause in seconds.
@@ -258,6 +262,78 @@ export const LandingPage: React.FC = () => {
               <p className="text-xs text-slate-400 font-mono">
                 Listening: <span className="text-emerald-400">git-repo:payment-service</span>, <span className="text-cyan-400">slack:#on-call-devs</span>, <span className="text-rose-400">sentry:alert-hook</span>
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Flattering Sponsor & Partner Tracks Section */}
+      <section className="py-12 border-t border-b border-slate-900/60 bg-slate-950/20 px-6">
+        <div className="max-w-6xl mx-auto space-y-8">
+          <p className="text-center text-[10px] text-slate-500 font-extrabold uppercase tracking-widest">
+            Proudly Integrating with & Supporting HackHazards '26 Sponsor Tracks
+          </p>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-75 hover:opacity-100 transition-opacity duration-300">
+            {/* Neo4j */}
+            <div className="flex items-center space-x-2.5 grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer group">
+              <div className="p-1.5 bg-emerald-950/30 rounded border border-emerald-900/50 group-hover:border-emerald-500/50 transition-colors">
+                <svg className="w-5 h-5 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <circle cx="12" cy="12" r="3" />
+                  <circle cx="6" cy="6" r="2" />
+                  <circle cx="18" cy="6" r="2" />
+                  <circle cx="6" cy="18" r="2" />
+                  <circle cx="18" cy="18" r="2" />
+                  <line x1="8" y1="8" x2="10" y2="10" />
+                  <line x1="16" y1="8" x2="14" y2="10" />
+                  <line x1="8" y1="16" x2="10" y2="14" />
+                  <line x1="16" y1="16" x2="14" y2="14" />
+                </svg>
+              </div>
+              <span className="font-extrabold font-sans text-slate-300 tracking-tight text-xs uppercase group-hover:text-slate-100 transition-colors">neo4j <span className="text-emerald-400">AuraDB</span></span>
+            </div>
+
+            {/* Render */}
+            <div className="flex items-center space-x-2.5 grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer group">
+              <div className="p-1.5 bg-indigo-950/30 rounded border border-indigo-900/50 group-hover:border-indigo-500/50 transition-colors">
+                <svg className="w-5 h-5 text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                  <path d="M2 17l10 5 10-5" />
+                  <path d="M2 12l10 5 10-5" />
+                </svg>
+              </div>
+              <span className="font-extrabold font-sans text-slate-300 tracking-tight text-xs uppercase group-hover:text-slate-100 transition-colors">RENDER <span className="text-indigo-400">Workflows</span></span>
+            </div>
+
+            {/* Expo */}
+            <div className="flex items-center space-x-2.5 grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer group">
+              <div className="p-1.5 bg-slate-900/40 rounded border border-slate-800/80 group-hover:border-slate-400 transition-colors">
+                <svg className="w-5 h-5 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2L2 22h20L12 2z" />
+                  <path d="M12 18v-8" />
+                  <path d="M8 14h8" />
+                </svg>
+              </div>
+              <span className="font-extrabold font-sans text-slate-300 tracking-tight text-xs uppercase group-hover:text-slate-100 transition-colors">EXPO <span className="text-slate-400">Track</span></span>
+            </div>
+
+            {/* Sarvam AI */}
+            <div className="flex items-center space-x-2.5 grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer group">
+              <div className="p-1.5 bg-cyan-950/30 rounded border border-cyan-900/50 group-hover:border-cyan-500/50 transition-colors">
+                <svg className="w-5 h-5 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+                  <line x1="4" y1="9" x2="4" y2="15" />
+                  <line x1="8" y1="6" x2="8" y2="18" />
+                  <line x1="12" y1="3" x2="12" y2="21" />
+                  <line x1="16" y1="6" x2="16" y2="18" />
+                  <line x1="20" y1="9" x2="20" y2="15" />
+                </svg>
+              </div>
+              <span className="font-extrabold font-sans text-slate-300 tracking-tight text-xs uppercase group-hover:text-slate-100 transition-colors">sarvam<span className="text-cyan-400">.ai</span></span>
+            </div>
+
+
+            {/* HackHazards */}
+            <div className="flex items-center space-x-2.5 grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer group">
+              <span className="px-2.5 py-1 bg-red-950/40 border border-red-900 rounded text-red-500 font-extrabold font-mono text-[9px] tracking-wider uppercase group-hover:border-red-500/50 transition-colors">HackHazards '26</span>
             </div>
           </div>
         </div>
@@ -1265,6 +1341,20 @@ export const LandingPage: React.FC = () => {
             <img src="/logo.svg" className="w-8 h-8 rounded-lg border border-emerald-500/30 object-cover shadow-lg shadow-emerald-500/10" alt="Logo" />
             <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Internet Black Box (2026)</span>
           </div>
+
+          {/* Stick Figure & Team Arete 2026 */}
+          <div className="flex items-center space-x-2 text-slate-500">
+            <svg className="w-5 h-8 text-slate-500 hover:text-emerald-400 hover:scale-110 transition-all duration-300" viewBox="0 0 20 40" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+              <circle cx="10" cy="8" r="4" />
+              <line x1="10" y1="12" x2="10" y2="24" />
+              <line x1="10" y1="16" x2="4" y2="15" />
+              <line x1="10" y1="16" x2="16" y2="15" />
+              <line x1="10" y1="24" x2="6" y2="34" />
+              <line x1="10" y1="24" x2="14" y2="34" />
+            </svg>
+            <span className="text-xs font-mono tracking-wider font-semibold">Team Arete 2026</span>
+          </div>
+
           <span className="text-[10px] text-slate-600 font-mono uppercase tracking-widest">Built for HackHazards '26</span>
         </div>
       </footer>
