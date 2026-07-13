@@ -37,4 +37,23 @@ public class IncidentController {
 
         return ResponseEntity.ok(incidentService.getIncidentTimeline(id));
     }
+
+    // POST /api/incidents
+    @PostMapping
+    public ResponseEntity<IncidentDto> createIncident(@RequestBody IncidentDto incidentDto) {
+        return ResponseEntity.ok(incidentService.createIncident(incidentDto));
+    }
+
+    // POST /api/incidents/{id}/reconstruct
+    @PostMapping("/{id}/reconstruct")
+    public ResponseEntity<Void> triggerReconstruction(@PathVariable String id) {
+        incidentService.triggerReconstruction(id);
+        return ResponseEntity.ok().build();
+    }
+
+    // GET /api/incidents/{id}/graph
+    @GetMapping("/{id}/graph")
+    public ResponseEntity<com.hackhazards.internetblackbox.dto.GraphDto> getIncidentGraph(@PathVariable String id) {
+        return ResponseEntity.ok(incidentService.getIncidentGraph(id));
+    }
 }

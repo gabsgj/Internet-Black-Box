@@ -37,8 +37,8 @@ export const LoginPage: React.FC = () => {
         
         {/* Header */}
         <div className="flex flex-col items-center text-center space-y-3 mb-6">
-          <Link to="/" className="w-10 h-10 bg-emerald-600 rounded-xl flex items-center justify-center font-bold text-slate-950 shadow-lg shadow-emerald-500/20 border border-emerald-400">
-            ■
+          <Link to="/" className="w-10 h-10 rounded-xl overflow-hidden border border-emerald-500/30 flex items-center justify-center shadow-lg shadow-emerald-500/10 hover:shadow-emerald-500/30 transition-all">
+            <img src="/logo.jpg" className="w-full h-full object-cover" alt="Logo" />
           </Link>
           <div>
             <h2 className="text-lg font-bold text-slate-200 uppercase tracking-wider">

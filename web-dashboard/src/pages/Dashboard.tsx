@@ -46,7 +46,9 @@ export const Dashboard: React.FC = () => {
     activeTimeline, 
     fetchIncidents, 
     connectWebSocket, 
-    disconnectWebSocket 
+    disconnectWebSocket,
+    realTimeMode,
+    setRealTimeMode
   } = useDashboardStore();
 
   useEffect(() => {
@@ -66,9 +68,13 @@ export const Dashboard: React.FC = () => {
   };
 
   return (
-    <div className="p-8 space-y-8 flex-grow overflow-y-auto max-h-screen">
+    <div className="p-8 space-y-8 flex-grow overflow-y-auto max-h-screen relative">
+      {/* Subtle glowing backdrops */}
+      <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-emerald-500/5 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-10 left-10 w-[300px] h-[300px] bg-indigo-500/5 rounded-full blur-[80px] pointer-events-none" />
+
       {/* Upper header */}
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 relative z-10">
         <div>
           <h2 className="text-xl font-bold tracking-tight text-slate-100">
             System Intelligence Hub
@@ -77,9 +83,36 @@ export const Dashboard: React.FC = () => {
             Passively listening to digital footprints & auto-reconstructing incidents.
           </p>
         </div>
-        <div className="flex items-center space-x-2 bg-slate-950/40 border border-slate-900 rounded-lg px-3 py-1.5 text-xs text-slate-400">
-          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-          <span>Ingestors Active</span>
+        
+        <div className="flex items-center space-x-4">
+          {/* Mode Switcher */}
+          <div className="flex items-center bg-slate-950/60 border border-slate-900 rounded-xl p-1 text-xs">
+            <button
+              onClick={() => setRealTimeMode(false)}
+              className={`px-3 py-1.5 rounded-lg font-bold transition-all ${
+                !realTimeMode 
+                  ? 'bg-slate-900 text-amber-500 border border-amber-900/30' 
+                  : 'text-slate-500 hover:text-slate-300'
+              }`}
+            >
+              Mock Engine
+            </button>
+            <button
+              onClick={() => setRealTimeMode(true)}
+              className={`px-3 py-1.5 rounded-lg font-bold transition-all ${
+                realTimeMode 
+                  ? 'bg-slate-900 text-emerald-400 border border-emerald-900/30' 
+                  : 'text-slate-500 hover:text-slate-300'
+              }`}
+            >
+              Live API
+            </button>
+          </div>
+
+          <div className="flex items-center space-x-2 bg-slate-950/40 border border-slate-900 rounded-lg px-3 py-1.5 text-xs text-slate-400">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span>Ingestors Active</span>
+          </div>
         </div>
       </div>
 

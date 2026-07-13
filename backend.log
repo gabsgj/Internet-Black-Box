@@ -1,0 +1,78 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< com.hackhazards:internet-black-box >-----------------
+[INFO] Building internet-black-box 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.3.0:run (default-cli) > test-compile @ internet-black-box >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ internet-black-box ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ internet-black-box ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ internet-black-box ---
+[INFO] skip non existing resourceDirectory /Users/gabriel/Projects/Internet Black Box/backend/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ internet-black-box ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:3.3.0:run (default-cli) < test-compile @ internet-black-box <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.3.0:run (default-cli) @ internet-black-box ---
+[INFO] Attaching agents: []
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.0)
+
+2026-07-13T12:56:55.723+05:30  INFO 12362 --- [           main] c.h.i.InternetBlackBoxApplication        : Starting InternetBlackBoxApplication using Java 26.0.1 with PID 12362 (/Users/gabriel/Projects/Internet Black Box/backend/target/classes started by gabriel in /Users/gabriel/Projects/Internet Black Box/backend)
+2026-07-13T12:56:55.723+05:30  INFO 12362 --- [           main] c.h.i.InternetBlackBoxApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-07-13T12:56:55.866+05:30  INFO 12362 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2026-07-13T12:56:55.899+05:30  INFO 12362 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 0 Neo4j repository interfaces.
+2026-07-13T12:56:55.901+05:30  INFO 12362 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2026-07-13T12:56:55.907+05:30  INFO 12362 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 5 Neo4j repository interfaces.
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.apache.tomcat.jni.Library in an unnamed module (file:/Users/gabriel/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.24/tomcat-embed-core-10.1.24.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+2026-07-13T12:56:56.033+05:30  INFO 12362 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-13T12:56:56.036+05:30  INFO 12362 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-13T12:56:56.036+05:30  INFO 12362 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2026-07-13T12:56:56.047+05:30  INFO 12362 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-13T12:56:56.047+05:30  INFO 12362 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 309 ms
+2026-07-13T12:56:56.052+05:30 DEBUG 12362 --- [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2026-07-13T12:56:56.052+05:30 DEBUG 12362 --- [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by io.netty.util.internal.PlatformDependent0$4 (file:/Users/gabriel/.m2/repository/io/netty/netty-common/4.1.110.Final/netty-common-4.1.110.Final.jar)
+WARNING: Please consider reporting this to the maintainers of class io.netty.util.internal.PlatformDependent0$4
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+2026-07-13T12:56:56.093+05:30  INFO 12362 --- [           main] o.neo4j.driver.internal.DriverFactory    : Direct driver instance 1564170442 created for server address localhost:7687
+2026-07-13T12:56:56.282+05:30 DEBUG 12362 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 14 mappings in 'requestMappingHandlerMapping'
+2026-07-13T12:56:56.293+05:30 DEBUG 12362 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-07-13T12:56:56.303+05:30 DEBUG 12362 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-07-13T12:56:56.310+05:30 DEBUG 12362 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-07-13T12:56:56.339+05:30  INFO 12362 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-13T12:56:56.342+05:30  INFO 12362 --- [           main] c.h.i.InternetBlackBoxApplication        : Started InternetBlackBoxApplication in 0.709 seconds (process running for 0.788)22026-07-13T13:39:17.728+05:30  INFO 12362 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-13T13:39:17.728+05:30  INFO 12362 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-13T13:39:17.728+05:30 DEBUG 12362 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-07-13T13:39:17.728+05:30 DEBUG 12362 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-07-13T13:39:17.728+05:30 DEBUG 12362 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2026-07-13T13:39:17.729+05:30 DEBUG 12362 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@71f0806b
+2026-07-13T13:39:17.729+05:30 DEBUG 12362 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@22ae905f
+2026-07-13T13:39:17.730+05:30 DEBUG 12362 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-07-13T13:39:17.730+05:30  INFO 12362 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-07-13T13:39:17.734+05:30 DEBUG 12362 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/incidents", parameters={}
+2026-07-13T13:39:17.741+05:30 DEBUG 12362 --- [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hackhazards.internetblackbox.controller.IncidentController#getAllIncidents()
+2026-07-13T13:39:17.780+05:30 DEBUG 12362 --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-07-13T13:39:17.780+05:30 DEBUG 12362 --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[IncidentDto(id=inc-payment-500, title=P1 Outage: Payment API returning 500 errors on /checkout, typ (truncated)...]
+2026-07-13T13:39:17.793+05:30 DEBUG 12362 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK

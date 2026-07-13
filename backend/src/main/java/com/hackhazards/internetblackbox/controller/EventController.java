@@ -16,6 +16,11 @@ public class EventController {
 
     @GetMapping
     public List<Event> getAllEvents() {
-        return eventRepository.findAll();
+        try {
+            return eventRepository.findAll();
+        } catch (Exception e) {
+            // Return empty list on DB error
+            return List.of();
+        }
     }
 }

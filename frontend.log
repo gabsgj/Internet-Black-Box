@@ -1,0 +1,22 @@
+
+> web-dashboard@0.0.0 dev
+> vite --host
+
+12:59:59 PM [vite] (client) Re-optimizing dependencies because vite config has changed
+
+  VITE v8.1.0  ready in 90 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://192.168.1.18:5173/
+12:59:59 PM [vite] (client) [Unhandled error] SyntaxError: Unexpected token '('
+
+1:00:14 PM [vite] (client) [Unhandled error] SyntaxError: Unexpected token '('
+
+1:00:14 PM [vite] (client) [Unhandled error] SyntaxError: Unexpected token '('
+
+1:00:14 PM [vite] (client) [Unhandled error] SyntaxError: Unexpected token '('
+
+1:00:15 PM [vite] (client) [Unhandled error] SyntaxError: Unexpected token '('
+
+1:00:15 PM [vite] (client) [Unhandled error] SyntaxError: Unexpected token '('
+

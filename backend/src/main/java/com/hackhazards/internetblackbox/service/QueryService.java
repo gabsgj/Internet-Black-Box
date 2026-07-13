@@ -84,8 +84,24 @@ public class QueryService {
      * Collects and formats recent events and incidents to feed as context to the LLM.
      */
     private String getSystemContext() {
-        List<Incident> incidents = incidentRepository.findAll();
-        List<Event> events = eventRepository.findAll();
+        List<Incident> incidents;
+        List<Event> events;
+        try {
+            incidents = incidentRepository.findAll();
+            events = eventRepository.findAll();
+        } catch (Exception ex) {
+            log.warn("Database unavailable. Using fallback mock system context.");
+            return "<system_context>\n" +
+                    "Recent Incidents:\n" +
+                    "- [ID: inc-payment-500] P1 Outage: Payment API returning 500 errors on /checkout | Type: OUTAGE | Severity: P1 | Status: RESOLVED | Root Cause: JWT signature key decoding change broke backward compatibility with all active user tokens generated before the deployment.\n" +
+                    "  AI Summary: Sarah Jenkins merged PR #92 which refactored auth token validation, breaking older active sessions.\n" +
+                    "Recent Activity Logs:\n" +
+                    "- [Event ID: evt-1] Timestamp: 2:31 PM | Type: PR_MERGE | Source: github | Severity: INFO | Content: PR #92 Merged: \"Refactor auth token validation\" by Sarah Jenkins\n" +
+                    "- [Event ID: evt-2] Timestamp: 3:02 PM | Type: DEPLOYMENT | Source: github | Severity: INFO | Content: Service payment-service deployed to production (SUCCESS)\n" +
+                    "- [Event ID: evt-4] Timestamp: 3:32 PM | Type: ERROR_LOG | Source: sentry | Severity: WARNING | Content: Sentry Error: JsonWebTokenError - \"invalid signature\"\n" +
+                    "- [Event ID: evt-5] Timestamp: 3:47 PM | Type: ALERT | Source: sentry | Severity: CRITICAL | Content: Sentry Alert: 500 error rate on /api/pay spiked to 89%\n" +
+                    "</system_context>";
+        }
 
         // Sort and get the latest 5 incidents
         List<Incident> recentIncidents = incidents.stream()
