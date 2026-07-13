@@ -25,6 +25,9 @@ public class NvidiaLlmService {
     @Value("${nvidia.model:meta/llama-3.1-70b-instruct}")
     private String nvidiaModel;
 
+    @Value("${use.mock.data:false}")
+    private boolean useMockData;
+
     public NvidiaLlmService(@Qualifier("nvidiaWebClient") WebClient webClient, ObjectMapper objectMapper) {
         this.webClient = webClient;
         this.objectMapper = objectMapper;
@@ -38,6 +41,80 @@ public class NvidiaLlmService {
      * @return a Mono containing the parsed ReconstructionReport
      */
     public Mono<ReconstructionReport> reconstructIncident(IncidentDto incident, List<EventDto> events) {
+        if (useMockData) {
+            log.info("USE_MOCK_DATA is true, returning mock reconstruction report");
+            ReconstructionReport.TimelineEntry e1 = ReconstructionReport.TimelineEntry.builder()
+                    .timestamp("2026-07-12T14:00:00Z")
+                    .eventId("ev-92")
+                    .eventType("PullRequest")
+                    .content("PR #92: Update Auth Middleware")
+                    .actorName("Sarah Jenkins")
+                    .source("github")
+                    .causalAnnotation("Sarah Jenkins merged PR #92 which modified the auth middleware, breaking backward compatibility of JWT tokens.")
+                    .build();
+
+            ReconstructionReport.TimelineEntry e2 = ReconstructionReport.TimelineEntry.builder()
+                    .timestamp("2026-07-12T14:15:00Z")
+                    .eventId("ev-93")
+                    .eventType("Deployment")
+                    .content("Deployment to production")
+                    .actorName("Raj Patel")
+                    .source("github")
+                    .causalAnnotation("Deployment of the changes in PR #92 to production environment.")
+                    .build();
+
+            ReconstructionReport.TimelineEntry e3 = ReconstructionReport.TimelineEntry.builder()
+                    .timestamp("2026-07-12T14:20:00Z")
+                    .eventId("ev-94")
+                    .eventType("Message")
+                    .content("Slack Alert: Outage reported in #ops channel")
+                    .actorName("Raj Patel")
+                    .source("slack")
+                    .causalAnnotation("Team noticed the API was returning 500 errors after deployment.")
+                    .build();
+
+            ReconstructionReport.TimelineEntry e4 = ReconstructionReport.TimelineEntry.builder()
+                    .timestamp("2026-07-12T14:25:00Z")
+                    .eventId("ev-95")
+                    .eventType("Alert")
+                    .content("Sentry error: InvalidTokenException in auth middleware")
+                    .actorName("Sentry Bot")
+                    .source("sentry")
+                    .causalAnnotation("Sentry captured a sudden spike in JWT verification errors.")
+                    .build();
+
+            ReconstructionReport.RootCauseInfo rootCause = ReconstructionReport.RootCauseInfo.builder()
+                    .description("PR #92 merged by Sarah Jenkins modified the auth middleware and broke backward compatibility of JWT tokens, causing all subsequent API requests with existing tokens to fail.")
+                    .confidenceScore(0.92)
+                    .evidence(List.of("ev-92", "ev-95"))
+                    .build();
+
+            ReconstructionReport.PersonActivity p1 = ReconstructionReport.PersonActivity.builder()
+                    .name("Sarah Jenkins")
+                    .actions(List.of("Merged PR #92 modifying auth middleware"))
+                    .roleInChain("Introduced the breaking auth change")
+                    .build();
+
+            ReconstructionReport.PersonActivity p2 = ReconstructionReport.PersonActivity.builder()
+                    .name("Raj Patel")
+                    .actions(List.of("Triggered production deployment", "Reported outage in #ops channel"))
+                    .roleInChain("Deployed the breaking release and monitored system status")
+                    .build();
+
+            ReconstructionReport report = ReconstructionReport.builder()
+                    .timeline(List.of(e1, e2, e3, e4))
+                    .rootCause(rootCause)
+                    .peopleInvolved(List.of(p1, p2))
+                    .prevention(List.of(
+                            "Add unit tests for auth middleware token backward compatibility.",
+                            "Verify JWT verification against older token versions in staging.",
+                            "Implement canary deployments for critical security middleware updates."
+                    ))
+                    .build();
+
+            return Mono.just(report);
+        }
+
         String systemPrompt = buildSystemPrompt();
         String userPrompt = buildUserPrompt(incident, events);
 
@@ -79,6 +156,10 @@ public class NvidiaLlmService {
      * Sends a general-purpose prompt to the LLM and returns the raw text response.
      */
     public Mono<String> askLlm(String systemPrompt, String userPrompt) {
+        if (useMockData) {
+            log.info("USE_MOCK_DATA is true, returning mock LLM response");
+            return Mono.just("Mock LLM Response: Based on system context, PR #92 merged by Sarah Jenkins modified the auth middleware and broke backward compatibility of JWT tokens.");
+        }
         NvidiaChatRequest.Message systemMsg = NvidiaChatRequest.Message.builder()
                 .role("system")
                 .content(systemPrompt)

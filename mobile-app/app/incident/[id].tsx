@@ -1,17 +1,39 @@
 import {
   View,
   Text,
-  FlatList,
   ScrollView,
 } from "react-native";
+import { useLocalSearchParams } from "expo-router";
+import { useEffect } from "react";
 
-import { timeline } from "../../mock/timeline";
 import TimelineCard from "../../components/TimelineCard";
 import { useMobileStore } from "../../store/useMobileStore";
 
 export default function IncidentDetail() {
-    const { selectedIncident } =
-    useMobileStore();
+  const { id } = useLocalSearchParams();
+  const {
+    selectedIncident,
+    setSelectedIncident,
+    fetchIncidents,
+    timeline,
+    fetchIncidentTimeline,
+  } = useMobileStore();
+
+  useEffect(() => {
+    if (id) {
+      fetchIncidentTimeline(id as string).catch((err) => console.error(err));
+      if (!selectedIncident || selectedIncident.id !== id) {
+        fetchIncidents()
+          .then((list) => {
+            const found = list.find((inc: any) => inc.id === id);
+            if (found) {
+              setSelectedIncident(found);
+            }
+          })
+          .catch((err) => console.error(err));
+      }
+    }
+  }, [id]);
 
   return (
     <ScrollView
@@ -36,7 +58,7 @@ export default function IncidentDetail() {
           marginBottom: 20,
         }}
       >
-        {selectedIncident?.summary}
+        {selectedIncident?.type} • Status: {selectedIncident?.status}
       </Text>
 
       <Text
@@ -49,12 +71,18 @@ export default function IncidentDetail() {
         Causal Timeline
       </Text>
 
-      {timeline.map((item) => (
-        <TimelineCard
-          key={item.id}
-          item={item}
-        />
-      ))}
+      {timeline && timeline.length > 0 ? (
+        timeline.map((item: any) => (
+          <TimelineCard
+            key={item.id}
+            item={item}
+          />
+        ))
+      ) : (
+        <Text style={{ color: "#6b7280", marginBottom: 16 }}>
+          No timeline events available.
+        </Text>
+      )}
 
       <View
         style={{
@@ -62,6 +90,7 @@ export default function IncidentDetail() {
           padding: 16,
           borderRadius: 12,
           marginTop: 12,
+          marginBottom: 24,
         }}
       >
         <Text
@@ -71,12 +100,12 @@ export default function IncidentDetail() {
             marginBottom: 8,
           }}
         >
-          Root Cause
+          Root Cause / Summary
         </Text>
 
         <Text>
-          Auth validation update introduced
-          backward token validation failure.
+          {selectedIncident?.description ||
+            "No AI reconstruction report generated yet."}
         </Text>
       </View>
     </ScrollView>

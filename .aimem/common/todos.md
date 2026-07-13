@@ -12,10 +12,10 @@ Master tracking sheet of major project milestones and tasks.
 - [ ] Setup web-dashboard boilerplate and routing config <!-- id: 7 -->
 - [ ] Build React timeline layout UI and components <!-- id: 8 -->
 - [ ] Integrate Sigma.js or Graphology to render the causal subgraphs on Web <!-- id: 9 -->
-- [ ] Initialize mobile-app with Expo Router and TypeScript <!-- id: 10 -->
-- [ ] Build mobile incident list feed and detailed timeline view <!-- id: 11 -->
-- [ ] Integrate Zustand state and push notifications logic on Mobile <!-- id: 12 -->
-- [ ] Build mobile voice command querying using Sarvam STT <!-- id: 13 -->
-- [ ] Setup Spring Boot WebClient endpoints for Sarvam TTS/STT <!-- id: 14 -->
+- [x] Initialize mobile-app with Expo Router and TypeScript <!-- id: 10 -->
+- [x] Build mobile incident list feed and detailed timeline view <!-- id: 11 -->
+- [x] Integrate Zustand state and push notifications logic on Mobile <!-- id: 12 -->
+- [x] Build mobile voice command querying using Sarvam STT <!-- id: 13 -->
+- [x] Setup Spring Boot WebClient endpoints for Sarvam TTS/STT <!-- id: 14 -->
 - [ ] Deploy backend, static dashboard, and database instance to Render <!-- id: 15 -->
 - [ ] Run end-to-end integration demo run with the payment incident dataset <!-- id: 16 -->

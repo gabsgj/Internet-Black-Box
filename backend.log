@@ -34,45 +34,285 @@
 
  :: Spring Boot ::                (v3.3.0)
 
-2026-07-13T12:56:55.723+05:30  INFO 12362 --- [           main] c.h.i.InternetBlackBoxApplication        : Starting InternetBlackBoxApplication using Java 26.0.1 with PID 12362 (/Users/gabriel/Projects/Internet Black Box/backend/target/classes started by gabriel in /Users/gabriel/Projects/Internet Black Box/backend)
-2026-07-13T12:56:55.723+05:30  INFO 12362 --- [           main] c.h.i.InternetBlackBoxApplication        : No active profile set, falling back to 1 default profile: "default"
-2026-07-13T12:56:55.866+05:30  INFO 12362 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
-2026-07-13T12:56:55.899+05:30  INFO 12362 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 0 Neo4j repository interfaces.
-2026-07-13T12:56:55.901+05:30  INFO 12362 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
-2026-07-13T12:56:55.907+05:30  INFO 12362 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 5 Neo4j repository interfaces.
+2026-07-13T14:25:20.859+05:30  INFO 18837 --- [           main] c.h.i.InternetBlackBoxApplication        : Starting InternetBlackBoxApplication using Java 26.0.1 with PID 18837 (/Users/gabriel/Projects/Internet Black Box/backend/target/classes started by gabriel in /Users/gabriel/Projects/Internet Black Box/backend)
+2026-07-13T14:25:20.859+05:30  INFO 18837 --- [           main] c.h.i.InternetBlackBoxApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-07-13T14:25:21.004+05:30  INFO 18837 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2026-07-13T14:25:21.036+05:30  INFO 18837 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 0 Neo4j repository interfaces.
+2026-07-13T14:25:21.038+05:30  INFO 18837 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2026-07-13T14:25:21.045+05:30  INFO 18837 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 5 Neo4j repository interfaces.
 WARNING: A restricted method in java.lang.System has been called
 WARNING: java.lang.System::load has been called by org.apache.tomcat.jni.Library in an unnamed module (file:/Users/gabriel/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.24/tomcat-embed-core-10.1.24.jar)
 WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
 WARNING: Restricted methods will be blocked in a future release unless native access is enabled
 
-2026-07-13T12:56:56.033+05:30  INFO 12362 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2026-07-13T12:56:56.036+05:30  INFO 12362 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-07-13T12:56:56.036+05:30  INFO 12362 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
-2026-07-13T12:56:56.047+05:30  INFO 12362 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-07-13T12:56:56.047+05:30  INFO 12362 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 309 ms
-2026-07-13T12:56:56.052+05:30 DEBUG 12362 --- [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
-2026-07-13T12:56:56.052+05:30 DEBUG 12362 --- [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2026-07-13T14:25:21.173+05:30  INFO 18837 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-13T14:25:21.176+05:30  INFO 18837 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-13T14:25:21.176+05:30  INFO 18837 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2026-07-13T14:25:21.188+05:30  INFO 18837 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-13T14:25:21.188+05:30  INFO 18837 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 313 ms
+2026-07-13T14:25:21.193+05:30 DEBUG 18837 --- [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2026-07-13T14:25:21.193+05:30 DEBUG 18837 --- [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
 WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
 WARNING: sun.misc.Unsafe::objectFieldOffset has been called by io.netty.util.internal.PlatformDependent0$4 (file:/Users/gabriel/.m2/repository/io/netty/netty-common/4.1.110.Final/netty-common-4.1.110.Final.jar)
 WARNING: Please consider reporting this to the maintainers of class io.netty.util.internal.PlatformDependent0$4
 WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
-2026-07-13T12:56:56.093+05:30  INFO 12362 --- [           main] o.neo4j.driver.internal.DriverFactory    : Direct driver instance 1564170442 created for server address localhost:7687
-2026-07-13T12:56:56.282+05:30 DEBUG 12362 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 14 mappings in 'requestMappingHandlerMapping'
-2026-07-13T12:56:56.293+05:30 DEBUG 12362 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2026-07-13T12:56:56.303+05:30 DEBUG 12362 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-07-13T12:56:56.310+05:30 DEBUG 12362 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2026-07-13T12:56:56.339+05:30  INFO 12362 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2026-07-13T12:56:56.342+05:30  INFO 12362 --- [           main] c.h.i.InternetBlackBoxApplication        : Started InternetBlackBoxApplication in 0.709 seconds (process running for 0.788)22026-07-13T13:39:17.728+05:30  INFO 12362 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-07-13T13:39:17.728+05:30  INFO 12362 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-07-13T13:39:17.728+05:30 DEBUG 12362 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
-2026-07-13T13:39:17.728+05:30 DEBUG 12362 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
-2026-07-13T13:39:17.728+05:30 DEBUG 12362 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
-2026-07-13T13:39:17.729+05:30 DEBUG 12362 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@71f0806b
-2026-07-13T13:39:17.729+05:30 DEBUG 12362 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@22ae905f
-2026-07-13T13:39:17.730+05:30 DEBUG 12362 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2026-07-13T13:39:17.730+05:30  INFO 12362 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-07-13T13:39:17.734+05:30 DEBUG 12362 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/incidents", parameters={}
-2026-07-13T13:39:17.741+05:30 DEBUG 12362 --- [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hackhazards.internetblackbox.controller.IncidentController#getAllIncidents()
-2026-07-13T13:39:17.780+05:30 DEBUG 12362 --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2026-07-13T13:39:17.780+05:30 DEBUG 12362 --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[IncidentDto(id=inc-payment-500, title=P1 Outage: Payment API returning 500 errors on /checkout, typ (truncated)...]
-2026-07-13T13:39:17.793+05:30 DEBUG 12362 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-07-13T14:25:21.235+05:30  INFO 18837 --- [           main] o.neo4j.driver.internal.DriverFactory    : Direct driver instance 2028767654 created for server address localhost:7687
+2026-07-13T14:25:21.438+05:30 DEBUG 18837 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 14 mappings in 'requestMappingHandlerMapping'
+2026-07-13T14:25:21.449+05:30 DEBUG 18837 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-07-13T14:25:21.459+05:30 DEBUG 18837 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-07-13T14:25:21.470+05:30 DEBUG 18837 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-07-13T14:25:21.501+05:30  INFO 18837 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-13T14:25:21.503+05:30  INFO 18837 --- [           main] c.h.i.InternetBlackBoxApplication        : Started InternetBlackBoxApplication in 0.736 seconds (process running for 0.813)
+2026-07-13T14:25:21.812+05:30  INFO 18837 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-13T14:25:21.812+05:30  INFO 18837 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-13T14:25:21.812+05:30 DEBUG 18837 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-07-13T14:25:21.812+05:30 DEBUG 18837 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-07-13T14:25:21.812+05:30 DEBUG 18837 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2026-07-13T14:25:21.813+05:30 DEBUG 18837 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@30517a57
+2026-07-13T14:25:21.813+05:30 DEBUG 18837 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@6d4a05f7
+2026-07-13T14:25:21.813+05:30 DEBUG 18837 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-07-13T14:25:21.813+05:30  INFO 18837 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-07-13T14:25:21.814+05:30 DEBUG 18837 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/webhooks/sentry", parameters={}
+2026-07-13T14:25:21.816+05:30 DEBUG 18837 --- [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hackhazards.internetblackbox.controller.WebhookController#handleSentryWebhook(Map)
+2026-07-13T14:25:21.832+05:30 DEBUG 18837 --- [nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{message=Database connection timeout under heavy checkout load, level=fatal, project_name=checkout-s (truncated)...]
+2026-07-13T14:25:21.834+05:30  INFO 18837 --- [nio-8080-exec-1] c.h.i.controller.WebhookController       : Received Sentry Webhook request
+2026-07-13T14:25:21.837+05:30 DEBUG 18837 --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-07-13T14:25:21.837+05:30 DEBUG 18837 --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2026-07-13T14:25:21.837+05:30 DEBUG 18837 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-07-13T14:25:21.874+05:30  INFO 18837 --- [      Thread-11] c.h.i.service.WebhookService             : Processing Sentry alert webhook
+2026-07-13T14:25:21.909+05:30  WARN 18837 --- [      Thread-11] o.s.data.neo4j.cypher.unrecognized       : Neo.ClientNotification.Statement.UnknownRelationshipTypeWarning: The provided relationship type is not in the database.
+	MATCH (systemNode:`System`) WHERE systemNode.id = $__id__ OPTIONAL MATCH (systemNode)-[__sr__:`EXPERIENCED`]->(__srn__:`Incident`) WITH collect(id(systemNode)) AS __sn__, collect(id(__srn__)) AS __srn__, collect(id(__sr__)) AS __sr__ RETURN __sn__, __srn__, __sr__
+	                                                                                              ^
+One of the relationship types in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing relationship type is: EXPERIENCED)
+2026-07-13T14:25:21.922+05:30  WARN 18837 --- [      Thread-11] o.s.data.neo4j.cypher.deprecation        : Neo.ClientNotification.Statement.FeatureDeprecationWarning: This feature is deprecated and will be removed in future versions.
+	MATCH (rootNodeIds:`System`) WHERE id(rootNodeIds) IN $rootNodeIds WITH collect(rootNodeIds) AS n OPTIONAL MATCH ()-[relationshipIds]-() WHERE id(relationshipIds) IN $relationshipIds WITH n, collect(DISTINCT relationshipIds) AS __sr__ OPTIONAL MATCH (relatedNodeIds) WHERE id(relatedNodeIds) IN $relatedNodeIds WITH n, __sr__ AS __sr__, collect(DISTINCT relatedNodeIds) AS __srn__ UNWIND n AS rootNodeIds WITH rootNodeIds AS systemNode, __sr__, __srn__ RETURN systemNode AS __sn__, __sr__, __srn__
+	                                   ^
+The query used a deprecated function: `id`.
+2026-07-13T14:25:21.922+05:30  WARN 18837 --- [      Thread-11] o.s.data.neo4j.cypher.deprecation        : Neo.ClientNotification.Statement.FeatureDeprecationWarning: This feature is deprecated and will be removed in future versions.
+	MATCH (rootNodeIds:`System`) WHERE id(rootNodeIds) IN $rootNodeIds WITH collect(rootNodeIds) AS n OPTIONAL MATCH ()-[relationshipIds]-() WHERE id(relationshipIds) IN $relationshipIds WITH n, collect(DISTINCT relationshipIds) AS __sr__ OPTIONAL MATCH (relatedNodeIds) WHERE id(relatedNodeIds) IN $relatedNodeIds WITH n, __sr__ AS __sr__, collect(DISTINCT relatedNodeIds) AS __srn__ UNWIND n AS rootNodeIds WITH rootNodeIds AS systemNode, __sr__, __srn__ RETURN systemNode AS __sn__, __sr__, __srn__
+	                                                                                                                                               ^
+The query used a deprecated function: `id`.
+2026-07-13T14:25:21.922+05:30  WARN 18837 --- [      Thread-11] o.s.data.neo4j.cypher.deprecation        : Neo.ClientNotification.Statement.FeatureDeprecationWarning: This feature is deprecated and will be removed in future versions.
+	MATCH (rootNodeIds:`System`) WHERE id(rootNodeIds) IN $rootNodeIds WITH collect(rootNodeIds) AS n OPTIONAL MATCH ()-[relationshipIds]-() WHERE id(relationshipIds) IN $relationshipIds WITH n, collect(DISTINCT relationshipIds) AS __sr__ OPTIONAL MATCH (relatedNodeIds) WHERE id(relatedNodeIds) IN $relatedNodeIds WITH n, __sr__ AS __sr__, collect(DISTINCT relatedNodeIds) AS __srn__ UNWIND n AS rootNodeIds WITH rootNodeIds AS systemNode, __sr__, __srn__ RETURN systemNode AS __sn__, __sr__, __srn__
+	                                                                                                                                                                                                                                                                                 ^
+The query used a deprecated function: `id`.
+2026-07-13T14:25:21.924+05:30  WARN 18837 --- [      Thread-11] o.s.d.n.c.m.DefaultNeo4jIsNewStrategy    : Instances of class com.hackhazards.internetblackbox.model.Event with an assigned id will always be treated as new without version property
+2026-07-13T14:25:21.936+05:30  WARN 18837 --- [      Thread-11] o.s.d.n.c.m.DefaultNeo4jIsNewStrategy    : Instances of class com.hackhazards.internetblackbox.model.SystemNode with an assigned id will always be treated as new without version property
+2026-07-13T14:25:21.951+05:30  WARN 18837 --- [      Thread-11] o.s.data.neo4j.cypher.deprecation        : Neo.ClientNotification.Statement.FeatureDeprecationWarning: This feature is deprecated and will be removed in future versions.
+	UNWIND $__relationships__ AS relationship WITH relationship MATCH (startNode:`Event`) WHERE startNode.id = relationship.fromId MATCH (endNode) WHERE id(endNode) = relationship.toId MERGE (startNode)-[relProps:`AFFECTED`]->(endNode) RETURN id(relProps) AS __elementId__
+	                                                                                                                                                     ^
+The query used a deprecated function: `id`.
+2026-07-13T14:25:21.951+05:30  WARN 18837 --- [      Thread-11] o.s.data.neo4j.cypher.deprecation        : Neo.ClientNotification.Statement.FeatureDeprecationWarning: This feature is deprecated and will be removed in future versions.
+	UNWIND $__relationships__ AS relationship WITH relationship MATCH (startNode:`Event`) WHERE startNode.id = relationship.fromId MATCH (endNode) WHERE id(endNode) = relationship.toId MERGE (startNode)-[relProps:`AFFECTED`]->(endNode) RETURN id(relProps) AS __elementId__
+	                                                                                                                                                                                                                                               ^
+The query used a deprecated function: `id`.
+2026-07-13T14:25:21.952+05:30  INFO 18837 --- [      Thread-11] c.h.i.service.WebhookService             : Saved Sentry alert: Database connection timeout under heavy checkout load for system: checkout-service
+2026-07-13T14:25:21.952+05:30  WARN 18837 --- [      Thread-11] c.h.i.service.WebhookService             : CRITICAL Sentry alert received. Auto-triggering incident reconstruction...
+2026-07-13T14:25:21.952+05:30  WARN 18837 --- [      Thread-11] o.s.d.n.c.m.DefaultNeo4jIsNewStrategy    : Instances of class com.hackhazards.internetblackbox.model.Incident with an assigned id will always be treated as new without version property
+2026-07-13T14:25:21.971+05:30  INFO 18837 --- [         task-1] c.h.i.s.IncidentReconstructionService    : Starting async incident reconstruction for incident ID: inc_sentry_1783932921952
+2026-07-13T14:25:21.979+05:30  WARN 18837 --- [         task-1] o.s.data.neo4j.cypher.unrecognized       : Neo.ClientNotification.Statement.UnknownRelationshipTypeWarning: The provided relationship type is not in the database.
+	MATCH (incident:`Incident`) WHERE incident.id = $__id__ OPTIONAL MATCH (incident)-[__sr__:`CAUSED_BY`]->(__srn__:`Event`) WITH collect(id(incident)) AS __sn__, collect(id(__srn__)) AS __srn__, collect(id(__sr__)) AS __sr__ RETURN __sn__, __srn__, __sr__
+	                                                                                          ^
+One of the relationship types in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing relationship type is: CAUSED_BY)
+2026-07-13T14:25:21.985+05:30  WARN 18837 --- [         task-1] o.s.data.neo4j.cypher.deprecation        : Neo.ClientNotification.Statement.FeatureDeprecationWarning: This feature is deprecated and will be removed in future versions.
+	MATCH (rootNodeIds:`Incident`) WHERE id(rootNodeIds) IN $rootNodeIds WITH collect(rootNodeIds) AS n OPTIONAL MATCH ()-[relationshipIds]-() WHERE id(relationshipIds) IN $relationshipIds WITH n, collect(DISTINCT relationshipIds) AS __sr__ OPTIONAL MATCH (relatedNodeIds) WHERE id(relatedNodeIds) IN $relatedNodeIds WITH n, __sr__ AS __sr__, collect(DISTINCT relatedNodeIds) AS __srn__ UNWIND n AS rootNodeIds WITH rootNodeIds AS incident, __sr__, __srn__ RETURN incident AS __sn__, __sr__, __srn__
+	                                     ^
+The query used a deprecated function: `id`.
+2026-07-13T14:25:21.986+05:30  WARN 18837 --- [         task-1] o.s.data.neo4j.cypher.deprecation        : Neo.ClientNotification.Statement.FeatureDeprecationWarning: This feature is deprecated and will be removed in future versions.
+	MATCH (rootNodeIds:`Incident`) WHERE id(rootNodeIds) IN $rootNodeIds WITH collect(rootNodeIds) AS n OPTIONAL MATCH ()-[relationshipIds]-() WHERE id(relationshipIds) IN $relationshipIds WITH n, collect(DISTINCT relationshipIds) AS __sr__ OPTIONAL MATCH (relatedNodeIds) WHERE id(relatedNodeIds) IN $relatedNodeIds WITH n, __sr__ AS __sr__, collect(DISTINCT relatedNodeIds) AS __srn__ UNWIND n AS rootNodeIds WITH rootNodeIds AS incident, __sr__, __srn__ RETURN incident AS __sn__, __sr__, __srn__
+	                                                                                                                                                 ^
+The query used a deprecated function: `id`.
+2026-07-13T14:25:21.986+05:30  WARN 18837 --- [         task-1] o.s.data.neo4j.cypher.deprecation        : Neo.ClientNotification.Statement.FeatureDeprecationWarning: This feature is deprecated and will be removed in future versions.
+	MATCH (rootNodeIds:`Incident`) WHERE id(rootNodeIds) IN $rootNodeIds WITH collect(rootNodeIds) AS n OPTIONAL MATCH ()-[relationshipIds]-() WHERE id(relationshipIds) IN $relationshipIds WITH n, collect(DISTINCT relationshipIds) AS __sr__ OPTIONAL MATCH (relatedNodeIds) WHERE id(relatedNodeIds) IN $relatedNodeIds WITH n, __sr__ AS __sr__, collect(DISTINCT relatedNodeIds) AS __srn__ UNWIND n AS rootNodeIds WITH rootNodeIds AS incident, __sr__, __srn__ RETURN incident AS __sn__, __sr__, __srn__
+	                                                                                                                                                                                                                                                                                   ^
+The query used a deprecated function: `id`.
+2026-07-13T14:25:21.999+05:30  INFO 18837 --- [         task-1] c.h.i.s.IncidentReconstructionService    : Fetched 0 events in time window [2026-07-13T10:25:21.952540 to 2026-07-13T14:55:21.952540] for reconstruction
+2026-07-13T14:25:22.000+05:30  INFO 18837 --- [         task-1] c.h.i.service.NvidiaLlmService           : Sending incident reconstruction request to Nvidia NIM AI (meta/llama-3.1-70b-instruct) for incident: inc_sentry_1783932921952
+2026-07-13T14:25:22.012+05:30 DEBUG 18837 --- [         task-1] o.s.w.r.f.client.ExchangeFunctions       : [3e26bc2b] HTTP POST https://integrate.api.nvidia.com/v1/chat/completions
+2026-07-13T14:25:22.285+05:30 DEBUG 18837 --- [ctor-http-nio-2] o.s.http.codec.json.Jackson2JsonEncoder  : [3e26bc2b] Encoding [NvidiaChatRequest(model=meta/llama-3.1-70b-instruct, messages=[NvidiaChatRequest.Message(role=system (truncated)...]
+2026-07-13T14:25:22.363+05:30 DEBUG 18837 --- [ctor-http-nio-2] o.s.w.r.f.client.ExchangeFunctions       : [3e26bc2b] [9319ce74-1, L:/192.168.1.18:51823 - R:integrate.api.nvidia.com/99.83.136.103:443] Response 500 INTERNAL_SERVER_ERROR
+2026-07-13T14:25:22.370+05:30 DEBUG 18837 --- [ctor-http-nio-2] o.s.core.codec.ByteArrayDecoder          : [3e26bc2b] [9319ce74-1, L:/192.168.1.18:51823 - R:integrate.api.nvidia.com/99.83.136.103:443] Read 200 bytes
+2026-07-13T14:25:22.374+05:30 ERROR 18837 --- [ctor-http-nio-2] c.h.i.service.NvidiaLlmService           : Failed to reconstruct incident via Nvidia NIM LLM: 500 Internal Server Error from POST https://integrate.api.nvidia.com/v1/chat/completions
+
+org.springframework.web.reactive.function.client.WebClientResponseException$InternalServerError: 500 Internal Server Error from POST https://integrate.api.nvidia.com/v1/chat/completions
+	at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:318) ~[spring-webflux-6.1.8.jar:6.1.8]
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ⇢ 500 INTERNAL_SERVER_ERROR from POST https://integrate.api.nvidia.com/v1/chat/completions [DefaultWebClient]
+Original Stack Trace:
+		at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:318) ~[spring-webflux-6.1.8.jar:6.1.8]
+		at org.springframework.web.reactive.function.client.DefaultClientResponse.lambda$createException$1(DefaultClientResponse.java:214) ~[spring-webflux-6.1.8.jar:6.1.8]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxOnErrorReturn$ReturnSubscriber.onNext(FluxOnErrorReturn.java:162) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:122) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:299) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:145) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:415) ~[reactor-netty-core-1.1.19.jar:1.1.19]
+		at reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:446) ~[reactor-netty-core-1.1.19.jar:1.1.19]
+		at reactor.netty.channel.ChannelOperations.terminate(ChannelOperations.java:500) ~[reactor-netty-core-1.1.19.jar:1.1.19]
+		at reactor.netty.http.client.HttpClientOperations.onInboundNext(HttpClientOperations.java:793) ~[reactor-netty-http-1.1.19.jar:1.1.19]
+		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:114) ~[reactor-netty-core-1.1.19.jar:1.1.19]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103) ~[netty-codec-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318) ~[netty-codec-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1475) ~[netty-handler-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1338) ~[netty-handler-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1387) ~[netty-handler-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:530) ~[netty-codec-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:469) ~[netty-codec-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1407) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:918) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+		at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
+
+2026-07-13T14:25:22.376+05:30 ERROR 18837 --- [         task-1] c.h.i.s.IncidentReconstructionService    : Failed to reconstruct incident ID: inc_sentry_1783932921952. Error: 500 Internal Server Error from POST https://integrate.api.nvidia.com/v1/chat/completions
+
+org.springframework.web.reactive.function.client.WebClientResponseException$InternalServerError: 500 Internal Server Error from POST https://integrate.api.nvidia.com/v1/chat/completions
+	at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:318) ~[spring-webflux-6.1.8.jar:6.1.8]
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ⇢ 500 INTERNAL_SERVER_ERROR from POST https://integrate.api.nvidia.com/v1/chat/completions [DefaultWebClient]
+Original Stack Trace:
+		at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:318) ~[spring-webflux-6.1.8.jar:6.1.8]
+		at org.springframework.web.reactive.function.client.DefaultClientResponse.lambda$createException$1(DefaultClientResponse.java:214) ~[spring-webflux-6.1.8.jar:6.1.8]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxOnErrorReturn$ReturnSubscriber.onNext(FluxOnErrorReturn.java:162) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:122) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:299) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:145) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:415) ~[reactor-netty-core-1.1.19.jar:1.1.19]
+		at reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:446) ~[reactor-netty-core-1.1.19.jar:1.1.19]
+		at reactor.netty.channel.ChannelOperations.terminate(ChannelOperations.java:500) ~[reactor-netty-core-1.1.19.jar:1.1.19]
+		at reactor.netty.http.client.HttpClientOperations.onInboundNext(HttpClientOperations.java:793) ~[reactor-netty-http-1.1.19.jar:1.1.19]
+		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:114) ~[reactor-netty-core-1.1.19.jar:1.1.19]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:103) ~[netty-codec-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318) ~[netty-codec-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1475) ~[netty-handler-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1338) ~[netty-handler-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1387) ~[netty-handler-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:530) ~[netty-codec-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:469) ~[netty-codec-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1407) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:918) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+		at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
+	Suppressed: java.lang.Exception: #block terminated with an error
+		at reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:104) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.Mono.block(Mono.java:1779) ~[reactor-core-3.6.6.jar:3.6.6]
+		at com.hackhazards.internetblackbox.service.IncidentReconstructionService.triggerReconstruction(IncidentReconstructionService.java:89) ~[classes/:na]
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+		at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+		at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354) ~[spring-aop-6.1.8.jar:6.1.8]
+		at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.8.jar:6.1.8]
+		at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.8.jar:6.1.8]
+		at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.8.jar:6.1.8]
+		at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.1.8.jar:6.1.8]
+		at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392) ~[spring-tx-6.1.8.jar:6.1.8]
+		at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.1.8.jar:6.1.8]
+		at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.8.jar:6.1.8]
+		at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.8.jar:6.1.8]
+		at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:113) ~[spring-aop-6.1.8.jar:6.1.8]
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:330) ~[na:na]
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090) ~[na:na]
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614) ~[na:na]
+		at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
+
+2026-07-13T14:25:24.867+05:30 DEBUG 18837 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/incidents", parameters={}
+2026-07-13T14:25:24.867+05:30 DEBUG 18837 --- [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hackhazards.internetblackbox.controller.IncidentController#getAllIncidents()
+2026-07-13T14:25:24.892+05:30  WARN 18837 --- [nio-8080-exec-2] o.s.data.neo4j.cypher.unrecognized       : Neo.ClientNotification.Statement.UnknownRelationshipTypeWarning: The provided relationship type is not in the database.
+	MATCH (incident:`Incident`) OPTIONAL MATCH (incident)-[__sr__:`CAUSED_BY`]->(__srn__:`Event`) WITH collect(id(incident)) AS __sn__, collect(id(__srn__)) AS __srn__, collect(id(__sr__)) AS __sr__ RETURN __sn__, __srn__, __sr__
+	                                                              ^
+One of the relationship types in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing relationship type is: CAUSED_BY)
+2026-07-13T14:25:24.903+05:30  WARN 18837 --- [nio-8080-exec-2] o.s.data.neo4j.cypher.deprecation        : Neo.ClientNotification.Statement.FeatureDeprecationWarning: This feature is deprecated and will be removed in future versions.
+	MATCH (rootNodeIds:`Incident`) WHERE id(rootNodeIds) IN $rootNodeIds WITH collect(rootNodeIds) AS n OPTIONAL MATCH ()-[relationshipIds]-() WHERE id(relationshipIds) IN $relationshipIds WITH n, collect(DISTINCT relationshipIds) AS __sr__ OPTIONAL MATCH (relatedNodeIds) WHERE id(relatedNodeIds) IN $relatedNodeIds WITH n, __sr__ AS __sr__, collect(DISTINCT relatedNodeIds) AS __srn__ UNWIND n AS rootNodeIds WITH rootNodeIds AS incident, __sr__, __srn__ RETURN incident AS __sn__, __sr__, __srn__
+	                                     ^
+The query used a deprecated function: `id`.
+2026-07-13T14:25:24.903+05:30  WARN 18837 --- [nio-8080-exec-2] o.s.data.neo4j.cypher.deprecation        : Neo.ClientNotification.Statement.FeatureDeprecationWarning: This feature is deprecated and will be removed in future versions.
+	MATCH (rootNodeIds:`Incident`) WHERE id(rootNodeIds) IN $rootNodeIds WITH collect(rootNodeIds) AS n OPTIONAL MATCH ()-[relationshipIds]-() WHERE id(relationshipIds) IN $relationshipIds WITH n, collect(DISTINCT relationshipIds) AS __sr__ OPTIONAL MATCH (relatedNodeIds) WHERE id(relatedNodeIds) IN $relatedNodeIds WITH n, __sr__ AS __sr__, collect(DISTINCT relatedNodeIds) AS __srn__ UNWIND n AS rootNodeIds WITH rootNodeIds AS incident, __sr__, __srn__ RETURN incident AS __sn__, __sr__, __srn__
+	                                                                                                                                                 ^
+The query used a deprecated function: `id`.
+2026-07-13T14:25:24.903+05:30  WARN 18837 --- [nio-8080-exec-2] o.s.data.neo4j.cypher.deprecation        : Neo.ClientNotification.Statement.FeatureDeprecationWarning: This feature is deprecated and will be removed in future versions.
+	MATCH (rootNodeIds:`Incident`) WHERE id(rootNodeIds) IN $rootNodeIds WITH collect(rootNodeIds) AS n OPTIONAL MATCH ()-[relationshipIds]-() WHERE id(relationshipIds) IN $relationshipIds WITH n, collect(DISTINCT relationshipIds) AS __sr__ OPTIONAL MATCH (relatedNodeIds) WHERE id(relatedNodeIds) IN $relatedNodeIds WITH n, __sr__ AS __sr__, collect(DISTINCT relatedNodeIds) AS __srn__ UNWIND n AS rootNodeIds WITH rootNodeIds AS incident, __sr__, __srn__ RETURN incident AS __sn__, __sr__, __srn__
+	                                                                                                                                                                                                                                                                                   ^
+The query used a deprecated function: `id`.
+2026-07-13T14:25:24.908+05:30 DEBUG 18837 --- [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-07-13T14:25:24.909+05:30 DEBUG 18837 --- [nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[IncidentDto(id=inc_sentry_1783932421233, title=Auto-Triggered Outage: Database connection timeout u (truncated)...]
+2026-07-13T14:25:24.916+05:30 DEBUG 18837 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-07-13T14:25:28.686+05:30  INFO 18837 --- [ionShutdownHook] o.neo4j.driver.internal.InternalDriver   : Closing driver instance 2028767654
+2026-07-13T14:25:28.689+05:30  INFO 18837 --- [ionShutdownHook] o.n.d.i.async.pool.ConnectionPoolImpl    : Closing connection pool towards localhost:7687
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.615 s
+[INFO] Finished at: 2026-07-13T14:25:28+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.3.0:run (default-cli) on project internet-black-box: Process terminated with exit code: 143 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

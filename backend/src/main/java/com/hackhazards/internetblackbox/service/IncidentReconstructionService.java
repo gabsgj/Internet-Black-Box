@@ -34,7 +34,7 @@ public class IncidentReconstructionService {
      * @param incidentId the ID of the incident to reconstruct
      */
     @Async
-    @Transactional
+    @Transactional("transactionManager")
     public void triggerReconstruction(String incidentId) {
         log.info("Starting async incident reconstruction for incident ID: {}", incidentId);
 

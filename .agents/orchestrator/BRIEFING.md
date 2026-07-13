@@ -24,13 +24,13 @@ Implement the full Internet Black Box application, coordinating Backend, Fronten
    - Redesign: re-partition milestones
 4. **Succession**: Self-succeed at 16 spawns.
 - **Work items**:
-  1. Initialize plan.md and progress.md [in-progress]
-  2. Explore and verify initial backend/mobile setups [pending]
-  3. Implement backend milestones (Neo4j, controllers, DTOs, webhooks, WebSockets) [pending]
-  4. Implement mobile milestones (Expo navigation, Incident Feed, detail timeline, audio recording, Zustand) [pending]
-  5. E2E validation and final polish [pending]
+  1. Initialize plan.md and progress.md [done]
+  2. Explore and verify initial backend/mobile setups [done]
+  3. Implement backend milestones (Neo4j, controllers, DTOs, webhooks, WebSockets) [done]
+  4. Implement mobile milestones (Expo navigation, Incident Feed, detail timeline, audio recording, Zustand) [done]
+  5. E2E validation and final polish [in-progress]
 - **Current phase**: 1
-- **Current focus**: Initializing plan.md and progress.md
+- **Current focus**: E2E validation and final polish
 
 ## 🔒 Key Constraints
 - Never write, modify, or create source code files directly.
@@ -49,17 +49,22 @@ Implement the full Internet Black Box application, coordinating Backend, Fronten
 ## Team Roster
 | Agent | Type | Work Item | Status | Conv ID |
 |-------|------|-----------|--------|---------|
+| Explorer_M1 | teamwork_preview_explorer | Explore backend and mobile | completed | 30a3c0df-fcff-46ff-b5f8-e11078b9971a |
+| Worker_M1_M2 | teamwork_preview_worker | Set up Neo4j and create test_backend.sh | completed | e3fbedcd-c61e-4714-a627-b92e8c166f6c |
+| Worker_M3_M4 | teamwork_preview_worker | Connect mobile app to API, mock toggle, build check | completed | 44d42c5c-dea9-4ff1-b72a-43aa85b15b43 |
+| Reviewer_M4 | teamwork_preview_reviewer | Review code changes and test scripts | in-progress | b568deea-469b-48aa-a52d-5175c31695bf |
+| Auditor_M4 | teamwork_preview_auditor | Forensic integrity check | in-progress | 4cdaea34-7c16-401a-ab3a-2f201787d883 |
 
 ## Succession Status
 - Succession required: no
-- Spawn count: 0 / 16
-- Pending subagents: none
+- Spawn count: 5 / 16
+- Pending subagents: b568deea-469b-48aa-a52d-5175c31695bf, 4cdaea34-7c16-401a-ab3a-2f201787d883
 - Predecessor: none
 - Successor: not yet spawned
 
 ## Active Timers
-- Heartbeat cron: not started
-- Safety timer: none
+- Heartbeat cron: task-71
+- Safety timer: task-194 (Reviewer), task-196 (Auditor)
 
 ## Artifact Index
 - /Users/gabriel/Projects/Internet Black Box/.agents/orchestrator/ORIGINAL_REQUEST.md — Original User Request

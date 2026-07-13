@@ -33,6 +33,9 @@ public class SarvamService {
     @Value("${sarvam.speaker.tts:ritu}")
     private String defaultSpeaker;
 
+    @Value("${use.mock.data:false}")
+    private boolean useMockData;
+
     public SarvamService(@Qualifier("sarvamWebClient") WebClient webClient) {
         this.webClient = webClient;
     }
@@ -45,6 +48,10 @@ public class SarvamService {
      * @return transcript text
      */
     public Mono<String> speechToText(byte[] audioBytes, String languageCode) {
+        if (useMockData) {
+            log.info("USE_MOCK_DATA is true, returning mock transcription");
+            return Mono.just("what caused the outage yesterday?");
+        }
         log.info("Sending speech-to-text request to Sarvam using model: {}, language: {}", sttModel, languageCode);
 
         MultipartBodyBuilder builder = new MultipartBodyBuilder();
@@ -88,6 +95,10 @@ public class SarvamService {
      * @return synthesized audio as a byte array
      */
     public Mono<byte[]> textToSpeech(String text, String languageCode) {
+        if (useMockData) {
+            log.info("USE_MOCK_DATA is true, returning mock synthesized audio");
+            return Mono.just(new byte[100]);
+        }
         log.info("Sending text-to-speech request to Sarvam using model: {}, speaker: {}, language: {}", 
                 ttsModel, defaultSpeaker, languageCode);
 

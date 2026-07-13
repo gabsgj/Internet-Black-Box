@@ -47,7 +47,7 @@ public class WebhookService {
     /**
      * Parses and processes GitHub webhook events (e.g. push/commits and pull_request).
      */
-    @Transactional
+    @Transactional("transactionManager")
     public void processGitHubWebhook(Map<String, Object> payload, String githubEventHeader) {
         log.info("Processing GitHub webhook event type: {}", githubEventHeader);
         try {
@@ -206,7 +206,7 @@ Event commitEvent = Event.builder()
     /**
      * Parses and processes Slack webhook events.
      */
-    @Transactional
+    @Transactional("transactionManager")
     public void processSlackWebhook(Map<String, Object> payload) {
         log.info("Processing Slack webhook event");
         try {
@@ -273,7 +273,7 @@ Event slackEvent = Event.builder()
     /**
      * Parses and processes Sentry webhook events (Alerts).
      */
-    @Transactional
+    @Transactional("transactionManager")
     public void processSentryWebhook(Map<String, Object> payload) {
         log.info("Processing Sentry alert webhook");
         try {

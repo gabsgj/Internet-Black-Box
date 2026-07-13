@@ -10,8 +10,6 @@ import IncidentCard from "../../components/IncidentCard";
 
 import { useMobileStore } from "../../store/useMobileStore";
 
-import { incidents as mockIncidents } from "../../mock/incidents";
-
 import { router } from "expo-router";
 
 import { useEffect } from "react";
@@ -22,20 +20,23 @@ export default function FeedScreen() {
 
     const {
         incidents,
-        setIncidents,
+        fetchIncidents,
         setSelectedIncident,
         } = useMobileStore();
 
         useEffect(() => {
-        setIncidents(mockIncidents);
+          fetchIncidents().catch((err) => console.error(err));
         }, []);
 
-  const onRefresh = () => {
+  const onRefresh = async () => {
     setRefreshing(true);
-
-    setTimeout(() => {
+    try {
+      await fetchIncidents();
+    } catch (err) {
+      console.error(err);
+    } finally {
       setRefreshing(false);
-    }, 1500);
+    }
   };
 
   return (
