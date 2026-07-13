@@ -2,30 +2,36 @@
 # Internet Black Box — Render Blueprint (render.yaml)
 # https://render.com/docs/blueprint-spec
 #
-# Services deployed:
-#   1. api-server       → Spring Boot 3 REST API  (Web Service, Docker)
-#   2. web-dashboard    → React + Vite SPA         (Static Site)
+# FREE TIER SETUP
+#   - api-server    → Web Service, native Java runtime (free, sleeps after 15 min)
+#   - web-dashboard → Static Site (always free, never sleeps)
 #
 # Webhook ingestion (GitHub / Slack / Sentry) is handled directly by the API
-# server at the routes below — configure these URLs in each platform's
-# webhook settings after first deploy:
+# server. Configure these URLs in each platform after first deploy:
 #
-#   GitHub   → https://<api-server>/api/webhooks/github
-#   Slack    → https://<api-server>/api/webhooks/slack
-#   Sentry   → https://<api-server>/api/webhooks/sentry
+#   GitHub  → https://<api-server>.onrender.com/api/webhooks/github
+#   Slack   → https://<api-server>.onrender.com/api/webhooks/slack
+#   Sentry  → https://<api-server>.onrender.com/api/webhooks/sentry
 #
+# NOTE: Free web services sleep after 15 min of inactivity.
+#       First request after sleep takes ~30 sec to wake up.
+#       Upgrade to Starter ($7/mo) for always-on behavior.
 # ─────────────────────────────────────────────────────────────────────────────
 
 services:
 
-  # ── 1. Spring Boot API (Web Service) ───────────────────────────────────────
+  # ── 1. Spring Boot API (Web Service — Free Tier) ───────────────────────────
   - type: web
     name: api-server
-    runtime: docker
-    dockerfilePath: ./backend/Dockerfile
-    dockerContext: ./backend
+    runtime: java
     region: oregon
-    plan: starter
+    plan: free
+
+    # Build the fat JAR from the backend/ subdirectory
+    buildCommand: cd backend && mvn clean package -DskipTests -q
+
+    # Run the built JAR — Render sets $PORT automatically
+    startCommand: java -Dserver.port=$PORT -jar backend/target/internet-black-box-0.0.1-SNAPSHOT.jar
 
     # Auto-deploy on every push to main
     autoDeploy: true
@@ -36,7 +42,7 @@ services:
     envVars:
       # Neo4j AuraDB connection
       - key: SPRING_NEO4J_URI
-        sync: false                  # set manually in Render dashboard
+        sync: false          # set manually in Render dashboard
 
       - key: SPRING_NEO4J_USERNAME
         sync: false
@@ -66,7 +72,7 @@ services:
       - key: SLACK_SIGNING_SECRET
         sync: false
 
-      # Sentry integration
+      # Sentry integration (optional)
       - key: SENTRY_DSN
         sync: false
 
@@ -74,29 +80,24 @@ services:
       - key: USE_MOCK_DATA
         value: "false"
 
-      # Spring port (Render injects PORT; kept explicit for clarity)
-      - key: SERVER_PORT
-        value: "8080"
-
-  # ── 2. React Web Dashboard (Static Site) ───────────────────────────────────
+  # ── 2. React Web Dashboard (Static Site — Always Free) ─────────────────────
   - type: web
     name: web-dashboard
     runtime: static
     buildCommand: cd web-dashboard && npm ci && npm run build
     staticPublishPath: ./web-dashboard/dist
 
-    # Auto-deploy on every push to main
     autoDeploy: true
     branch: main
 
-    # SPA routing: serve index.html for all unknown paths
+    # SPA routing — serve index.html for all unknown paths (React Router)
     routes:
       - type: rewrite
         source: /*
         destination: /index.html
 
     headers:
-      # Cache aggressively for hashed assets, never for index.html
+      # Cache hashed assets forever, never cache index.html
       - path: /assets/*
         name: Cache-Control
         value: public, max-age=31536000, immutable
