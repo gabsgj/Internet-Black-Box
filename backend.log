@@ -1,0 +1,361 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< com.hackhazards:internet-black-box >-----------------
+[INFO] Building internet-black-box 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.3.0:run (default-cli) > test-compile @ internet-black-box >>>
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-actuator/3.3.0/spring-boot-starter-actuator-3.3.0.pom
+Progress (1): 953 BProgress (1): 2.8 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-actuator/3.3.0/spring-boot-starter-actuator-3.3.0.pom (2.8 kB at 14 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-actuator-autoconfigure/3.3.0/spring-boot-actuator-autoconfigure-3.3.0.pom
+Progress (1): 993 BProgress (1): 2.9 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-actuator-autoconfigure/3.3.0/spring-boot-actuator-autoconfigure-3.3.0.pom (2.9 kB at 67 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-actuator/3.3.0/spring-boot-actuator-3.3.0.pom
+Progress (1): 1.0 kBProgress (1): 2.0 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-actuator/3.3.0/spring-boot-actuator-3.3.0.pom (2.0 kB at 66 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-jakarta9/1.13.0/micrometer-jakarta9-1.13.0.pom
+Progress (1): 1.1 kBProgress (1): 3.4 kBProgress (1): 3.8 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-jakarta9/1.13.0/micrometer-jakarta9-1.13.0.pom (3.8 kB at 118 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-core/1.13.0/micrometer-core-1.13.0.pom
+Progress (1): 987 BProgress (1): 3.7 kBProgress (1): 9.0 kBProgress (1): 11 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-core/1.13.0/micrometer-core-1.13.0.pom (11 kB at 313 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/hdrhistogram/HdrHistogram/2.2.1/HdrHistogram-2.2.1.pom
+Progress (1): 940 BProgress (1): 2.3 kBProgress (1): 4.5 kBProgress (1): 8.8 kBProgress (1): 12 kB Progress (1): 14 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/hdrhistogram/HdrHistogram/2.2.1/HdrHistogram-2.2.1.pom (14 kB at 445 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-actuator/3.3.0/spring-boot-starter-actuator-3.3.0.jar
+Progress (1): 0.9/4.8 kBProgress (1): 2.3/4.8 kBProgress (1): 3.6/4.8 kBProgress (1): 4.8 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-actuator/3.3.0/spring-boot-starter-actuator-3.3.0.jar (4.8 kB at 166 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-actuator-autoconfigure/3.3.0/spring-boot-actuator-autoconfigure-3.3.0.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-actuator/3.3.0/spring-boot-actuator-3.3.0.jar
+Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-core/1.13.0/micrometer-core-1.13.0.jar
+Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-jakarta9/1.13.0/micrometer-jakarta9-1.13.0.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/hdrhistogram/HdrHistogram/2.2.1/HdrHistogram-2.2.1.jar
+Progress (1): 0.9/777 kBProgress (1): 2.3/777 kBProgress (1): 3.6/777 kBProgress (1): 5.0/777 kBProgress (1): 6.4/777 kBProgress (1): 7.7/777 kBProgress (1): 8.2/777 kBProgress (1): 9.6/777 kBProgress (1): 11/777 kB Progress (1): 12/777 kBProgress (1): 14/777 kBProgress (1): 15/777 kBProgress (1): 16/777 kBProgress (1): 18/777 kBProgress (1): 19/777 kBProgress (1): 21/777 kBProgress (1): 22/777 kBProgress (1): 23/777 kBProgress (1): 25/777 kBProgress (1): 26/777 kBProgress (1): 30/777 kBProgress (1): 34/777 kBProgress (1): 39/777 kBProgress (1): 43/777 kBProgress (1): 47/777 kBProgress (1): 51/777 kBProgress (1): 56/777 kBProgress (1): 60/777 kBProgress (1): 64/777 kBProgress (1): 68/777 kBProgress (1): 73/777 kBProgress (1): 77/777 kBProgress (1): 81/777 kBProgress (1): 85/777 kBProgress (1): 89/777 kBProgress (1): 94/777 kBProgress (1): 98/777 kBProgress (1): 98/777 kBProgress (1): 103/777 kBProgress (1): 107/777 kBProgress (1): 111/777 kBProgress (1): 115/777 kBProgress (1): 119/777 kBProgress (1): 124/777 kBProgress (1): 128/777 kBProgress (1): 132/777 kBProgress (1): 136/777 kBProgress (1): 141/777 kBProgress (1): 145/777 kBProgress (1): 149/777 kBProgress (1): 153/777 kBProgress (1): 158/777 kBProgress (1): 162/777 kBProgress (1): 166/777 kBProgress (1): 170/777 kBProgress (1): 174/777 kBProgress (1): 179/777 kBProgress (1): 183/777 kBProgress (1): 187/777 kBProgress (1): 188/777 kBProgress (1): 205/777 kBProgress (1): 221/777 kBProgress (1): 238/777 kBProgress (1): 254/777 kBProgress (1): 270/777 kBProgress (1): 287/777 kBProgress (2): 287/777 kB | 0.9/862 kBProgress (2): 287/777 kB | 2.3/862 kBProgress (2): 287/777 kB | 3.6/862 kBProgress (2): 287/777 kB | 5.0/862 kBProgress (2): 287/777 kB | 6.4/862 kBProgress (2): 287/777 kB | 7.7/862 kBProgress (2): 287/777 kB | 9.1/862 kBProgress (2): 303/777 kB | 9.1/862 kBProgress (2): 303/777 kB | 10/862 kB Progress (2): 303/777 kB | 12/862 kBProgress (2): 303/777 kB | 13/862 kBProgress (2): 303/777 kB | 15/862 kBProgress (2): 303/777 kB | 16/862 kBProgress (2): 303/777 kB | 17/862 kBProgress (2): 303/777 kB | 19/862 kBProgress (2): 303/777 kB | 20/862 kBProgress (2): 303/777 kB | 21/862 kBProgress (2): 303/777 kB | 23/862 kBProgress (2): 303/777 kB | 24/862 kBProgress (2): 303/777 kB | 25/862 kBProgress (2): 303/777 kB | 27/862 kBProgress (2): 303/777 kB | 28/862 kBProgress (2): 303/777 kB | 30/862 kBProgress (2): 303/777 kB | 31/862 kBProgress (2): 303/777 kB | 32/862 kBProgress (2): 303/777 kB | 34/862 kBProgress (2): 303/777 kB | 35/862 kBProgress (2): 303/777 kB | 36/862 kBProgress (2): 303/777 kB | 38/862 kBProgress (2): 303/777 kB | 39/862 kBProgress (2): 303/777 kB | 41/862 kBProgress (2): 303/777 kB | 42/862 kBProgress (2): 303/777 kB | 43/862 kBProgress (2): 319/777 kB | 43/862 kBProgress (2): 319/777 kB | 45/862 kBProgress (2): 319/777 kB | 46/862 kBProgress (2): 319/777 kB | 47/862 kBProgress (2): 319/777 kB | 49/862 kBProgress (2): 319/777 kB | 50/862 kBProgress (2): 336/777 kB | 50/862 kBProgress (2): 336/777 kB | 51/862 kBProgress (2): 336/777 kB | 53/862 kBProgress (2): 336/777 kB | 54/862 kBProgress (2): 336/777 kB | 56/862 kBProgress (2): 336/777 kB | 60/862 kBProgress (2): 336/777 kB | 64/862 kBProgress (2): 336/777 kB | 68/862 kBProgress (2): 352/777 kB | 68/862 kBProgress (2): 369/777 kB | 68/862 kBProgress (2): 385/777 kB | 68/862 kBProgress (3): 385/777 kB | 68/862 kB | 0.9/675 kBProgress (3): 385/777 kB | 68/862 kB | 2.3/675 kBProgress (3): 385/777 kB | 68/862 kB | 3.6/675 kBProgress (3): 385/777 kB | 68/862 kB | 5.0/675 kBProgress (3): 385/777 kB | 68/862 kB | 6.4/675 kBProgress (3): 385/777 kB | 68/862 kB | 7.3/675 kBProgress (3): 385/777 kB | 68/862 kB | 8.6/675 kBProgress (3): 385/777 kB | 68/862 kB | 10/675 kB Progress (3): 385/777 kB | 68/862 kB | 11/675 kBProgress (3): 385/777 kB | 68/862 kB | 13/675 kBProgress (3): 385/777 kB | 68/862 kB | 14/675 kBProgress (3): 385/777 kB | 68/862 kB | 15/675 kBProgress (3): 385/777 kB | 68/862 kB | 17/675 kBProgress (3): 385/777 kB | 68/862 kB | 18/675 kBProgress (3): 385/777 kB | 68/862 kB | 20/675 kBProgress (3): 385/777 kB | 68/862 kB | 21/675 kBProgress (3): 385/777 kB | 68/862 kB | 22/675 kBProgress (3): 385/777 kB | 68/862 kB | 24/675 kBProgress (3): 385/777 kB | 68/862 kB | 25/675 kBProgress (3): 385/777 kB | 68/862 kB | 26/675 kBProgress (3): 385/777 kB | 68/862 kB | 28/675 kBProgress (3): 385/777 kB | 68/862 kB | 29/675 kBProgress (3): 385/777 kB | 68/862 kB | 31/675 kBProgress (3): 385/777 kB | 68/862 kB | 32/675 kBProgress (3): 385/777 kB | 68/862 kB | 33/675 kBProgress (3): 385/777 kB | 68/862 kB | 35/675 kBProgress (3): 385/777 kB | 68/862 kB | 36/675 kBProgress (3): 385/777 kB | 68/862 kB | 37/675 kBProgress (3): 385/777 kB | 68/862 kB | 39/675 kBProgress (3): 385/777 kB | 68/862 kB | 40/675 kBProgress (3): 385/777 kB | 68/862 kB | 41/675 kBProgress (3): 385/777 kB | 68/862 kB | 43/675 kBProgress (3): 401/777 kB | 68/862 kB | 43/675 kBProgress (3): 418/777 kB | 68/862 kB | 43/675 kBProgress (3): 418/777 kB | 68/862 kB | 44/675 kBProgress (3): 418/777 kB | 68/862 kB | 46/675 kBProgress (3): 418/777 kB | 68/862 kB | 47/675 kBProgress (3): 418/777 kB | 68/862 kB | 48/675 kBProgress (3): 418/777 kB | 68/862 kB | 50/675 kBProgress (3): 418/777 kB | 68/862 kB | 51/675 kBProgress (3): 418/777 kB | 68/862 kB | 52/675 kBProgress (3): 418/777 kB | 68/862 kB | 54/675 kBProgress (3): 418/777 kB | 68/862 kB | 55/675 kBProgress (3): 418/777 kB | 68/862 kB | 59/675 kBProgress (3): 418/777 kB | 68/862 kB | 64/675 kBProgress (3): 418/777 kB | 68/862 kB | 68/675 kBProgress (3): 434/777 kB | 68/862 kB | 68/675 kBProgress (4): 434/777 kB | 68/862 kB | 68/675 kB | 0.9/176 kBProgress (4): 434/777 kB | 68/862 kB | 68/675 kB | 2.3/176 kBProgress (4): 434/777 kB | 68/862 kB | 68/675 kB | 3.6/176 kBProgress (4): 451/777 kB | 68/862 kB | 68/675 kB | 3.6/176 kBProgress (4): 467/777 kB | 68/862 kB | 68/675 kB | 3.6/176 kBProgress (4): 483/777 kB | 68/862 kB | 68/675 kB | 3.6/176 kBProgress (4): 483/777 kB | 68/862 kB | 68/675 kB | 5.0/176 kBProgress (4): 483/777 kB | 68/862 kB | 68/675 kB | 6.4/176 kBProgress (4): 500/777 kB | 68/862 kB | 68/675 kB | 6.4/176 kBProgress (4): 500/777 kB | 68/862 kB | 68/675 kB | 7.7/176 kBProgress (4): 500/777 kB | 68/862 kB | 68/675 kB | 9.1/176 kBProgress (4): 516/777 kB | 68/862 kB | 68/675 kB | 9.1/176 kBProgress (4): 516/777 kB | 68/862 kB | 68/675 kB | 10/176 kB Progress (4): 516/777 kB | 68/862 kB | 68/675 kB | 12/176 kBProgress (4): 516/777 kB | 68/862 kB | 68/675 kB | 13/176 kBProgress (4): 516/777 kB | 68/862 kB | 68/675 kB | 15/176 kBProgress (4): 516/777 kB | 68/862 kB | 68/675 kB | 16/176 kBProgress (4): 516/777 kB | 68/862 kB | 68/675 kB | 17/176 kBProgress (5): 516/777 kB | 68/862 kB | 68/675 kB | 17/176 kB | 0.9/32 kBProgress (5): 516/777 kB | 68/862 kB | 68/675 kB | 19/176 kB | 0.9/32 kBProgress (5): 516/777 kB | 68/862 kB | 68/675 kB | 20/176 kB | 0.9/32 kBProgress (5): 516/777 kB | 68/862 kB | 68/675 kB | 21/176 kB | 0.9/32 kBProgress (5): 516/777 kB | 68/862 kB | 68/675 kB | 21/176 kB | 2.3/32 kBProgress (5): 516/777 kB | 68/862 kB | 68/675 kB | 23/176 kB | 2.3/32 kBProgress (5): 516/777 kB | 68/862 kB | 68/675 kB | 23/176 kB | 3.6/32 kBProgress (5): 516/777 kB | 68/862 kB | 68/675 kB | 24/176 kB | 3.6/32 kBProgress (5): 516/777 kB | 68/862 kB | 68/675 kB | 24/176 kB | 5.0/32 kBProgress (5): 516/777 kB | 68/862 kB | 68/675 kB | 25/176 kB | 5.0/32 kBProgress (5): 532/777 kB | 68/862 kB | 68/675 kB | 25/176 kB | 5.0/32 kBProgress (5): 532/777 kB | 68/862 kB | 68/675 kB | 25/176 kB | 6.4/32 kBProgress (5): 532/777 kB | 68/862 kB | 68/675 kB | 27/176 kB | 6.4/32 kBProgress (5): 532/777 kB | 68/862 kB | 68/675 kB | 27/176 kB | 7.7/32 kBProgress (5): 532/777 kB | 68/862 kB | 68/675 kB | 28/176 kB | 7.7/32 kBProgress (5): 532/777 kB | 68/862 kB | 68/675 kB | 28/176 kB | 8.2/32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 28/176 kB | 8.2/32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 28/176 kB | 9.6/32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 30/176 kB | 9.6/32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 30/176 kB | 11/32 kB Progress (5): 549/777 kB | 68/862 kB | 68/675 kB | 30/176 kB | 12/32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 31/176 kB | 12/32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 31/176 kB | 14/32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 32/176 kB | 14/32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 32/176 kB | 15/32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 32/176 kB | 16/32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 32/176 kB | 18/32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 34/176 kB | 18/32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 34/176 kB | 19/32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 34/176 kB | 21/32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 35/176 kB | 21/32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 35/176 kB | 22/32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 35/176 kB | 23/32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 35/176 kB | 25/32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 36/176 kB | 25/32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 36/176 kB | 26/32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 36/176 kB | 27/32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 38/176 kB | 27/32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 38/176 kB | 29/32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 38/176 kB | 30/32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 39/176 kB | 30/32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 39/176 kB | 31/32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 41/176 kB | 31/32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 41/176 kB | 32 kB   Progress (5): 549/777 kB | 68/862 kB | 68/675 kB | 42/176 kB | 32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 43/176 kB | 32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 45/176 kB | 32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 46/176 kB | 32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 47/176 kB | 32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 49/176 kB | 32 kBProgress (5): 549/777 kB | 68/862 kB | 68/675 kB | 50/176 kB | 32 kB                                                                    Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-jakarta9/1.13.0/micrometer-jakarta9-1.13.0.jar (32 kB at 549 kB/s)
+Progress (4): 549/777 kB | 68/862 kB | 68/675 kB | 51/176 kBProgress (4): 549/777 kB | 68/862 kB | 68/675 kB | 53/176 kBProgress (4): 549/777 kB | 68/862 kB | 68/675 kB | 54/176 kBProgress (4): 549/777 kB | 68/862 kB | 68/675 kB | 56/176 kBProgress (4): 549/777 kB | 68/862 kB | 68/675 kB | 60/176 kBProgress (4): 549/777 kB | 68/862 kB | 68/675 kB | 64/176 kBProgress (4): 549/777 kB | 68/862 kB | 68/675 kB | 68/176 kBProgress (4): 549/777 kB | 73/862 kB | 68/675 kB | 68/176 kBProgress (4): 549/777 kB | 77/862 kB | 68/675 kB | 68/176 kBProgress (4): 549/777 kB | 81/862 kB | 68/675 kB | 68/176 kBProgress (4): 565/777 kB | 81/862 kB | 68/675 kB | 68/176 kBProgress (4): 565/777 kB | 85/862 kB | 68/675 kB | 68/176 kBProgress (4): 565/777 kB | 89/862 kB | 68/675 kB | 68/176 kBProgress (4): 565/777 kB | 94/862 kB | 68/675 kB | 68/176 kBProgress (4): 565/777 kB | 98/862 kB | 68/675 kB | 68/176 kBProgress (4): 582/777 kB | 98/862 kB | 68/675 kB | 68/176 kBProgress (4): 598/777 kB | 98/862 kB | 68/675 kB | 68/176 kBProgress (4): 598/777 kB | 102/862 kB | 68/675 kB | 68/176 kBProgress (4): 598/777 kB | 102/862 kB | 72/675 kB | 68/176 kBProgress (4): 598/777 kB | 106/862 kB | 72/675 kB | 68/176 kBProgress (4): 598/777 kB | 106/862 kB | 76/675 kB | 68/176 kBProgress (4): 614/777 kB | 106/862 kB | 76/675 kB | 68/176 kBProgress (4): 614/777 kB | 111/862 kB | 76/675 kB | 68/176 kBProgress (4): 614/777 kB | 115/862 kB | 76/675 kB | 68/176 kBProgress (4): 631/777 kB | 115/862 kB | 76/675 kB | 68/176 kBProgress (4): 631/777 kB | 115/862 kB | 81/675 kB | 68/176 kBProgress (4): 631/777 kB | 115/862 kB | 81/675 kB | 73/176 kBProgress (4): 631/777 kB | 115/862 kB | 85/675 kB | 73/176 kBProgress (4): 631/777 kB | 115/862 kB | 85/675 kB | 77/176 kBProgress (4): 631/777 kB | 115/862 kB | 89/675 kB | 77/176 kBProgress (4): 631/777 kB | 115/862 kB | 89/675 kB | 81/176 kBProgress (4): 647/777 kB | 115/862 kB | 89/675 kB | 81/176 kBProgress (4): 647/777 kB | 119/862 kB | 89/675 kB | 81/176 kBProgress (4): 647/777 kB | 119/862 kB | 89/675 kB | 85/176 kBProgress (4): 647/777 kB | 119/862 kB | 93/675 kB | 85/176 kBProgress (4): 647/777 kB | 123/862 kB | 93/675 kB | 85/176 kBProgress (4): 647/777 kB | 123/862 kB | 93/675 kB | 89/176 kBProgress (4): 647/777 kB | 127/862 kB | 93/675 kB | 89/176 kBProgress (4): 647/777 kB | 132/862 kB | 93/675 kB | 89/176 kBProgress (4): 647/777 kB | 136/862 kB | 93/675 kB | 89/176 kBProgress (4): 647/777 kB | 140/862 kB | 93/675 kB | 89/176 kBProgress (4): 647/777 kB | 140/862 kB | 97/675 kB | 89/176 kBProgress (4): 664/777 kB | 140/862 kB | 97/675 kB | 89/176 kBProgress (4): 664/777 kB | 140/862 kB | 102/675 kB | 89/176 kBProgress (4): 680/777 kB | 140/862 kB | 102/675 kB | 89/176 kBProgress (4): 680/777 kB | 140/862 kB | 106/675 kB | 89/176 kBProgress (4): 680/777 kB | 140/862 kB | 110/675 kB | 89/176 kBProgress (4): 680/777 kB | 140/862 kB | 110/675 kB | 94/176 kBProgress (4): 680/777 kB | 144/862 kB | 110/675 kB | 94/176 kBProgress (4): 680/777 kB | 144/862 kB | 114/675 kB | 94/176 kBProgress (4): 680/777 kB | 144/862 kB | 114/675 kB | 98/176 kBProgress (4): 680/777 kB | 149/862 kB | 114/675 kB | 98/176 kBProgress (4): 680/777 kB | 149/862 kB | 119/675 kB | 98/176 kBProgress (4): 680/777 kB | 149/862 kB | 119/675 kB | 102/176 kBProgress (4): 680/777 kB | 153/862 kB | 119/675 kB | 102/176 kBProgress (4): 696/777 kB | 153/862 kB | 119/675 kB | 102/176 kBProgress (4): 696/777 kB | 153/862 kB | 119/675 kB | 106/176 kBProgress (4): 696/777 kB | 155/862 kB | 119/675 kB | 106/176 kBProgress (4): 696/777 kB | 155/862 kB | 119/675 kB | 111/176 kBProgress (4): 696/777 kB | 155/862 kB | 119/675 kB | 115/176 kBProgress (4): 696/777 kB | 155/862 kB | 123/675 kB | 115/176 kBProgress (4): 696/777 kB | 159/862 kB | 123/675 kB | 115/176 kBProgress (4): 696/777 kB | 159/862 kB | 127/675 kB | 115/176 kBProgress (4): 696/777 kB | 164/862 kB | 127/675 kB | 115/176 kBProgress (4): 713/777 kB | 164/862 kB | 127/675 kB | 115/176 kBProgress (4): 713/777 kB | 164/862 kB | 130/675 kB | 115/176 kBProgress (4): 713/777 kB | 164/862 kB | 134/675 kB | 115/176 kBProgress (4): 713/777 kB | 168/862 kB | 134/675 kB | 115/176 kBProgress (4): 713/777 kB | 168/862 kB | 139/675 kB | 115/176 kBProgress (4): 713/777 kB | 168/862 kB | 139/675 kB | 119/176 kBProgress (4): 713/777 kB | 172/862 kB | 139/675 kB | 119/176 kBProgress (4): 729/777 kB | 172/862 kB | 139/675 kB | 119/176 kBProgress (4): 729/777 kB | 172/862 kB | 139/675 kB | 123/176 kBProgress (4): 729/777 kB | 172/862 kB | 143/675 kB | 123/176 kBProgress (4): 729/777 kB | 176/862 kB | 143/675 kB | 123/176 kBProgress (4): 729/777 kB | 176/862 kB | 143/675 kB | 127/176 kBProgress (4): 729/777 kB | 176/862 kB | 143/675 kB | 132/176 kBProgress (4): 729/777 kB | 181/862 kB | 143/675 kB | 132/176 kBProgress (4): 729/777 kB | 181/862 kB | 147/675 kB | 132/176 kBProgress (4): 729/777 kB | 185/862 kB | 147/675 kB | 132/176 kBProgress (4): 729/777 kB | 185/862 kB | 151/675 kB | 132/176 kBProgress (4): 745/777 kB | 185/862 kB | 151/675 kB | 132/176 kBProgress (4): 745/777 kB | 185/862 kB | 156/675 kB | 132/176 kBProgress (4): 745/777 kB | 185/862 kB | 160/675 kB | 132/176 kBProgress (4): 762/777 kB | 185/862 kB | 160/675 kB | 132/176 kBProgress (4): 777 kB | 185/862 kB | 160/675 kB | 132/176 kB    Progress (4): 777 kB | 185/862 kB | 160/675 kB | 136/176 kBProgress (4): 777 kB | 189/862 kB | 160/675 kB | 136/176 kB                                                           Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-actuator-autoconfigure/3.3.0/spring-boot-actuator-autoconfigure-3.3.0.jar (777 kB at 11 MB/s)
+Progress (3): 189/862 kB | 164/675 kB | 136/176 kBProgress (3): 189/862 kB | 164/675 kB | 140/176 kBProgress (3): 193/862 kB | 164/675 kB | 140/176 kBProgress (3): 193/862 kB | 168/675 kB | 140/176 kBProgress (3): 193/862 kB | 168/675 kB | 144/176 kBProgress (3): 193/862 kB | 168/675 kB | 149/176 kBProgress (3): 197/862 kB | 168/675 kB | 149/176 kBProgress (3): 197/862 kB | 168/675 kB | 153/176 kBProgress (3): 197/862 kB | 172/675 kB | 153/176 kBProgress (3): 197/862 kB | 177/675 kB | 153/176 kBProgress (3): 197/862 kB | 181/675 kB | 153/176 kBProgress (3): 197/862 kB | 185/675 kB | 153/176 kBProgress (3): 197/862 kB | 189/675 kB | 153/176 kBProgress (3): 197/862 kB | 194/675 kB | 153/176 kBProgress (3): 197/862 kB | 198/675 kB | 153/176 kBProgress (3): 197/862 kB | 198/675 kB | 155/176 kBProgress (3): 197/862 kB | 202/675 kB | 155/176 kBProgress (3): 197/862 kB | 206/675 kB | 155/176 kBProgress (3): 197/862 kB | 211/675 kB | 155/176 kBProgress (3): 197/862 kB | 215/675 kB | 155/176 kBProgress (3): 197/862 kB | 219/675 kB | 155/176 kBProgress (3): 197/862 kB | 223/675 kB | 155/176 kBProgress (3): 202/862 kB | 223/675 kB | 155/176 kBProgress (3): 202/862 kB | 223/675 kB | 159/176 kBProgress (3): 206/862 kB | 223/675 kB | 159/176 kBProgress (3): 206/862 kB | 223/675 kB | 164/176 kBProgress (3): 210/862 kB | 223/675 kB | 164/176 kBProgress (3): 210/862 kB | 223/675 kB | 168/176 kBProgress (3): 214/862 kB | 223/675 kB | 168/176 kBProgress (3): 214/862 kB | 223/675 kB | 172/176 kBProgress (3): 219/862 kB | 223/675 kB | 172/176 kBProgress (3): 219/862 kB | 223/675 kB | 176 kB    Progress (3): 223/862 kB | 223/675 kB | 176 kB                                              Downloaded from central: https://repo.maven.apache.org/maven2/org/hdrhistogram/HdrHistogram/2.2.1/HdrHistogram-2.2.1.jar (176 kB at 2.1 MB/s)
+Progress (2): 223/862 kB | 240/675 kBProgress (2): 239/862 kB | 240/675 kBProgress (2): 239/862 kB | 256/675 kBProgress (2): 239/862 kB | 261/675 kBProgress (2): 256/862 kB | 261/675 kBProgress (2): 256/862 kB | 278/675 kBProgress (2): 272/862 kB | 278/675 kBProgress (2): 272/862 kB | 294/675 kBProgress (2): 286/862 kB | 294/675 kBProgress (2): 286/862 kB | 310/675 kBProgress (2): 303/862 kB | 310/675 kBProgress (2): 303/862 kB | 327/675 kBProgress (2): 303/862 kB | 343/675 kBProgress (2): 303/862 kB | 360/675 kBProgress (2): 319/862 kB | 360/675 kBProgress (2): 319/862 kB | 376/675 kBProgress (2): 335/862 kB | 376/675 kBProgress (2): 352/862 kB | 376/675 kBProgress (2): 352/862 kB | 392/675 kBProgress (2): 368/862 kB | 392/675 kBProgress (2): 368/862 kB | 409/675 kBProgress (2): 385/862 kB | 409/675 kBProgress (2): 401/862 kB | 409/675 kBProgress (2): 401/862 kB | 425/675 kBProgress (2): 401/862 kB | 441/675 kBProgress (2): 417/862 kB | 441/675 kBProgress (2): 417/862 kB | 458/675 kBProgress (2): 417/862 kB | 474/675 kBProgress (2): 434/862 kB | 474/675 kBProgress (2): 434/862 kB | 491/675 kBProgress (2): 450/862 kB | 491/675 kBProgress (2): 450/862 kB | 507/675 kBProgress (2): 466/862 kB | 507/675 kBProgress (2): 466/862 kB | 523/675 kBProgress (2): 483/862 kB | 523/675 kBProgress (2): 483/862 kB | 540/675 kBProgress (2): 499/862 kB | 540/675 kBProgress (2): 516/862 kB | 540/675 kBProgress (2): 516/862 kB | 556/675 kBProgress (2): 516/862 kB | 573/675 kBProgress (2): 516/862 kB | 589/675 kBProgress (2): 532/862 kB | 589/675 kBProgress (2): 548/862 kB | 589/675 kBProgress (2): 548/862 kB | 605/675 kBProgress (2): 565/862 kB | 605/675 kBProgress (2): 581/862 kB | 605/675 kBProgress (2): 581/862 kB | 622/675 kBProgress (2): 581/862 kB | 638/675 kBProgress (2): 598/862 kB | 638/675 kBProgress (2): 598/862 kB | 654/675 kBProgress (2): 614/862 kB | 654/675 kBProgress (2): 614/862 kB | 671/675 kBProgress (2): 614/862 kB | 675 kB    Progress (2): 630/862 kB | 675 kBProgress (2): 647/862 kB | 675 kB                                 Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-actuator/3.3.0/spring-boot-actuator-3.3.0.jar (675 kB at 6.4 MB/s)
+Progress (1): 663/862 kBProgress (1): 679/862 kBProgress (1): 696/862 kBProgress (1): 712/862 kBProgress (1): 729/862 kBProgress (1): 745/862 kBProgress (1): 761/862 kBProgress (1): 778/862 kBProgress (1): 794/862 kBProgress (1): 811/862 kBProgress (1): 827/862 kBProgress (1): 843/862 kBProgress (1): 860/862 kBProgress (1): 862 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-core/1.13.0/micrometer-core-1.13.0.jar (862 kB at 7.7 MB/s)
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ internet-black-box ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ internet-black-box ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ internet-black-box ---
+[INFO] skip non existing resourceDirectory /Users/gabriel/Projects/Internet Black Box/backend/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ internet-black-box ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:3.3.0:run (default-cli) < test-compile @ internet-black-box <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.3.0:run (default-cli) @ internet-black-box ---
+[INFO] Attaching agents: []
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.0)
+
+2026-07-13T22:01:52.065+05:30  INFO 29727 --- [           main] c.h.i.InternetBlackBoxApplication        : Starting InternetBlackBoxApplication using Java 26.0.1 with PID 29727 (/Users/gabriel/Projects/Internet Black Box/backend/target/classes started by gabriel in /Users/gabriel/Projects/Internet Black Box/backend)
+2026-07-13T22:01:52.066+05:30  INFO 29727 --- [           main] c.h.i.InternetBlackBoxApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-07-13T22:01:52.284+05:30  INFO 29727 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2026-07-13T22:01:52.322+05:30  INFO 29727 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 0 Neo4j repository interfaces.
+2026-07-13T22:01:52.324+05:30  INFO 29727 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2026-07-13T22:01:52.330+05:30  INFO 29727 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 5 Neo4j repository interfaces.
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.apache.tomcat.jni.Library in an unnamed module (file:/Users/gabriel/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.24/tomcat-embed-core-10.1.24.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+2026-07-13T22:01:52.461+05:30  INFO 29727 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-13T22:01:52.464+05:30  INFO 29727 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-13T22:01:52.464+05:30  INFO 29727 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2026-07-13T22:01:52.478+05:30  INFO 29727 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-13T22:01:52.478+05:30  INFO 29727 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 396 ms
+2026-07-13T22:01:52.513+05:30 DEBUG 29727 --- [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: webMvcObservationFilter urls=[/*] order=-2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2026-07-13T22:01:52.513+05:30 DEBUG 29727 --- [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2026-07-13T22:01:52.520+05:30 DEBUG 29727 --- [           main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by io.netty.util.internal.PlatformDependent0$4 (file:/Users/gabriel/.m2/repository/io/netty/netty-common/4.1.110.Final/netty-common-4.1.110.Final.jar)
+WARNING: Please consider reporting this to the maintainers of class io.netty.util.internal.PlatformDependent0$4
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+2026-07-13T22:01:52.558+05:30  INFO 29727 --- [           main] o.neo4j.driver.internal.DriverFactory    : Direct driver instance 503365602 created for server address localhost:7687
+2026-07-13T22:01:52.769+05:30 DEBUG 29727 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 14 mappings in 'requestMappingHandlerMapping'
+2026-07-13T22:01:52.782+05:30 DEBUG 29727 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-07-13T22:01:52.792+05:30 DEBUG 29727 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-07-13T22:01:52.800+05:30 DEBUG 29727 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-07-13T22:01:52.864+05:30  INFO 29727 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-13T22:01:52.884+05:30  INFO 29727 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-13T22:01:52.889+05:30  INFO 29727 --- [           main] c.h.i.InternetBlackBoxApplication        : Started InternetBlackBoxApplication in 0.919 seconds (process running for 1.007)
+2026-07-13T22:02:19.664+05:30  INFO 29727 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-13T22:02:19.665+05:30  INFO 29727 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-13T22:02:19.665+05:30 DEBUG 29727 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-07-13T22:02:19.665+05:30 DEBUG 29727 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-07-13T22:02:19.665+05:30 DEBUG 29727 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2026-07-13T22:02:19.666+05:30 DEBUG 29727 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7bdb4f17
+2026-07-13T22:02:19.666+05:30 DEBUG 29727 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@794cb26b
+2026-07-13T22:02:19.666+05:30 DEBUG 29727 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-07-13T22:02:19.666+05:30  INFO 29727 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-07-13T22:02:19.675+05:30 DEBUG 29727 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/incidents", parameters={}
+2026-07-13T22:02:19.676+05:30 DEBUG 29727 --- [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hackhazards.internetblackbox.controller.IncidentController#getAllIncidents()
+2026-07-13T22:02:19.771+05:30  WARN 29727 --- [nio-8080-exec-1] o.s.data.neo4j.cypher.unrecognized       : Neo.ClientNotification.Statement.UnknownRelationshipTypeWarning: The provided relationship type is not in the database.
+	MATCH (incident:`Incident`) OPTIONAL MATCH (incident)-[__sr__:`CAUSED_BY`]->(__srn__:`Event`) WITH collect(id(incident)) AS __sn__, collect(id(__srn__)) AS __srn__, collect(id(__sr__)) AS __sr__ RETURN __sn__, __srn__, __sr__
+	                                                              ^
+One of the relationship types in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing relationship type is: CAUSED_BY)
+2026-07-13T22:02:19.794+05:30  WARN 29727 --- [nio-8080-exec-1] o.s.data.neo4j.cypher.deprecation        : Neo.ClientNotification.Statement.FeatureDeprecationWarning: This feature is deprecated and will be removed in future versions.
+	MATCH (rootNodeIds:`Incident`) WHERE id(rootNodeIds) IN $rootNodeIds WITH collect(rootNodeIds) AS n OPTIONAL MATCH ()-[relationshipIds]-() WHERE id(relationshipIds) IN $relationshipIds WITH n, collect(DISTINCT relationshipIds) AS __sr__ OPTIONAL MATCH (relatedNodeIds) WHERE id(relatedNodeIds) IN $relatedNodeIds WITH n, __sr__ AS __sr__, collect(DISTINCT relatedNodeIds) AS __srn__ UNWIND n AS rootNodeIds WITH rootNodeIds AS incident, __sr__, __srn__ RETURN incident AS __sn__, __sr__, __srn__
+	                                     ^
+The query used a deprecated function: `id`.
+2026-07-13T22:02:19.794+05:30  WARN 29727 --- [nio-8080-exec-1] o.s.data.neo4j.cypher.deprecation        : Neo.ClientNotification.Statement.FeatureDeprecationWarning: This feature is deprecated and will be removed in future versions.
+	MATCH (rootNodeIds:`Incident`) WHERE id(rootNodeIds) IN $rootNodeIds WITH collect(rootNodeIds) AS n OPTIONAL MATCH ()-[relationshipIds]-() WHERE id(relationshipIds) IN $relationshipIds WITH n, collect(DISTINCT relationshipIds) AS __sr__ OPTIONAL MATCH (relatedNodeIds) WHERE id(relatedNodeIds) IN $relatedNodeIds WITH n, __sr__ AS __sr__, collect(DISTINCT relatedNodeIds) AS __srn__ UNWIND n AS rootNodeIds WITH rootNodeIds AS incident, __sr__, __srn__ RETURN incident AS __sn__, __sr__, __srn__
+	                                                                                                                                                 ^
+The query used a deprecated function: `id`.
+2026-07-13T22:02:19.795+05:30  WARN 29727 --- [nio-8080-exec-1] o.s.data.neo4j.cypher.deprecation        : Neo.ClientNotification.Statement.FeatureDeprecationWarning: This feature is deprecated and will be removed in future versions.
+	MATCH (rootNodeIds:`Incident`) WHERE id(rootNodeIds) IN $rootNodeIds WITH collect(rootNodeIds) AS n OPTIONAL MATCH ()-[relationshipIds]-() WHERE id(relationshipIds) IN $relationshipIds WITH n, collect(DISTINCT relationshipIds) AS __sr__ OPTIONAL MATCH (relatedNodeIds) WHERE id(relatedNodeIds) IN $relatedNodeIds WITH n, __sr__ AS __sr__, collect(DISTINCT relatedNodeIds) AS __srn__ UNWIND n AS rootNodeIds WITH rootNodeIds AS incident, __sr__, __srn__ RETURN incident AS __sn__, __sr__, __srn__
+	                                                                                                                                                                                                                                                                                   ^
+The query used a deprecated function: `id`.
+2026-07-13T22:02:19.806+05:30 DEBUG 29727 --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-07-13T22:02:19.807+05:30 DEBUG 29727 --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[IncidentDto(id=inc_sentry_1783932421233, title=Auto-Triggered Outage: Database connection timeout u (truncated)...]
+2026-07-13T22:02:19.820+05:30 DEBUG 29727 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-07-13T22:02:27.945+05:30 DEBUG 29727 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : OPTIONS "/api/query/voice", parameters={}
+2026-07-13T22:02:27.946+05:30 DEBUG 29727 --- [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hackhazards.internetblackbox.controller.QueryController#handleVoiceQuery(VoiceQueryRequest)
+2026-07-13T22:02:27.947+05:30 DEBUG 29727 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-07-13T22:02:27.953+05:30 DEBUG 29727 --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/api/query/voice", parameters={}
+2026-07-13T22:02:27.953+05:30 DEBUG 29727 --- [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hackhazards.internetblackbox.controller.QueryController#handleVoiceQuery(VoiceQueryRequest)
+2026-07-13T22:02:27.979+05:30 DEBUG 29727 --- [nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [VoiceQueryRequest(audioBase64=GkXfo59ChoEBQveBAULygQRC84EIQoKEd2VibUKHgQRChYECGFOAZwEAAAAAAJuuEU2bdL (truncated)...]
+2026-07-13T22:02:27.983+05:30  INFO 29727 --- [nio-8080-exec-3] c.h.i.controller.QueryController         : Received HTTP Voice Query
+2026-07-13T22:02:27.985+05:30  INFO 29727 --- [nio-8080-exec-3] c.h.i.service.QueryService               : Processing voice query
+2026-07-13T22:02:27.985+05:30  INFO 29727 --- [nio-8080-exec-3] c.h.i.service.SarvamService              : Sending speech-to-text request to Sarvam using model: saarika:v2, language: en-IN
+2026-07-13T22:02:28.010+05:30 DEBUG 29727 --- [nio-8080-exec-3] o.s.w.r.f.client.ExchangeFunctions       : [3d763401] HTTP POST https://api.sarvam.ai/speech-to-text
+2026-07-13T22:02:28.078+05:30 DEBUG 29727 --- [nio-8080-exec-3] o.s.w.c.request.async.WebAsyncManager    : Started async request for "/api/query/voice"
+2026-07-13T22:02:28.079+05:30 DEBUG 29727 --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Exiting but response remains open for further handling
+2026-07-13T22:02:28.269+05:30 DEBUG 29727 --- [ctor-http-nio-3] o.s.h.c.m.MultipartHttpMessageWriter     : [3d763401] Encoding parts [file, model, language_code] (content masked)
+2026-07-13T22:02:28.392+05:30 DEBUG 29727 --- [ctor-http-nio-3] o.s.w.r.f.client.ExchangeFunctions       : [3d763401] [472d9aae-1, L:/192.168.1.8:56007 - R:api.sarvam.ai/20.235.220.20:443] Response 403 FORBIDDEN
+2026-07-13T22:02:28.405+05:30 DEBUG 29727 --- [ctor-http-nio-3] o.s.core.codec.ByteArrayDecoder          : [3d763401] [472d9aae-1, L:/192.168.1.8:56007 - R:api.sarvam.ai/20.235.220.20:443] Read 161 bytes
+2026-07-13T22:02:28.409+05:30 ERROR 29727 --- [ctor-http-nio-3] c.h.i.service.SarvamService              : Failed to transcribe audio via Sarvam STT: 403 Forbidden from POST https://api.sarvam.ai/speech-to-text
+
+org.springframework.web.reactive.function.client.WebClientResponseException$Forbidden: 403 Forbidden from POST https://api.sarvam.ai/speech-to-text
+	at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:309) ~[spring-webflux-6.1.8.jar:6.1.8]
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ⇢ 403 FORBIDDEN from POST https://api.sarvam.ai/speech-to-text [DefaultWebClient]
+Original Stack Trace:
+		at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:309) ~[spring-webflux-6.1.8.jar:6.1.8]
+		at org.springframework.web.reactive.function.client.DefaultClientResponse.lambda$createException$1(DefaultClientResponse.java:214) ~[spring-webflux-6.1.8.jar:6.1.8]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxOnErrorReturn$ReturnSubscriber.onNext(FluxOnErrorReturn.java:162) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:122) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:299) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:145) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:415) ~[reactor-netty-core-1.1.19.jar:1.1.19]
+		at reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:446) ~[reactor-netty-core-1.1.19.jar:1.1.19]
+		at reactor.netty.channel.ChannelOperations.terminate(ChannelOperations.java:500) ~[reactor-netty-core-1.1.19.jar:1.1.19]
+		at reactor.netty.http.client.HttpClientOperations.onInboundNext(HttpClientOperations.java:793) ~[reactor-netty-http-1.1.19.jar:1.1.19]
+		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:114) ~[reactor-netty-core-1.1.19.jar:1.1.19]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:289) ~[netty-handler-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:289) ~[netty-handler-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318) ~[netty-codec-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1475) ~[netty-handler-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1338) ~[netty-handler-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1387) ~[netty-handler-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:530) ~[netty-codec-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:469) ~[netty-codec-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1407) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:918) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+		at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
+
+2026-07-13T22:02:28.411+05:30 DEBUG 29727 --- [ctor-http-nio-3] o.s.w.c.request.async.WebAsyncManager    : Async result set to: org.springframework.web.reactive.function.client.WebClientResponseException$Forbidden: 403 Forbidden from POST https://api.sarvam.ai/speech-to-text for "/api/query/voice"
+2026-07-13T22:02:28.411+05:30 DEBUG 29727 --- [ctor-http-nio-3] o.s.w.c.request.async.WebAsyncManager    : Performing async dispatch for "/api/query/voice"
+2026-07-13T22:02:28.414+05:30 DEBUG 29727 --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : "ASYNC" dispatch for POST "/api/query/voice", parameters={}
+2026-07-13T22:02:28.414+05:30 DEBUG 29727 --- [nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerAdapter : Resume with async result [org.springframework.web.reactive.function.client.WebClientResponseException$Forbidden: 403 Forbidden (truncated)...]
+2026-07-13T22:02:28.417+05:30 DEBUG 29727 --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Unresolved failure from "ASYNC" dispatch: org.springframework.web.reactive.function.client.WebClientResponseException$Forbidden: 403 Forbidden from POST https://api.sarvam.ai/speech-to-text
+2026-07-13T22:02:28.417+05:30 ERROR 29727 --- [nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] threw exception
+
+org.springframework.web.reactive.function.client.WebClientResponseException$Forbidden: 403 Forbidden from POST https://api.sarvam.ai/speech-to-text
+	at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:309) ~[spring-webflux-6.1.8.jar:6.1.8]
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ⇢ 403 FORBIDDEN from POST https://api.sarvam.ai/speech-to-text [DefaultWebClient]
+Original Stack Trace:
+		at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:309) ~[spring-webflux-6.1.8.jar:6.1.8]
+		at org.springframework.web.reactive.function.client.DefaultClientResponse.lambda$createException$1(DefaultClientResponse.java:214) ~[spring-webflux-6.1.8.jar:6.1.8]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxOnErrorReturn$ReturnSubscriber.onNext(FluxOnErrorReturn.java:162) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:122) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:299) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:145) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:415) ~[reactor-netty-core-1.1.19.jar:1.1.19]
+		at reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:446) ~[reactor-netty-core-1.1.19.jar:1.1.19]
+		at reactor.netty.channel.ChannelOperations.terminate(ChannelOperations.java:500) ~[reactor-netty-core-1.1.19.jar:1.1.19]
+		at reactor.netty.http.client.HttpClientOperations.onInboundNext(HttpClientOperations.java:793) ~[reactor-netty-http-1.1.19.jar:1.1.19]
+		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:114) ~[reactor-netty-core-1.1.19.jar:1.1.19]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:289) ~[netty-handler-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:289) ~[netty-handler-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318) ~[netty-codec-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1475) ~[netty-handler-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1338) ~[netty-handler-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1387) ~[netty-handler-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:530) ~[netty-codec-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:469) ~[netty-codec-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1407) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:918) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+		at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
+
+2026-07-13T22:02:28.418+05:30 ERROR 29727 --- [nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.web.reactive.function.client.WebClientResponseException$Forbidden: 403 Forbidden from POST https://api.sarvam.ai/speech-to-text] with root cause
+
+org.springframework.web.reactive.function.client.WebClientResponseException$Forbidden: 403 Forbidden from POST https://api.sarvam.ai/speech-to-text
+	at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:309) ~[spring-webflux-6.1.8.jar:6.1.8]
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ⇢ 403 FORBIDDEN from POST https://api.sarvam.ai/speech-to-text [DefaultWebClient]
+Original Stack Trace:
+		at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:309) ~[spring-webflux-6.1.8.jar:6.1.8]
+		at org.springframework.web.reactive.function.client.DefaultClientResponse.lambda$createException$1(DefaultClientResponse.java:214) ~[spring-webflux-6.1.8.jar:6.1.8]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxOnErrorReturn$ReturnSubscriber.onNext(FluxOnErrorReturn.java:162) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:122) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:299) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:145) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) ~[reactor-core-3.6.6.jar:3.6.6]
+		at reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:415) ~[reactor-netty-core-1.1.19.jar:1.1.19]
+		at reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:446) ~[reactor-netty-core-1.1.19.jar:1.1.19]
+		at reactor.netty.channel.ChannelOperations.terminate(ChannelOperations.java:500) ~[reactor-netty-core-1.1.19.jar:1.1.19]
+		at reactor.netty.http.client.HttpClientOperations.onInboundNext(HttpClientOperations.java:793) ~[reactor-netty-http-1.1.19.jar:1.1.19]
+		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:114) ~[reactor-netty-core-1.1.19.jar:1.1.19]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:289) ~[netty-handler-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:289) ~[netty-handler-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318) ~[netty-codec-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1475) ~[netty-handler-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1338) ~[netty-handler-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1387) ~[netty-handler-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:530) ~[netty-codec-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:469) ~[netty-codec-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1407) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:918) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.110.Final.jar:4.1.110.Final]
+		at java.base/java.lang.Thread.run(Thread.java:1516) ~[na:na]
+
+2026-07-13T22:02:28.419+05:30 DEBUG 29727 --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for POST "/error", parameters={}
+2026-07-13T22:02:28.419+05:30 DEBUG 29727 --- [nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-07-13T22:02:28.422+05:30 DEBUG 29727 --- [nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-07-13T22:02:28.423+05:30 DEBUG 29727 --- [nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Jul 13 22:02:28 IST 2026, status=500, error=Internal Server Error, path=/api/query/vo (truncated)...]
+2026-07-13T22:02:28.427+05:30 DEBUG 29727 --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 500
+2026-07-13T22:02:28.427+05:30 DEBUG 29727 --- [nio-8080-exec-4] o.s.w.c.request.async.WebAsyncManager    : Servlet container error notification for "/error"
+2026-07-13T22:06:51.847+05:30 DEBUG 29727 --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/api/incidents/inc_sentry_1783932645910/timeline", parameters={}
+2026-07-13T22:06:51.848+05:30 DEBUG 29727 --- [nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hackhazards.internetblackbox.controller.IncidentController#getIncidentTimeline(String)
+2026-07-13T22:06:51.898+05:30  WARN 29727 --- [nio-8080-exec-5] o.s.data.neo4j.cypher.unrecognized       : Neo.ClientNotification.Statement.UnknownRelationshipTypeWarning: The provided relationship type is not in the database.
+	    MATCH (i:Incident {id: $id})-[:CAUSED_BY]->(e:Event)
+	                                   ^
+	    RETURN e
+One of the relationship types in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing relationship type is: CAUSED_BY)
+2026-07-13T22:06:51.900+05:30 DEBUG 29727 --- [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-07-13T22:06:51.901+05:30 DEBUG 29727 --- [nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
+2026-07-13T22:06:51.901+05:30 DEBUG 29727 --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
